@@ -18,3 +18,11 @@
   from = "https://lando.dev/sponsor/"
   to = "https://github.com/sponsors/lando"
   status = 301
+[[redirects]]
+  from = "https://lando.dev/join/"
+  to = "https://docs.lando.dev/contrib/contributing.html"
+  status = 301
+[[redirects]]
+  from = "https://lando.dev/alliance/join/"
+  to = "https://docs.lando.dev/contrib/contributing.html"
+  status = 301

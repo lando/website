@@ -19,10 +19,6 @@ jobs:
           - ubuntu-20.04
         node-version:
           - '14'
-        sites:
-          - blog
-          - events
-          - site
     steps:
 
       # Install deps and cache
@@ -49,4 +45,4 @@ jobs:
       - name: Linting
         run: yarn test
       - name: Test Builds
-        run: "yarn build:${{ matrix.sites }}"
+        run: "yarn build"
