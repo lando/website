@@ -18,9 +18,9 @@ services:
       ports:
         - '8013:8013'
 tooling:
-  site:
+  build:
     service: cli
-    cmd: yarn dev:site
+    cmd: yarn dev
     description: Launch the marketing site
   node:
     service: cli
