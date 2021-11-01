@@ -16,7 +16,7 @@
     "lint": "eslint --quiet --no-ignore scripts",
     "release": "bump --prompt --tag --all --push",
     "dev": "vuepress dev --temp /tmp/lando-site --cache /tmp/lando-site-cache --port 8013 site",
-    "test": "yarn lint && yarn lint:sites"
+    "test": "yarn lint"
   },
   "devDependencies": {
     "@vuepress/plugin-blog": "^1.9.2",
