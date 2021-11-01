@@ -1,4 +1,4 @@
-name: lando-sites
+name: lando-website
 env_file:
   - lando.env
 excludes:

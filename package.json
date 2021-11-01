@@ -1,26 +1,21 @@
 {
-  "name": "lando-sites",
+  "name": "lando-website",
   "description": "Sites for the best local development solution in the galaxy.",
   "license": "GPL-3.0",
   "version": "1.0.0",
   "repository": {
     "type": "git",
-    "url": "https://github.com/lando/sites"
+    "url": "https://github.com/lando/website"
   },
   "bugs": {
     "email": "mike@lando.dev",
-    "url": "https://github.com/lando/sites/issues"
+    "url": "https://github.com/lando/website/issues"
   },
   "scripts": {
-    "build:blog": "vuepress build blog -d _blog",
-    "build:events": "vuepress build events -d _events",
-    "build:site": "vuepress build website -d _site",
+    "build": "vuepress build src -d _site",
     "lint": "eslint --quiet --no-ignore scripts",
-    "lint:sites": "eslint  --quiet --ext .js,.vue --config .eslintrc.vuepress.json blog/.vuepress events/.vuepress website/.vuepress",
     "release": "bump --prompt --tag --all --push",
-    "dev:blog": "vuepress dev --temp /tmp/lando-blog --cache /tmp/lando-blog-cache --port 8011 blog",
-    "dev:events": "vuepress dev --temp /tmp/lando-events --cache /tmp/lando-events-cache --port 8012 events",
-    "dev:site": "vuepress dev --temp /tmp/lando-site --cache /tmp/lando-site-cache --port 8013 website",
+    "dev": "vuepress dev --temp /tmp/lando-site --cache /tmp/lando-site-cache --port 8013 website",
     "test": "yarn lint && yarn lint:sites"
   },
   "devDependencies": {
