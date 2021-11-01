@@ -1,0 +1,50 @@
+{
+  "name": "lando-sites",
+  "description": "Sites for the best local development solution in the galaxy.",
+  "license": "GPL-3.0",
+  "version": "1.0.0",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/lando/sites"
+  },
+  "bugs": {
+    "email": "mike@lando.dev",
+    "url": "https://github.com/lando/sites/issues"
+  },
+  "scripts": {
+    "build:blog": "vuepress build blog -d _blog",
+    "build:events": "vuepress build events -d _events",
+    "build:site": "vuepress build website -d _site",
+    "lint": "eslint --quiet --no-ignore scripts",
+    "lint:sites": "eslint  --quiet --ext .js,.vue --config .eslintrc.vuepress.json blog/.vuepress events/.vuepress website/.vuepress",
+    "release": "bump --prompt --tag --all --push",
+    "dev:blog": "vuepress dev --temp /tmp/lando-blog --cache /tmp/lando-blog-cache --port 8011 blog",
+    "dev:events": "vuepress dev --temp /tmp/lando-events --cache /tmp/lando-events-cache --port 8012 events",
+    "dev:site": "vuepress dev --temp /tmp/lando-site --cache /tmp/lando-site-cache --port 8013 website",
+    "test": "yarn lint && yarn lint:sites"
+  },
+  "devDependencies": {
+    "@vuepress/plugin-blog": "^1.9.2",
+    "@vuepress/plugin-google-analytics": "^1.0.0-rc.1",
+    "@vuepress/theme-blog": "^2.0.0",
+    "axios": "^0.21.1",
+    "eslint": "^6.1.0",
+    "eslint-config-google": "^0.9.1",
+    "eslint-plugin-vue": "^5.2.3",
+    "js-yaml": "^3.14.0",
+    "lodash": "^4.17.21",
+    "mkdirp": "^1.0.4",
+    "version-bump-prompt": "^4.2.1",
+    "vue-feather-icons": "^5.0.0",
+    "vue-lazyload": "^1.3.3",
+    "vue2-google-maps": "^0.10.7",
+    "vuepress": "^1.8.2",
+    "vuepress-plugin-autometa": "https://github.com/thinktandem/vuepress-plugin-autometa",
+    "vuepress-plugin-canonical": "^1.0.0",
+    "vuepress-plugin-container": "^2.1.2",
+    "vuepress-plugin-feed": "^0.1.8",
+    "vuepress-plugin-robots": "^1.0.1",
+    "vuepress-plugin-sitemap": "https://github.com/thinktandem/vuepress-plugin-sitemap",
+    "yargs": "^16.1.0"
+  }
+}
