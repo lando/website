@@ -1,0 +1,14 @@
+[build]
+  base = "./"
+  publish = "_site"
+  command = "yarn build"
+
+# Domain redirects
+[[redirects]]
+  from = "https://devwithlando.io/*"
+  to = "https://lando.dev/:splat"
+  status = 301
+[[redirects]]
+  from = "https://lndo.io/*"
+  to = "https://lando.dev/:splat"
+  status = 301
