@@ -12,3 +12,9 @@
   from = "https://lndo.io/*"
   to = "https://lando.dev/:splat"
   status = 301
+
+  # Legacy redirects from cloudflare
+[[redirects]]
+  from = "https://lando.dev/sponsor/"
+  to = "https://github.com/sponsors/lando"
+  status = 301
