@@ -15,7 +15,7 @@
     "build": "vuepress build src -d _site",
     "lint": "eslint --quiet --no-ignore scripts",
     "release": "bump --prompt --tag --all --push",
-    "dev": "vuepress dev --temp /tmp/lando-site --cache /tmp/lando-site-cache --port 8013 website",
+    "dev": "vuepress dev --temp /tmp/lando-site --cache /tmp/lando-site-cache --port 8013 site",
     "test": "yarn lint && yarn lint:sites"
   },
   "devDependencies": {
