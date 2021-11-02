@@ -14,7 +14,7 @@
   status = 301
 [[redirects]]
   from = "https://blog.devwithlando.io/*"
-  to = "/blog/:splat"
+  to = "https://lando.dev/blog/:splat"
   status = 301
   force = true
 
