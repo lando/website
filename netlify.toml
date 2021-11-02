@@ -30,6 +30,6 @@
 # Subsite redirects
 [[redirects]]
   from = "/blog/*"
-  to = "https://lando-blog.netlify.app/:splat"
+  to = "https://lando-blog.netlify.app/blog/:splat"
   status = 200
   force = true
