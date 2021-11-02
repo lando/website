@@ -17,6 +17,11 @@
   to = "https://lando.dev/blog/:splat"
   status = 301
   force = true
+[[redirects]]
+  from = "https://events.devwithlando.io/*"
+  to = "https://lando.dev/events/:splat"
+  status = 301
+  force = true
 
   # Legacy redirects from cloudflare
 [[redirects]]
