@@ -12,6 +12,11 @@
   from = "https://lndo.io/*"
   to = "https://lando.dev/:splat"
   status = 301
+[[redirects]]
+  from = "https://blog.devwithlando.io/*"
+  to = "/blog/:splat"
+  status = 301
+  force = true
 
   # Legacy redirects from cloudflare
 [[redirects]]
@@ -31,5 +36,10 @@
 [[redirects]]
   from = "/blog/*"
   to = "https://lando-blog.netlify.app/:splat"
+  status = 200
+  force = true
+[[redirects]]
+  from = "/events/*"
+  to = "https://lando-events.netlify.app/:splat"
   status = 200
   force = true
