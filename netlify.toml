@@ -13,6 +13,10 @@
   to = "https://lando.dev/:splat"
   status = 301
 [[redirects]]
+  from = "https://lndo.site/*"
+  to = "https://lando.dev/:splat"
+  status = 301
+[[redirects]]
   from = "https://blog.devwithlando.io/*"
   to = "https://lando.dev/blog/:splat"
   status = 301
@@ -28,6 +32,11 @@
   status = 301
   force = true
 [[redirects]]
+  from = "https://blog.lndo.site/*"
+  to = "https://lando.dev/blog/:splat"
+  status = 301
+  force = true
+[[redirects]]
   from = "https://events.devwithlando.io/*"
   to = "https://lando.dev/events/:splat"
   status = 301
@@ -39,6 +48,11 @@
   force = true
 [[redirects]]
   from = "https://events.lndo.io/*"
+  to = "https://lando.dev/events/:splat"
+  status = 301
+  force = true
+[[redirects]]
+  from = "https://events.lndo.site/*"
   to = "https://lando.dev/events/:splat"
   status = 301
   force = true
