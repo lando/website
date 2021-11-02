@@ -26,3 +26,10 @@
   from = "https://lando.dev/alliance/join/"
   to = "https://docs.lando.dev/contrib/contributing.html"
   status = 301
+
+# Subsite redirects
+[[redirects]]
+  from = "/blog/*"
+  to = "https://lando-blog.netlify.app/:splat"
+  status = 200
+  force = true
