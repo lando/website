@@ -56,8 +56,8 @@ module.exports = {
     },
   },
   themeConfig: {
-    docsDir: 'website',
-    docsBranch: 'master',
+    docsDir: 'src',
+    docsBranch: 'main',
     logo: '/images/logo-small-white.png',
     search: false,
     editLinks: false,
