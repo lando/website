@@ -1,18 +1,24 @@
 {
   "env": {
     "node": true,
-    "mocha": true
+    "mocha": true,
+    "es6": true
   },
   "parserOptions": {
-    "ecmaVersion": 6
+    "sourceType": "module",
+    "ecmaVersion": 9
   },
-  "extends": "google",
+  "extends": [
+    "plugin:vue/recommended",
+    "google"
+  ],
   "rules": {
+    "linebreak-style": 0,
     "arrow-parens": ["error",
       "as-needed"
     ],
     "max-len": ["error", {
-      "code": 120,
+      "code": 12000,
       "ignoreComments": true
     }],
     "require-jsdoc": ["error", {
