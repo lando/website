@@ -1,4 +1,9 @@
-v1.0.2 [November 2, 2021](https://github.com/lando/website/releases/tag/v1.0.2)
+v1.0.3 [November 10, 2021](https://github.com/lando/website/releases/tag/v1.0.3)
+------------------------
+
+* Performance Tweaks
+
+v1.0.2 [November 10, 2021](https://github.com/lando/website/releases/tag/v1.0.2)
 ------------------------
 
 * Adjust linter
