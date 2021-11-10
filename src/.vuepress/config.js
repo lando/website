@@ -11,6 +11,7 @@ module.exports = {
     ]};
   },
   head: [
+    ['meta', {name: 'viewport', content: 'width=device-width, initial-scale=1'}],
     ['link', {rel: 'preconnect', href: 'https://www.google-analytics.com/analytics.js', crossorigin: 'true'}],
     ['link', {rel: 'preconnect', href: '//js.hs-scripts.com/6864374.js', crossorigin: 'true'}],
     ['link', {rel: 'preconnect', href: '//cdn.rawgit.com/konpa/devicon/df6431e323547add1b4cf45992913f15286456d3/devicon.min.css', crossorigin: 'true'}],
