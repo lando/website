@@ -11,13 +11,16 @@ module.exports = {
     ]};
   },
   head: [
+    ['link', {rel: 'preload', href: '//js.hs-scripts.com/6864374.js', crossorigin: 'true', as: 'script'}],
+    ['link', {rel: 'preload', href: 'https://www.google-analytics.com/analytics.js', crossorigin: 'true', as: 'script'}],
+    ['link', {rel: 'preload', href: '//cdn.rawgit.com/konpa/devicon/df6431e323547add1b4cf45992913f15286456d3/devicon.min.css', crossorigin: 'true', as: 'style'}],
+    ['link', {rel: 'preload', href: '//cdn.jsdelivr.net/devicons/1.8.0/css/devicons.min.css', crossorigin: 'true', as: 'style'}],
+    ['link', {rel: 'preload', href: '//fonts.googleapis.com/css?family=Poppins:700|Source+Sans+Pro&display=swap', crossorigin: 'true', as: 'style'}],
     ['link', {rel: 'icon', href: '/favicon.ico'}],
     ['link', {rel: 'stylesheet', href: '/styles/overrides.css'}],
     ['link', {rel: 'stylesheet', href: '//fonts.googleapis.com/css?family=Poppins:700|Source+Sans+Pro&display=swap'}],
     ['link', {rel: 'stylesheet', href: '//cdn.rawgit.com/konpa/devicon/df6431e323547add1b4cf45992913f15286456d3/devicon.min.css'}],
     ['link', {rel: 'stylesheet', href: '//cdn.jsdelivr.net/devicons/1.8.0/css/devicons.min.css'}],
-    ['link', {rel: 'preconnect', href: '//js.hs-scripts.com/6864374.js', crossorigin: 'true'}],
-    ['link', {rel: 'preconnect', href: 'https://www.google-analytics.com/analytics.js', crossorigin: 'true'}],
     ['script', {src: '//js.hs-scripts.com/6864374.js'}],
   ],
   plugins: {
