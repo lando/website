@@ -5,7 +5,7 @@
     </div>
     <div class="sponsor-patriot-block" v-for="(patriot, index) in patriots" :key="index">
       <a :href="patriot.url" target="_blank">
-        <div class="sponsor-patriot-block-image"><img :src="patriot.logo" :alt="patriot.name"></div>
+        <div class="sponsor-patriot-block-image"><img :src="patriot.logo" :alt="patriot.name" loading="lazy"></div>
       </a>
     </div>
   </div>

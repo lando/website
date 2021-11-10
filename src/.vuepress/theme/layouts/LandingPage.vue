@@ -15,7 +15,7 @@
           <h2> {{ whyTitle }} </h2>
 
           <div class="point" v-for="(why, index) in whys" :key="index">
-            <img v-if="why.image" :src="why.image" />
+            <img v-if="why.image" :src="why.image" loading="lazy" />
             <h3>{{ why.title }}</h3>
             <p>{{ why.details }}</p>
           </div>

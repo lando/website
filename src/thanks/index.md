@@ -6,7 +6,7 @@ byline: We appreciate you and hope you enjoy your time with lando
 ---
 
 <div class="seal-of-liberation">
-  <img src="/images/lando-alliance.png">
+  <img src="/images/lando-alliance.png" alt="Lando Alliance" loading="lazy">
 </div>
 
 <div class="liberation-manifesto">

@@ -3,7 +3,7 @@
     <div class="inner">
       <div class="hero-header">
         <div class="hero-left">
-          <img class="hero-logo" v-if="heroImage" :src="$withBase(heroImage)" :alt="heroAlt || 'lando logo'">
+          <img class="hero-logo" v-if="heroImage" :src="$withBase(heroImage)" :alt="heroAlt || 'lando logo'" loading="lazy">
         </div>
         <div class="hero-right">
           <h2 class="hide">Lando.</h2>
