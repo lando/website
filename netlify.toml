@@ -6,10 +6,23 @@
   # [context.production]
   #   ignore = "if git diff $CACHED_COMMIT_REF $COMMIT_REF ./package.json | grep - | grep version && git diff $CACHED_COMMIT_REF $COMMIT_REF ./package.json | grep + | grep version; then exit 1; else exit 0; fi"
 
+# Sets our asset optimization
+[build.processing.css]
+  bundle = true
+  minify = true
+[build.processing.js]
+  bundle = true
+  minify = true
+[build.processing.html]
+  pretty_urls = false
+[build.processing.images]
+  compress = true
+
+# Caches our images for 1 year
 [[headers]]
   for = "/images/*"
   [headers.values]
-	  Cache-Control = "public, max-age=2419200"
+	  Cache-Control = "public, max-age=31536000"
 
 # Domain redirects
 [[redirects]]
