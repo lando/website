@@ -1,9 +1,16 @@
+const { path } = require('@vuepress/utils')
+console.log(path.resolve(__dirname, './theme/index.js'));
+
 module.exports = {
   lang: 'en-US',
   title: 'Lando',
   description: 'Instant dev environments for all your projects.',
+  theme: path.resolve(__dirname, './theme/index.js'),
 
   themeConfig: {
+    contributors: false,
+    editLink: false,
+    lastUpdated: false,
     logo: '/images/logo-small-pink.png',
     logoDark: '/images/logo-small-white.png',
     navbar: [
@@ -12,5 +19,6 @@ module.exports = {
       {text: 'Resources', link: 'https://docs.lando.dev'},
       {text: 'Get Lando!', link: '/download/'},
     ],
+    sidebar: false,
   },
 }
