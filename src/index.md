@@ -1,8 +1,7 @@
 ---
 ---
 
-# Coding at Lightspeed
-Push-button development environments hosted on your computer or in the cloud. Automate your developer workflow and share it with your team.
+<Hero />
 
 ## Start Coding Instantly
 
