@@ -115,14 +115,20 @@ function getCssValue(el: HTMLElement | null, property: string): number {
 .navbar-interior {
   max-width: var(--content-width);
   margin: auto;
+  display: flex;
 }
 .navbar .navbar-links-wrapper, .navbar .navbar-links-right-wrapper {
   display: inline-flex;
   margin-left: 3rem;
   position: static;
+  flex-grow: 1;
 }
 
 .navbar .navbar-links-right-wrapper {
-  float: right;
+  justify-content: flex-end;
+}
+
+.toggle-dark-button {
+  margin: 0px 1rem;
 }
 </style>

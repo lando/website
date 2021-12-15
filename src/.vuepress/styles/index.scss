@@ -3,7 +3,7 @@
 :root {
   // brand colors
   --c-brand: #DD3F8F;
-  --c-brand-light: #DD3F8F
+  --c-brand-light: #DEDB8E;
   
   // layout vars
   --navbar-height: 3.6rem;
@@ -24,11 +24,11 @@
 html.dark {
   // brand colors
   --c-brand: #DD3F8F;
-  --c-brand-light: #DD3F8F
+  --c-brand-light: #DEDB8E;
 
   // background colors
-  --c-bg: #261D2D;
-  --c-bg-light: #412B6B;
+  --c-bg: #412B6B;
+  --c-bg-light: #261D2D;
   --c-bg-lighter: #412B6B;
 
   // text colors
