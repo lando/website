@@ -1,9 +1,22 @@
 body {
-    background: radial-gradient(121.65% 71.43% at 91.1% 13.63%, var(--c-bg-lighter) 0%, var(--c-bg) 100%)
+    background: radial-gradient(121.65% 71.43% at 91.1% 13.63%, var(--c-bg-lighter) 0%, var(--c-bg) 100%);
+    .btn {
+        padding: 0px 24px;
+        border-radius: 42px;
+        background: var(--c-brand);
+        color: var(--c-text);
+        font-size: 14px;
+    }
+    .btn-primary {
+        font-weight: bold;
+        text-transform: uppercase;
+    }
 }
 
 html.dark {
-    h1,h2,h3 {
+    h1,
+    h2,
+    h3 {
         color: var(--c-text-lightest);
     }
 }

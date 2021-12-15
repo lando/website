@@ -15,7 +15,6 @@ module.exports = {
       {text: 'Features', link: '/features/'},
       {text: 'Pricing', link: '/pricing/'},
       {text: 'Resources', link: 'https://docs.lando.dev'},
-      {text: 'Get Lando!', link: '/download/'},
     ],
     sidebar: false,
   },

@@ -1,30 +1,36 @@
 <template>
   <header ref="navbar" class="navbar">
     <ToggleSidebarButton @toggle="$emit('toggle-sidebar')" />
+    <div class="navbar-interior">
 
-    <span ref="siteBrand">
-      <RouterLink :to="siteBrandLink">
+      <span ref="siteBrand">
+        <RouterLink :to="siteBrandLink">
 
-        <span
-          v-if="siteBrandTitle"
-          class="site-name"
-          :class="{ 'can-hide': siteBrandLogo }"
-        >
-          {{ siteBrandTitle }}
-        </span>
-      </RouterLink>
-    </span>
+          <span
+            v-if="siteBrandTitle"
+            class="site-name"
+            :class="{ 'can-hide': siteBrandLogo }"
+          >
+            {{ siteBrandTitle }}
+          </span>
+        </RouterLink>
+      </span>
 
-    <div class="navbar-links-wrapper" :style="linksWrapperStyle">
-      <slot name="before" />
+      <div class="navbar-links-wrapper" :style="linksWrapperStyle">
+        <slot name="before" />
 
-      <NavbarLinks class="can-hide" />
+        <NavbarLinks class="can-hide" />
 
-      <slot name="after" />
+        <slot name="after" />
 
-      <ToggleDarkModeButton v-if="enableDarkMode" />
+      </div>
+      <div class="navbar-links-right-wrapper" :style="linksWrapperStyle">
 
-      <NavbarSearch />
+        <a href="/download/" class="btn btn-primary">Get Lando!</a>
+
+        <ToggleDarkModeButton v-if="enableDarkMode" />
+
+      </div>
     </div>
   </header>
 </template>
@@ -99,3 +105,24 @@ function getCssValue(el: HTMLElement | null, property: string): number {
   return Number.isNaN(num) ? 0 : num
 }
 </script>
+
+<style scoped>
+.navbar {
+  position: static;
+  background: inherit;
+  border-bottom: none;
+}
+.navbar-interior {
+  max-width: var(--content-width);
+  margin: auto;
+}
+.navbar .navbar-links-wrapper, .navbar .navbar-links-right-wrapper {
+  display: inline-flex;
+  margin-left: 3rem;
+  position: static;
+}
+
+.navbar .navbar-links-right-wrapper {
+  float: right;
+}
+</style>
