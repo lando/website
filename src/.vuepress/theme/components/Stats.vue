@@ -1,5 +1,6 @@
 <template>
   <div class="stats">
+    <!-- Should break these out into a StatsItem component -->
     <div class="stats-item">
       <div class="stat-number">
         50,000+

@@ -106,29 +106,34 @@ function getCssValue(el: HTMLElement | null, property: string): number {
 }
 </script>
 
-<style scoped>
+<style lang="scss">
 .navbar {
   position: static;
   background: inherit;
   border-bottom: none;
-}
-.navbar-interior {
-  max-width: var(--content-width);
-  margin: auto;
-  display: flex;
-}
-.navbar .navbar-links-wrapper, .navbar .navbar-links-right-wrapper {
-  display: inline-flex;
-  margin-left: 3rem;
-  position: static;
-  flex-grow: 1;
-}
+  .navbar-interior {
+    max-width: var(--content-width);
+    margin: auto;
+    display: flex;
+    .navbar-links-wrapper, .navbar-links-right-wrapper {
+      display: inline-flex;
+      margin-left: 3rem;
+      position: static;
+      flex-grow: 1;
+      // Should probably make our own navbar-links and do this there.
+      .navbar-links {
+        .navbar-links-item {
+          font-size: 1rem;
+        }
+      }
+    }
+    .navbar-links-right-wrapper {
+      justify-content: flex-end;
+    }
+    .toggle-dark-button {
+      margin: 0px 1rem;
+    }
 
-.navbar .navbar-links-right-wrapper {
-  justify-content: flex-end;
-}
-
-.toggle-dark-button {
-  margin: 0px 1rem;
+  }
 }
 </style>
