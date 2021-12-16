@@ -1,11 +1,12 @@
 body {
     background: radial-gradient(121.65% 71.43% at 91.1% 13.63%, var(--c-bg-lighter) 0%, var(--c-bg-light) 100%);
+    font-size: 1.375rem;
     .btn {
         padding: 0px 24px;
         border-radius: 42px;
         background: var(--c-brand);
         color: var(--c-text);
-        font-size: 14px;
+        font-size: 1rem;
         display: inline-block;
         line-height: 2rem;
         height: 2rem;

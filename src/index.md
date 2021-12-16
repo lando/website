@@ -3,6 +3,8 @@
 
 <Hero />
 
+<FeatureLeft />
+
 ## Start Coding Instantly
 
 Lando creates your dev environment and seeds it. Because you don't have time to configure Docker, debug tooling, or any of that space snarge.
