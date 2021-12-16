@@ -2,9 +2,9 @@
   <div class="hero-wrapper">
     <div class="hero">
       <div class="hero-left">
-        <h2>Coding at <div class="emphasis">lightspeed</div></h2>
-        <p>Push-button development environments hosted on your computer or in the cloud. Automate your developer workflow and share it with your team.</p>
-        <a href="/download/" class="btn btn-primary">Get Lando!</a>
+        <h2 v-html="heroHeading"></h2>
+        <p v-html="heroText"></p>
+        <a :href="ctaLink" class="btn btn-primary">{{ ctaText }}</a>
       </div>
       <div class="hero-right">
         <div class="inner-orbit">
@@ -35,16 +35,17 @@
           </svg>
       </div>
     </div>
-    <Stats />
+    <slot />
   </div>
 </template>
 
 <script>
-import Stats from './Stats.vue'
-
 export default {
-  components: {
-    Stats,
+  props: {
+    heroHeading: String,
+    heroText: String,
+    ctaText: String,
+    ctaLink: String
   },
 }
 </script>
@@ -64,9 +65,6 @@ export default {
           font-size: 4rem;
           font-weight: 800;
           line-height: 4rem;
-        }
-        .emphasis {
-          color: var(--c-brand);
         }
       }
       .hero-right {
