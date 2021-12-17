@@ -6,6 +6,7 @@ import Feature from "./theme/components/Feature.vue";
 import Icons from "./theme/components/Icons.vue";
 import Logos from "./theme/components/Logos.vue";
 import Quotes from "./theme/components/Quotes.vue";
+import FooterCta from "./theme/components/FooterCta.vue";
 
 export default defineClientAppEnhance(({ app, router, siteData }) => {
   app.component("Hero", Hero);
@@ -15,4 +16,5 @@ export default defineClientAppEnhance(({ app, router, siteData }) => {
   app.component("Icons", Icons);
   app.component("Logos", Logos);
   app.component("Quotes", Quotes);
+  app.component("FooterCta", FooterCta);
 });

@@ -4,6 +4,12 @@
       <Navbar />
     </template>
     <template #page-bottom>
+      <FooterCta 
+        heading="One small click for you..."
+        text="...one giant leap for developers everywhere. Download Lando and start accelerating your development workflow today."
+        ctaText="Get Lando"
+        ctaLink="/download/"
+      />
       <div class="my-footer">This is my custom page footer</div>
     </template>
   </Layout>
