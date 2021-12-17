@@ -21,7 +21,7 @@ export default {
 }
 </script>
 
-<style lang="scss" scoped>
+<style lang="scss">
 .feature {
   margin-bottom: 10rem;
   display: flex;
@@ -30,6 +30,13 @@ export default {
   .feature-image {
     flex-grow: 1;
     flex-basis: 50%;
+  }
+  .feature-image {
+    background: radial-gradient(50% 50% at 50% 50%, #DD3F8F 0%, rgba(221, 63, 143, 0) 100%);
+    img {
+      display: block;
+      margin: auto;
+    }
   }
 }
 

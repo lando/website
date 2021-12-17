@@ -48,23 +48,8 @@
   featureHeading='Easily share with <div class="emphasis">your team</div>'
   featureText='Distribute working dev environments to your whole team. Junior devs get a rocket boost while senior devs can tune settings to make their best astro racer.'
 >
-<CodeGroup>
-  <CodeGroupItem title="LAUNCH">
 
-  ```yaml:no-line-numbers
-    name: lando-101
-    recipe: lamp
-    config:
-      php: 7.4
-    services:
-      mailhog:
-        type: mailhog:v1.0.0
-        portforward: true
-        hogfrom:
-          - appserver
-  ```
+![Image of developer distributing Lando config to their team.](images/share-with-team.png)
 
-  </CodeGroupItem>
-</CodeGroup>
 </Feature>
 
