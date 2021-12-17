@@ -1,5 +1,5 @@
 <template>
-  <div class="feature-left">
+  <div class="feature" :class="orientation">
     <div class="feature-content">
       <h3 v-html="featureHeading"></h3>
       <p v-html="featureText"></p>
@@ -16,12 +16,14 @@ export default {
   props: {
     featureHeading: String,
     featureText: String,
+    orientation: String,
   },
 }
 </script>
 
 <style lang="scss" scoped>
-.feature-left {
+.feature {
+  margin-bottom: 10rem;
   display: flex;
   gap: 4rem;
   .feature-content,
@@ -29,5 +31,9 @@ export default {
     flex-grow: 1;
     flex-basis: 50%;
   }
+}
+
+.feature.right {
+  flex-direction: row-reverse;
 }
 </style>
