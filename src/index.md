@@ -53,3 +53,7 @@
 
 </Feature>
 
+<Logos />
+
+<Quotes />
+
