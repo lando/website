@@ -1,40 +1,37 @@
 <template>
-  <div class="stats">
-    <!-- Should break these out into a StatsItem component -->
-    <div class="stats-item">
-      <div class="stat-number">
-        50,000+
-      </div>
-      <div class="stat-title">
-        Delighted Devs
-      </div>
-    </div>
-    <div class="stats-item">
-      <div class="stat-number">
-        3,000+
-      </div>
-      <div class="stat-title">
-        Github Stars
-      </div>
-    </div>
-  </div>
+  <ul class="icons">
+    <li v-for="(icon, index) in icons" :key="index">
+      <img :src="icon.src" :alt="icon.alt">
+    </li>
+  </ul>
 </template>
 
 <style lang="scss" scoped>
-  .stats {
+  .icons {
     display: flex;
-    .stats-item {
-      margin-right: 2.5rem;
-      .stat-number {
-        font-size: 2rem;
-        font-weight: 700;
-        line-height: 2.25rem;
-      }
-      .stat-title {
-        color: var(--c-brand-light);
-        font-size: 1.375rem;
-        line-heith: 1.875rem;
-      }
+    gap:1.5rem;
+    list-style: none;
+    padding-left: 0;
+    .icon {
+      height: 3.25rem;
     }
   }
 </style>
+
+<script>
+export default {
+  data() {
+    return {
+      icons: [
+        { src: 'images/icons/osx.png', alt:'MacOS logo.' },
+        { src: 'images/icons/windows.png', alt:'Windows logo.' },
+        { src: 'images/icons/linux.png', alt:'Linux logo.' },
+        { src: 'images/icons/line.png', alt:'A divider line.' },
+        { src: 'images/icons/safari.png', alt:'Safari logo.' },
+        { src: 'images/icons/chrome.png', alt:'Chrome logo.' },
+        { src: 'images/icons/firefox.png', alt:'Firefox logo.' },
+      ]
+    }
+  }
+}
+</script>

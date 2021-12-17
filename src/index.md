@@ -11,7 +11,7 @@
 </Hero>
 
 <Feature 
-  featureHeading='Start Coding <div class="emphasis">Instantly</div>'
+  featureHeading='Start coding <div class="emphasis">instantly</div>'
   featureText='Lando creates your dev environment and seeds it. Because you dont have time to configure Docker, debug tooling, or any of that space snarge.'
 >
 <template v-slot:afterFeatureContent>
