@@ -18,4 +18,13 @@ module.exports = {
     ],
     sidebar: false,
   },
+  bundlerConfig: {
+    css: {
+      preprocessorOptions: {
+        scss: {
+          additionalData: `$MQMobile: 719px !default;`
+        }
+      }
+    }
+  }
 }

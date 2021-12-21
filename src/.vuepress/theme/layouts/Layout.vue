@@ -10,7 +10,7 @@
         ctaText="Get Lando"
         ctaLink="/download/"
       />
-      <div class="my-footer">This is my custom page footer</div>
+      <Footer />
     </template>
   </Layout>
 </template>

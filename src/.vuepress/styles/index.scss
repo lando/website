@@ -1,4 +1,6 @@
 @import url('https://fonts.googleapis.com/css2?family=Lexend:wght@400;700;800&display=swap');
+@import '@vuepress/plugin-palette/palette';
+@import 'palette.scss';
 
 :root {
   // brand colors
@@ -27,7 +29,7 @@ html.dark {
   --c-brand-light: #DEDB8E;
 
   // background colors
-  --c-bg: #412B6B;
+  --c-bg: #261D2D;
   --c-bg-light: #261D2D;
   --c-bg-lighter: #412B6B;
 

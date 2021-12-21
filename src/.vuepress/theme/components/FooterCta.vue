@@ -19,6 +19,7 @@
       background-color: var(--c-text-lightest);
       &:after {
         content: url('../../public/images/button-arrow.svg');
+        margin-left: 1rem;
       }
     }
   }
