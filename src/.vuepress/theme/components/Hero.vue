@@ -7,7 +7,9 @@
         <a :href="ctaLink" class="btn btn-primary">{{ ctaText }}</a>
       </div>
       <div class="hero-right">
-        <div class="inner-orbit">
+        <div class="orbit inner-orbit">
+        </div>
+        <div class="orbit outer-orbit">
         </div>
           <svg width="220" height="220" viewBox="0 0 220 220" fill="none" xmlns="http://www.w3.org/2000/svg">
             <g clip-path="url(#clip0_113_786)">
@@ -61,6 +63,7 @@ export default {
         font-size: 1.375rem;
       }
       .hero-left {
+        z-index: 10;
         h2 {
           font-size: 4rem;
           font-weight: 800;
@@ -68,17 +71,25 @@ export default {
         }
       }
       .hero-right {
+        z-index: 4;
         display: flex;
         justify-content: center;
+        align-self: center;
         align-items: center;
         max-height: 30vh;
       }
-      .inner-orbit {
+      .orbit {
         position: absolute;
+        border: 1.5px dashed #794993;
+        border-radius: 100%;
+      }
+      .inner-orbit {
         width: 1081px;
         height: 469px;
-        border: 2px #4A437F dashed;
-        border-radius: 100%;
+      }
+      .outer-orbit {
+        width: 2081px;
+        height: 869px;
       }
     }
   }

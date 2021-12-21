@@ -57,13 +57,13 @@
         <h3>Lando Cloud</h3>
         <div class="footer-column-inner">
           <div class="footer-column-third">
-            <h4>Beta Program</h4>
+            <h4>Lando Cloud Beta</h4>
             <ul>
               <li><a href="">Overview</a></li>
               <li><a href="">Features</a></li>
               <li><a href="">Beta Signup</a></li>
             </ul>
-            <h4>Partnerships</h4>
+            <h4>For Partners</h4>
             <ul>
               <li><a href="https://docs.lando.dev/guides/lando-info.html" target="_blank">Hosting Companies</a></li>
               <li><a href="https://docs.lando.dev/help/logs.html" target="_blank">Enterprise</a></li>

@@ -1,4 +1,7 @@
 <template>
+  <div class="feature-orbit" :class="customClass">
+    <img :src="planetImage" class="feature-planet" />
+  </div>
   <div class="feature" :class="orientation">
     <div class="feature-content">
       <h3 v-html="featureHeading"></h3>
@@ -17,15 +20,47 @@ export default {
     featureHeading: String,
     featureText: String,
     orientation: String,
+    customClass: String,
+    planetImage: String,
   },
 }
 </script>
 
 <style lang="scss">
+$default-orbit-height: 1000px;
+$default-orbit-margin-top: 150 - $default-orbit-height;
+.feature-orbit {
+  position: absolute;
+  border-bottom: 1.5px dashed #794993;
+  border-radius: 100%;
+  margin-left: -50rem;
+  margin-top: $default-orbit-margin-top;
+  z-index: 0;
+  width: 3000px;
+  height: $default-orbit-height;
+  &.orbit-2 {
+    height: $default-orbit-height - 500;
+    margin-top: $default-orbit-margin-top + 500;
+  }
+  &.orbit-3 {
+    height: $default-orbit-height - 600;
+    margin-top: $default-orbit-margin-top + 600;
+    .feature-planet {
+      bottom: -5px;
+    }
+  }
+  .feature-planet {
+    position: absolute;
+    left: 41rem;
+    bottom: 35px;
+  }
+}
+
 .feature {
   margin-bottom: 10rem;
   display: flex;
   gap: 4rem;
+  position: relative;
   .feature-content,
   .feature-image {
     flex-grow: 1;

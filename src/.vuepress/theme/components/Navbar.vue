@@ -108,7 +108,7 @@ function getCssValue(el: HTMLElement | null, property: string): number {
 
 <style lang="scss">
 .navbar {
-  position: static;
+  position: relative;
   background: inherit;
   border-bottom: none;
   .navbar-interior {
@@ -132,6 +132,7 @@ function getCssValue(el: HTMLElement | null, property: string): number {
     }
     .toggle-dark-button {
       margin: 0px 1rem;
+      align-self: center;
     }
 
   }
