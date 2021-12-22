@@ -42,6 +42,7 @@
 </template>
 
 <script>
+import Stats from "./Stats.vue";
 export default {
   props: {
     heroHeading: String,

@@ -17,14 +17,5 @@ module.exports = {
       {text: 'Resources', link: 'https://docs.lando.dev'},
     ],
     sidebar: false,
-  },
-  bundlerConfig: {
-    css: {
-      preprocessorOptions: {
-        scss: {
-          additionalData: `$MQMobile: 719px !default;`
-        }
-      }
-    }
   }
 }

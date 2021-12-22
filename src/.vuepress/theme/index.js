@@ -7,9 +7,17 @@ module.exports = {
     Layout: path.resolve(__dirname, 'layouts/Layout.vue'),
   },
   plugins: [
-    '@vuepress/register-components',
-    {
-      componentsDir: path.resolve(__dirname, './components'),
-    },
+    ['@vuepress/register-components',
+      {
+        componentsDir: path.resolve(__dirname, './components'),
+        componentsPatterns: ['*.vue', '**/*.vue'],
+      },
+    ],
+    // Use sass palette stuff
+    ['@vuepress/plugin-palette',
+      {
+        preset: 'sass',
+      },
+    ],
   ],
 }

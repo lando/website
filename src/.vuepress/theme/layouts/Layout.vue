@@ -3,6 +3,9 @@
     <template #navbar>
       <Navbar />
     </template>
+    <template #page>
+      <Home v-if="frontmatter.layout === 'home'" />
+    </template>
     <template #page-bottom>
       <FooterCta 
         heading="One small click for you..."
@@ -17,6 +20,7 @@
 
 <script>
 import Layout from '@vuepress/theme-default/lib/client/layouts/Layout.vue'
+import Home from '../components/Home.vue'
 
 export default {
   components: {
