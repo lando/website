@@ -112,7 +112,7 @@
 
 <script>
 // Lando components
-import Subscribe from './Subscribe';
+import Subscribe from './Subscribe.vue';
 
 export default {
   components: {Subscribe},
