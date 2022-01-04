@@ -19,7 +19,7 @@
       <div class="navbar-links-wrapper" :style="linksWrapperStyle">
         <slot name="before" />
 
-        <NavbarLinks class="can-hide" />
+        <NavbarItems class="can-hide" />
 
         <slot name="after" />
 
@@ -39,7 +39,7 @@
 import { useRouteLocale, useSiteLocaleData, withBase } from '@vuepress/client'
 import { computed, onMounted, ref } from 'vue'
 import { useDarkMode, useThemeLocaleData } from '@vuepress/theme-default/lib/client/composables'
-import NavbarLinks from '@vuepress/theme-default/lib/client/components/NavbarLinks.vue'
+import NavbarItems from '@vuepress/theme-default/lib/client/components/NavbarItems.vue'
 import ToggleDarkModeButton from '@vuepress/theme-default/lib/client/components/ToggleDarkModeButton.vue'
 import ToggleSidebarButton from '@vuepress/theme-default/lib/client/components/ToggleSidebarButton.vue'
 

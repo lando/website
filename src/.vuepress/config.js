@@ -17,5 +17,6 @@ module.exports = {
       {text: 'Resources', link: 'https://docs.lando.dev'},
     ],
     sidebar: false,
-  }
+  },
+  bundler: '@vuepress/bundler-webpack',
 }

@@ -13,25 +13,23 @@
     featureText='Lando creates your dev environment and seeds it. Because you dont have time to configure Docker, debug tooling, or any of that space snarge.'
     planetImage="images/Planet.svg"
   >
-  <template v-slot:afterFeatureContent>
-    <Icons />
-  </template>
-  <CodeGroup>
-    <CodeGroupItem title="LAUNCH">
+    <template v-slot:afterFeatureContent>
+      <Icons />
+    </template>
+    <CodeGroup>
+      <CodeGroupItem title="LAUNCH">
+        <code>
+        # Create a new directory.
+        mkdir drupal9 && cd drupal9
+        # Initialize a new Drupal 9 site.
+        lando init --recipe=drupal9
 
-    ```bash:no-line-numbers
-    # Create a new directory.
-    mkdir drupal9 && cd drupal9
+        # Start your engines.
+        lando start
+        </code>
 
-    # Initialize a new Drupal 9 site.
-    lando init --recipe=drupal9
-
-    # Start your engines.
-    lando start
-    ```
-
-    </CodeGroupItem>
-  </CodeGroup>
+      </CodeGroupItem>
+    </CodeGroup>
   </Feature>
 
   <Feature featureHeading='Integrate with your <div class="emphasis">existing dev tools</div>'
@@ -39,9 +37,7 @@
     orientation='right'
     customClass='orbit-2'
   >
-
-  ![Image of developer and their associated tools](images/integrate-dev-tools.png)
-
+    <img src="images/integrate-dev-tools.png" alt="Image of developer and their associated tools" />
   </Feature>
 
   <Feature 
@@ -50,9 +46,7 @@
     customClass='orbit-3'
     planetImage="images/Planet2.svg"
   >
-
-  ![Image of developer distributing Lando config to their team.](images/share-with-team.png)
-
+    <img src="images/share-with-team.png" alt="Image of developer distributing Lando config to their team." />
   </Feature>
 
   <Logos />
@@ -66,6 +60,8 @@
   import Icons from "./Icons.vue";
   import Logos from "./Logos.vue";
   import Quotes from "./Quotes.vue";
+  import FooterCta from '../components/FooterCta.vue';
+  import Footer from '../components/Footer.vue';
 export default {
 }
 </script>
