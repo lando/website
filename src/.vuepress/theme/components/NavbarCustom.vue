@@ -121,8 +121,8 @@ function getCssValue(el: HTMLElement | null, property: string): number {
       position: static;
       flex-grow: 1;
       // Should probably make our own navbar-links and do this there.
-      .navbar-links {
-        .navbar-links-item {
+      .navbar-items {
+        .navbar-item {
           font-size: 1rem;
         }
       }

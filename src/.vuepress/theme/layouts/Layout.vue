@@ -1,21 +1,26 @@
 <template>
-  <ParentLayout>
-    <template #navbar>
-      <Navbar />
-    </template>
-    <template #page>
-      <Home v-if="frontmatter.layout === 'home'" />
-    </template>
-    <template #page-bottom>
-      <FooterCta
-        heading="One small click for you..."
-        text="...one giant leap for developers everywhere. Download Lando and start accelerating your development workflow today."
-        ctaText="Get Lando"
-        ctaLink="/download/"
-      />
-      <Footer />
-    </template>
-  </ParentLayout>
+  <div class="layout-wrapper">
+    <ParentLayout>
+      <template #navbar>
+        <NavbarCustom />
+      </template>
+      <template #page>
+        <HomeCustom v-if="frontmatter.type === 'home'" />
+        <Page
+          v-else
+          :key="page.path"
+        >
+          <template #top>
+            <slot name="page-top" />
+          </template>
+          <template #bottom>
+            <slot name="page-bottom" />
+          </template>
+        </Page>
+      </template>
+    </ParentLayout>
+    <Footer />
+  </div>
 </template>
 
 <script setup>
@@ -29,9 +34,10 @@ import {useScrollPromise} from '@vuepress/theme-default/lib/client/composables';
 import ParentLayout from '@vuepress/theme-default/lib/client/layouts/Layout.vue';
 
 // Theme components
-import Navbar from '../components/Navbar.vue';
+import NavbarCustom from '../components/NavbarCustom.vue';
 import Footer from '../components/Footer.vue';
 import FooterCta from '../components/FooterCta.vue';
+import HomeCustom from '../components/HomeCustom.vue';
 
 // Get theme data
 const frontmatter = usePageFrontmatter();
