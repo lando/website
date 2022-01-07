@@ -12,9 +12,9 @@ module.exports = {
     logo: '/images/logo-small-pink.png',
     logoDark: '/images/logo-small-white.png',
     navbar: [
-      {text: 'Features', link: '/features/'},
-      {text: 'Pricing', link: '/pricing/'},
-      {text: 'Resources', link: 'https://docs.lando.dev'},
+      {text: 'Docs', link: 'https://docs.lando.dev'},
+      {text: 'Lando Cloud Beta', link: '/lando-cloud-beta/'},
+      {text: 'Blog', link: 'https://blog.lando.dev'},
     ],
     sidebar: false,
   },
