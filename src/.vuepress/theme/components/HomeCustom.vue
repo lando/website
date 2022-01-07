@@ -18,20 +18,18 @@
         <template v-slot:afterFeatureContent>
           <Icons />
         </template>
-        <CodeGroup>
-          <CodeGroupItem title="LAUNCH">
-            <code>
-            # Create a new directory.
-            mkdir drupal9 && cd drupal9
-            # Initialize a new Drupal 9 site.
-            lando init --recipe=drupal9
+        <CodeHighlightCustom language="shell">
+          <pre>
+# Create a new directory.
+mkdir drupal9 && cd drupal9
 
-            # Start your engines.
-            lando start
-            </code>
+# Initialize a new Drupal 9 site.
+lando init --recipe=drupal9
 
-          </CodeGroupItem>
-        </CodeGroup>
+# Start your engines.
+lando start
+        </pre>
+        </CodeHighlightCustom>
       </Feature>
 
       <Feature featureHeading='Integrate with your <div class="emphasis">existing dev tools</div>'
@@ -72,6 +70,7 @@
   import Quotes from "./Quotes.vue";
   import FooterCta from '../components/FooterCta.vue';
   import Footer from '../components/Footer.vue';
+  import CodeHighlightCustom from '../components/CodeHighlightCustom.vue';
 export default {
 }
 </script>
@@ -115,6 +114,10 @@ export default {
         width: 2081px;
         height: 869px;
       }
+    }
+    @import '../../styles/prism-twilight.scss';
+    pre {
+      margin-top: 2rem;
     }
   }
 </style>
