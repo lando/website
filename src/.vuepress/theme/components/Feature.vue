@@ -1,5 +1,5 @@
 <template>
-  <div class="feature-orbit" :class="customClass">
+  <div class="feature-orbit orbit" :class="customClass">
     <img :src="planetImage" class="feature-planet" />
   </div>
   <div class="feature" :class="orientation">
@@ -59,12 +59,13 @@ $default-orbit-margin-top: 150 - $default-orbit-height;
 .feature {
   margin-bottom: 10rem;
   display: flex;
+  flex-wrap: wrap;
   gap: 4rem;
   position: relative;
   .feature-content,
   .feature-image {
     flex-grow: 1;
-    flex-basis: 50%;
+    flex-basis: 45%;
   }
   .feature-image {
     background: radial-gradient(50% 50% at 50% 50%, #DD3F8F 0%, rgba(221, 63, 143, 0) 100%);

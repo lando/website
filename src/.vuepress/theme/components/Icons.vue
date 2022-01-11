@@ -13,7 +13,6 @@
     list-style: none;
     padding-left: 0;
     .icon {
-      height: 3.25rem;
       display: flex;
       justify-content: center;
     }

@@ -32,6 +32,10 @@ body {
         color: var(--c-brand-light);
       }
     }
+    .page {
+        position: relative;
+        overflow: hidden;
+    }
 }
 
 html.dark {
@@ -40,5 +44,12 @@ html.dark {
     h3 {
         color: var(--c-text-lightest);
         margin: 1rem 0;
+    }
+}
+
+
+@media (max-width: $MQNarrow) {
+    .orbit {
+        display: none;
     }
 }
