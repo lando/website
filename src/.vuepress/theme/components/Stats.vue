@@ -23,6 +23,8 @@
 <style lang="scss" scoped>
   .stats {
     display: flex;
+    position: relative;
+    z-index: 10;
     .stats-item {
       margin-right: 2.5rem;
       .stat-number {
