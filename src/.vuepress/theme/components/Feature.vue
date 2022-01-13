@@ -27,6 +27,7 @@ export default {
 </script>
 
 <style lang="scss">
+@import '../../styles/palette.scss';
 $default-orbit-height: 1000px;
 $default-orbit-margin-top: 150 - $default-orbit-height;
 .feature-orbit {
@@ -78,5 +79,12 @@ $default-orbit-margin-top: 150 - $default-orbit-height;
 
 .feature.right {
   flex-direction: row-reverse;
+}
+
+@media (max-width: $MQMobileNarrow) {
+  .feature {
+    flex-wrap: wrap-reverse;
+    gap: 2rem;
+  }
 }
 </style>

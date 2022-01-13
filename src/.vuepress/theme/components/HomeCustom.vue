@@ -76,48 +76,5 @@ export default {
 </script>
 
 <style lang="scss" scoped>
-  .hero-wrapper {
-    height: 100vh;
-    .hero {
-      display: flex;
-      margin: 2rem 0em 8rem 0rem;
-      .hero-left, .hero-right {
-        width: 50%;
-        font-size: 1.375rem;
-      }
-      .hero-left {
-        z-index: 10;
-        h2 {
-          font-size: 4rem;
-          font-weight: 800;
-          line-height: 4rem;
-        }
-      }
-      .hero-right {
-        z-index: 4;
-        display: flex;
-        justify-content: center;
-        align-self: center;
-        align-items: center;
-        max-height: 30vh;
-      }
-      .orbit {
-        position: absolute;
-        border: 1.5px dashed #794993;
-        border-radius: 100%;
-      }
-      .inner-orbit {
-        width: 1081px;
-        height: 469px;
-      }
-      .outer-orbit {
-        width: 2081px;
-        height: 869px;
-      }
-    }
-    @import '../../styles/prism-twilight.scss';
-    pre {
-      margin-top: 2rem;
-    }
-  }
+
 </style>

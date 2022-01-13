@@ -34,7 +34,8 @@ export default {
 };
 </script>
 
-<style scoped>
+<style lang="scss" scoped>
+  @import '../../styles/palette.scss';
   div pre[class*="language-"] {
     display: inline-block;
     padding-top: 3rem;
@@ -43,5 +44,16 @@ export default {
     background-repeat: no-repeat;
     background-position: 16px 16px;
     box-shadow: 5px 5px 15px 0px rgba(50, 50, 50, 0.75);
+  }
+  @media (max-width: $MQNarrow) {
+    div pre[class*="language-"] {
+      font-size: 1rem;
+    }
+  }
+  @media (max-width: $MQMobileNarrow) {
+    div pre[class*="language-"] {
+      font-size: .8rem;
+      padding: 3.3rem 1rem 1.5rem 1rem;
+    }
   }
 </style>

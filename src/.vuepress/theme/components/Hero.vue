@@ -58,13 +58,18 @@ export default {
 <style lang="scss" scoped>
   @import '../../styles/palette.scss';
   .hero-wrapper {
-    height: 100vh;
+    min-height: 100vh;
+    height: 100%;
+    padding-bottom: 4rem;
     .hero {
       display: flex;
       margin: 2rem 0em 8rem 0rem;
       .hero-left, .hero-right {
         width: 50%;
         font-size: 1.375rem;
+        @media (max-width: $MQMobile) {
+          width: initial;
+        }
       }
       .hero-left {
         z-index: 10;
@@ -96,6 +101,22 @@ export default {
         .outer-orbit {
           width: 2081px;
           height: 869px;
+        }
+      }
+    }
+    @import '../../styles/prism-twilight.scss';
+    pre {
+      margin-top: 2rem;
+    }
+  }
+
+  @media (max-width: $MQMobileNarrow) {
+    .hero-wrapper {
+      .hero {
+        flex-wrap: wrap-reverse;
+        gap: 2rem;
+        .hero-left h2{
+          font-size: 3rem;
         }
       }
     }

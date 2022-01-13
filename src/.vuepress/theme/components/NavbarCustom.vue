@@ -107,6 +107,7 @@ function getCssValue(el: HTMLElement | null, property: string): number {
 </script>
 
 <style lang="scss">
+@import '../../styles/palette.scss';
 .navbar {
   position: relative;
   background: inherit;
@@ -135,6 +136,12 @@ function getCssValue(el: HTMLElement | null, property: string): number {
       align-self: center;
     }
 
+  }
+}
+
+@media (max-width: $MQMobileNarrow) {
+  .navbar .navbar-interior .navbar-links-right-wrapper, .navbar .navbar-interior .navbar-links-wrapper {
+    margin-left: 0rem;
   }
 }
 </style>

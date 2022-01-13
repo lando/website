@@ -57,7 +57,7 @@ export default {
           author:'– Senior Developer, US House of Representatives' 
         },
         { 
-          text: "I don't have to handhold junior devs anymore...thank god in heaven.", 
+          text: "I don't have to handhold junior devs anymore... thank god in heaven.", 
           author:'– Senior Developer, Blue State Digital' 
         },
         {  
