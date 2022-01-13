@@ -32,6 +32,7 @@ import {useScrollPromise} from '@vuepress/theme-default/lib/client/composables';
 
 // Parent components
 import ParentLayout from '@vuepress/theme-default/lib/client/layouts/Layout.vue';
+import Page from '@vuepress/theme-default/lib/client/components/Page.vue';
 
 // Theme components
 import NavbarCustom from '../components/NavbarCustom.vue';
