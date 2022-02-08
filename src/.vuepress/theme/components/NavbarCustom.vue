@@ -5,13 +5,6 @@
       <span ref="siteBrand">
         <RouterLink :to="siteBrandLink">
           <NavbarBrandLogo />
-          <span
-            v-if="siteBrandTitle"
-            class="site-name"
-            :class="{ 'can-hide': navbarBrandLogo }"
-          >
-            {{ siteBrandTitle }}
-          </span>
         </RouterLink>
       </span>
 
@@ -127,11 +120,13 @@ function getCssValue(el: HTMLElement | null, property: string): number {
   position: relative;
   background: inherit;
   border-bottom: none;
+  display: flex;
   .navbar-interior {
     max-width: var(--content-width);
     margin: auto;
     display: flex;
-    .navbar-links-wrapper, .navbar-links-right-wrapper {
+    .navbar-items-wrapper, .navbar-links-right-wrapper {
+      position: static;
       display: inline-flex;
       margin-left: 3rem;
       position: static;
