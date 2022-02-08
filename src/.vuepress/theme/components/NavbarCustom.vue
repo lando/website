@@ -2,14 +2,13 @@
   <header ref="navbar" class="navbar">
     <ToggleSidebarButton @toggle="$emit('toggle-sidebar')" />
     <div class="navbar-interior">
-
       <span ref="siteBrand">
         <RouterLink :to="siteBrandLink">
-
+          <NavbarBrandLogo />
           <span
             v-if="siteBrandTitle"
             class="site-name"
-            :class="{ 'can-hide': siteBrandLogo }"
+            :class="{ 'can-hide': navbarBrandLogo }"
           >
             {{ siteBrandTitle }}
           </span>
@@ -36,8 +35,9 @@
 </template>
 
 <script setup lang="ts">
-import { useRouteLocale, useSiteLocaleData, withBase } from '@vuepress/client'
-import { computed, onMounted, ref } from 'vue'
+import { useRouteLocale, useSiteLocaleData, withBase, ClientOnly } from '@vuepress/client'
+import { computed, onMounted, ref, h } from 'vue'
+import type { FunctionalComponent } from 'vue'
 import { useDarkMode, useThemeLocaleData } from '@vuepress/theme-default/lib/client/composables'
 import NavbarItems from '@vuepress/theme-default/lib/client/components/NavbarItems.vue'
 import ToggleDarkModeButton from '@vuepress/theme-default/lib/client/components/ToggleDarkModeButton.vue'
@@ -55,13 +55,13 @@ const siteBrand = ref<HTMLElement | null>(null)
 const siteBrandLink = computed(
   () => themeLocale.value.home || routeLocale.value
 )
-const siteBrandLogo = computed(() => {
+const navbarBrandLogo = computed(() => {
   if (isDarkMode.value && themeLocale.value.logoDark !== undefined) {
     return themeLocale.value.logoDark
   }
   return themeLocale.value.logo
 })
-const siteBrandTitle = computed(() => siteLocale.value.title)
+const navbarBrandTitle = computed(() => siteLocale.value.title)
 const linksWrapperMaxWidth = ref(0)
 const linksWrapperStyle = computed(() => {
   if (!linksWrapperMaxWidth.value) {
@@ -95,6 +95,21 @@ onMounted(() => {
   window.addEventListener('resize', handleLinksWrapWidth, false)
   window.addEventListener('orientationchange', handleLinksWrapWidth, false)
 })
+
+const NavbarBrandLogo: FunctionalComponent = () => {
+  if (!navbarBrandLogo.value) return null
+  const img = h('img', {
+    class: 'logo',
+    src: withBase(navbarBrandLogo.value),
+    alt: navbarBrandTitle.value,
+  })
+  if (themeLocale.value.logoDark === undefined) {
+    return img
+  }
+  // wrap brand logo with <ClientOnly> to avoid ssr-mismatch
+  // when using a different brand logo in dark mode
+  return h(ClientOnly, img)
+}
 
 function getCssValue(el: HTMLElement | null, property: string): number {
   // NOTE: Known bug, will return 'auto' if style value is 'auto'
