@@ -87,10 +87,11 @@
               <h4>Repos</h4>
               <ul>
                 <li><a href="https://github.com/lando/lando" target="_blank">Lando</a></li>
+                <li><a href="https://github.com/lando/cli" target="_blank">CLI</a></li>
                 <li><a href="https://github.com/lando/hyperdrive" target="_blank">Hyperdrive</a></li>
                 <li><a href="https://github.com/lando/leia" target="_blank">Leia</a></li>
-                <li><a href="https://github.com/lando/lando/tree/master/docs" target="_blank">Docs</a></li>
-                <li><a href="https://github.com/lando/sites" target="_blank">Sites</a></li>
+                <li><a href="https://github.com/lando/docs" target="_blank">Docs</a></li>
+                <li><a href="https://github.com/lando/website" target="_blank">Website</a></li>
               </ul>
               <h4>Sponsor</h4>
               <ul>
