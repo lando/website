@@ -45,7 +45,7 @@ subscribe:
   <div class="right">
     <h3>Spin up your first app</h3>
     <div>
-      <p>Try spinning up a basic <em>Hello World!</em> app before spinning up <a href="https://docs.lando.dev/basics/first-app.html" target="_blank">more complex apps</a> or trying any of our <a href="https://github.com/lando/lando/tree/master/examples" target="_blank">myriad examples</a>.
+      <p>Try spinning up a basic <em>Hello World!</em> app before spinning up <a href="https://docs.lando.dev/basics/first-app.html" target="_blank">more complex apps</a> or trying any of our <a href="https://docs.lando.dev/config/recipes.html#supported-recipes" target="_blank">myriad recipes</a>.
       </p>
     </div>
   </div>
