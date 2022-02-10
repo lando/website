@@ -1,6 +1,5 @@
 <template>
   <header ref="navbar" class="navbar">
-    <ToggleSidebarButton @toggle="$emit('toggle-sidebar')" />
     <div class="navbar-interior">
       <span ref="siteBrand">
         <RouterLink :to="siteBrandLink">
@@ -18,10 +17,9 @@
       </div>
       <div class="navbar-links-right-wrapper" :style="linksWrapperStyle">
 
-        <a href="/download/" class="btn btn-primary">Get Lando!</a>
+        <a href="/download/" class="btn btn-primary can-hide">Get Lando!</a>
 
-        <ToggleDarkModeButton v-if="enableDarkMode" />
-
+        <ToggleSidebarButton @toggle="$emit('toggle-sidebar')" />
       </div>
     </div>
   </header>
@@ -121,9 +119,9 @@ function getCssValue(el: HTMLElement | null, property: string): number {
   background: inherit;
   border-bottom: none;
   display: flex;
+  padding: 1.25rem 0 0 1.5rem;
   .navbar-interior {
-    max-width: var(--content-width);
-    margin: auto;
+    width: var(--content-width);
     display: flex;
     .navbar-items-wrapper, .navbar-links-right-wrapper {
       position: static;
@@ -145,7 +143,10 @@ function getCssValue(el: HTMLElement | null, property: string): number {
       margin: 0px 1rem;
       align-self: center;
     }
-
+    .toggle-sidebar-button {
+      position: static;
+      padding: .3rem 1.25rem;
+    }
   }
 }
 
