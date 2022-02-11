@@ -13,7 +13,6 @@ module.exports = {
     logoDark: '/images/logo-small-white.png',
     navbar: [
       {text: 'Docs', link: 'https://docs.lando.dev'},
-      {text: 'Lando Cloud Beta', link: '/lando-cloud-beta/'},
       {text: 'Blog', link: 'https://blog.lando.dev'},
     ],
     sidebar: false,

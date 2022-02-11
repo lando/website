@@ -21,6 +21,7 @@
 </template>
 
 <style lang="scss" scoped>
+  @import '../../styles/palette.scss';
   .stats {
     display: flex;
     position: relative;
@@ -35,7 +36,21 @@
       .stat-title {
         color: var(--c-brand-light);
         font-size: 1.375rem;
-        line-heith: 1.875rem;
+        line-height: 1.875rem;
+      }
+    }
+  }
+
+
+  @media (max-width: $MQMobileNarrow) {
+    .stats {
+      .stats-item {
+        .stat-number {
+          font-size: 1.5rem;
+        }
+        .stat-title {
+          font-size: 1.125rem;
+        }
       }
     }
   }

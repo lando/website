@@ -50,4 +50,7 @@ const {version, versionLink} = page.value;
 
 <style lang="scss">
 @import '../../styles/index.scss';
+.page {
+  padding: 0rem;
+}
 </style>
