@@ -119,7 +119,9 @@ function getCssValue(el: HTMLElement | null, property: string): number {
   background: inherit;
   border-bottom: none;
   display: flex;
-  padding: 1.25rem 0 0 1.5rem;
+  padding: 1.25rem 0 0 0;
+  max-width: var(--content-width);
+  margin: auto;
   .navbar-interior {
     width: var(--content-width);
     display: flex;
@@ -147,6 +149,12 @@ function getCssValue(el: HTMLElement | null, property: string): number {
       position: static;
       padding: .3rem 1.25rem;
     }
+  }
+}
+
+@media (max-width: $MQNarrow) {
+  .navbar {
+    padding: 2rem;
   }
 }
 

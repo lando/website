@@ -53,4 +53,27 @@ const {version, versionLink} = page.value;
 .page {
   padding: 0rem;
 }
+
+.theme-container {
+
+  .sidebar-open .sidebar {
+    transform: translateY(0);
+    top: var(--navbar-height);
+  }
+  .sidebar {
+    display: none;
+    width: 100%;
+    z-index: 100;
+    background: radial-gradient(148.29% 119.48% at 105.77% -28.17%, #412B6B 0%, #34244D 46.09%, #302243 96.16%);
+  }
+}
+
+@media (max-width: 719px) {
+  .theme-container.sidebar-open .sidebar, {
+    transform: none;
+    display: block;
+    top: var(--navbar-height);
+    background: radial-gradient(148.29% 119.48% at 105.77% -28.17%, #412B6B 0%, #34244D 46.09%, #302243 96.16%);
+  }
+}
 </style>

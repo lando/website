@@ -22,5 +22,8 @@
     "vuepress": "^2.0.0-beta.32"
   },
   "main": "index.js",
-  "private": true
+  "private": true,
+  "dependencies": {
+    "hamburgers": "^1.1.3"
+  }
 }

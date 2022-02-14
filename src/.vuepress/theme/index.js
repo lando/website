@@ -5,6 +5,7 @@ module.exports = {
   extends: '@vuepress/theme-default',
   alias: {
     '@theme/Navbar.vue': path.resolve(__dirname, 'components', 'NavbarCustom.vue'),
+    '@theme/ToggleSidebarButton.vue': path.resolve(__dirname, 'components', 'ToggleSidebarButtonCustom.vue'),
   },
   darkMode: false,
   layouts: path.resolve(__dirname, 'layouts'),
