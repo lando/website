@@ -19,7 +19,7 @@
 
         <a href="/download/" class="btn btn-primary can-hide">Get Lando!</a>
 
-        <ToggleSidebarButton @toggle="$emit('toggle-sidebar')" />
+        <ToggleSidebarButtonCustom @toggle="$emit('toggle-sidebar')" />
       </div>
     </div>
   </header>
@@ -32,7 +32,7 @@ import type { FunctionalComponent } from 'vue'
 import { useDarkMode, useThemeLocaleData } from '@vuepress/theme-default/lib/client/composables'
 import NavbarItems from '@vuepress/theme-default/lib/client/components/NavbarItems.vue'
 import ToggleDarkModeButton from '@vuepress/theme-default/lib/client/components/ToggleDarkModeButton.vue'
-import ToggleSidebarButton from '@vuepress/theme-default/lib/client/components/ToggleSidebarButton.vue'
+import ToggleSidebarButtonCustom from './ToggleSidebarButtonCustom.vue'
 
 defineEmits(['toggle-sidebar'])
 
@@ -122,6 +122,7 @@ function getCssValue(el: HTMLElement | null, property: string): number {
   padding: 1.25rem 0 0 0;
   max-width: var(--content-width);
   margin: auto;
+  z-index: 200;
   .navbar-interior {
     width: var(--content-width);
     display: flex;

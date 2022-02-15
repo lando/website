@@ -69,11 +69,35 @@ const {version, versionLink} = page.value;
 }
 
 @media (max-width: 719px) {
-  .theme-container.sidebar-open .sidebar, {
-    transform: none;
-    display: block;
-    top: var(--navbar-height);
-    background: radial-gradient(148.29% 119.48% at 105.77% -28.17%, #412B6B 0%, #34244D 46.09%, #302243 96.16%);
+  .theme-container.sidebar-open {
+    overflow: hidden;
+
+    .sidebar {
+      transform: none;
+      display: block;
+      background: radial-gradient(148.29% 119.48% at 105.77% -28.17%, #412B6B 0%, #34244D 46.09%, #302243 96.16%);
+      height: 100%;
+      position: fixed;
+      transition: .5s;
+      padding-top: calc(var(--navbar-height) + 2.5rem);
+      .navbar-items {
+        border: none;
+        .navbar-item {
+          border-bottom: 1px solid rgba(255, 255, 255, 0.14);
+          padding: 1.3125rem 0 1.5rem 0rem;
+          margin: 0 1.5rem;
+          a {
+            font-weight: normal;
+            font-size: 1.125rem;
+            &:after {
+              content: url('../../public/images/down-arrow.svg');
+              position: absolute;
+              right: 1.125rem;
+            }
+          }
+        }
+      }
+    }
   }
 }
 </style>
