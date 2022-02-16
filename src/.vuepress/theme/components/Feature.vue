@@ -81,6 +81,23 @@ $default-orbit-margin-top: 150 - $default-orbit-height;
   flex-direction: row-reverse;
 }
 
+@media (max-width: $MQMobile) {
+  .feature {
+    margin-top: 1rem;
+  }
+  .feature-orbit {
+    position: relative;
+    &.orbit-3 .feature-planet {
+      top: 340px;
+    }
+    .feature-planet {
+      position: absolute;
+      top: 900px;
+      left: 50rem;
+    }
+  }
+}
+
 @media (max-width: $MQMobileNarrow) {
   .feature {
     flex-wrap: wrap-reverse;

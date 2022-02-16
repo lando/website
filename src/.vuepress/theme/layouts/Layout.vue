@@ -11,7 +11,6 @@
             <slot name="page-top" />
           </template>
           <template #sidebar-top>
-            <h1> YEPP!</h1>
             <p>some more stuff</p>
           </template>
           <template #bottom>
