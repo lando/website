@@ -44,9 +44,6 @@ export default {
       .hero-left, .hero-right {
         width: 50%;
         font-size: 1.375rem;
-        @media (max-width: $MQMobile) {
-          width: initial;
-        }
       }
       .hero-left {
         z-index: 10;
@@ -91,6 +88,7 @@ export default {
     }
   }
 
+
   @media (max-width: $MQMobileNarrow) {
     .hero-wrapper {
       .hero {
@@ -98,6 +96,7 @@ export default {
         margin-bottom: 3rem;
         gap: 2rem;
         .hero-left {
+          width: 100%;
           h2 {
             font-size: 2.75rem;
           }
@@ -111,6 +110,19 @@ export default {
           .hero-planet {
             margin-right: 2rem;
             width: 7.25rem;
+          }
+        }
+        .orbit-wrapper {
+          .inner-orbit {
+            width: 500px;
+            height: 250px;
+            position: relative;
+            right: -100px;
+          }
+          .outer-orbit {
+            width: 1900px;
+            position: relative;
+            right: -800px;
           }
         }
       }

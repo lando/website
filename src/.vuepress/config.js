@@ -4,7 +4,7 @@ module.exports = {
   lang: 'en-US',
   title: 'Lando',
   description: 'Instant dev environments for all your projects.',
-  theme: path.resolve(__dirname, './theme/index.js'),
+  theme: path.resolve(__dirname, './theme'),
   themeConfig: {
     contributors: false,
     editLink: false,
