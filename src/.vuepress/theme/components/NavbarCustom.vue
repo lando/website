@@ -47,7 +47,7 @@ const siteBrandLink = computed(
   () => themeLocale.value.home || routeLocale.value
 )
 const navbarBrandLogo = computed(() => {
-  if (isDarkMode.value && themeLocale.value.logoDark !== undefined) {
+  if (document.documentElement.classList.contains('dark')) {
     return themeLocale.value.logoDark
   }
   return themeLocale.value.logo

@@ -5,7 +5,7 @@ body {
         padding: .5rem 2rem;
         border-radius: 42px;
         background: var(--c-brand);
-        color: var(--c-text);
+        color: #fff;
         font-size: 1rem;
         display: inline-block;
         line-height: 2rem;
@@ -14,6 +14,14 @@ body {
     .btn-primary {
         font-weight: bold;
         text-transform: uppercase;
+    }
+    .btn-full-width {
+        width: 100%;
+        max-width: 400px;
+        margin: auto;
+        padding: 1rem 3rem;
+        text-align: center;
+        vertical-align: middle;
     }
     h1, h2, h3 {
         border-bottom: none;
@@ -39,10 +47,15 @@ body {
 }
 
 html.dark {
-    h1,
-    h2,
-    h3 {
-        color: var(--c-text-lightest);
-        margin: 1rem 0;
+    body {
+        .btn {
+            color: var(--c-text);
+        }
+        h1,
+        h2,
+        h3 {
+            color: var(--c-text-lightest);
+            margin: 1rem 0;
+        }
     }
 }

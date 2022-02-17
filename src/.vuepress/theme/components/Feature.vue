@@ -1,5 +1,5 @@
 <template>
-  <div class="feature-orbit orbit" :class="customClass">
+  <div v-if="showOrbit" class="feature-orbit orbit" :class="customClass">
     <img :src="planetImage" class="feature-planet" />
   </div>
   <div class="feature" :class="orientation">
@@ -22,6 +22,10 @@ export default {
     orientation: String,
     customClass: String,
     planetImage: String,
+    showOrbit: {
+      type: Boolean,
+      default: true
+    }
   },
 }
 </script>
@@ -65,11 +69,12 @@ $default-orbit-margin-top: 150 - $default-orbit-height;
   position: relative;
   .feature-content,
   .feature-image {
+    width: 50%;
     flex-grow: 1;
-    flex-basis: 45%;
+    flex-basis: 42%;
   }
   .feature-image {
-    background: radial-gradient(50% 50% at 50% 50%, #DD3F8F 0%, rgba(221, 63, 143, 0) 100%);
+    display: flex;
     img {
       display: block;
       margin: auto;

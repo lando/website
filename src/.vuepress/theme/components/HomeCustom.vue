@@ -62,7 +62,7 @@ lando start
   </main>
 </template>
 
-<script>
+<script setup>
   import Hero from "./Hero.vue";
   import Feature from "./Feature.vue";
   import Icons from "./Icons.vue";
@@ -71,8 +71,8 @@ lando start
   import FooterCta from '../components/FooterCta.vue';
   import Footer from '../components/Footer.vue';
   import CodeHighlightCustom from '../components/CodeHighlightCustom.vue';
-export default {
-}
+	document.documentElement.classList.toggle('dark', true);
+
 </script>
 
 <style lang="scss" scoped>
