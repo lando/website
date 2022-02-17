@@ -7,6 +7,7 @@
 </template>
 
 <style lang="scss" scoped>
+  @import '../../styles/palette.scss';
   .footer-cta {
     background: radial-gradient(102.17% 322.14% at -4.98% 92.25%, #DD3F8F 13.06%, #412B6B 100%);
     padding: 5.875rem;
@@ -22,6 +23,35 @@
         margin-left: 1rem;
       }
     }
+  }
+
+  .sidebar .footer-cta {
+    padding: 3rem 0rem;
+    position: absolute;
+    width: 100%;
+    bottom: 0;
+    font-size: 1rem;
+    h3 {
+      font-size: 1.5rem;
+    }
+    a {
+      font-size: 1rem;
+    }
+  }
+
+  @media (max-width: $MQNarrow) {
+    .footer-cta {
+      padding: 3rem 0rem;
+      width: 100%;
+      bottom: 0;
+      font-size: 1rem;
+      h3 {
+        font-size: 1.5rem;
+      }
+      a {
+        font-size: 1rem;
+      }
+    } 
   }
 </style>
 

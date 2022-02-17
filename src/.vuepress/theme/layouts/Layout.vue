@@ -1,6 +1,13 @@
 <template>
   <div class="layout-wrapper">
     <ParentLayout>
+      <template #sidebar-bottom>
+        <FooterCta 
+          heading="What are you waiting for?"
+          ctaText="Get Lando Now"
+          ctaLink="/download"
+        />
+      </template>
       <template #page>
         <HomeCustom v-if="frontmatter.type === 'home'" />
         <Page
@@ -9,9 +16,6 @@
         >
           <template #top>
             <slot name="page-top" />
-          </template>
-          <template #sidebar-top>
-            <p>some more stuff</p>
           </template>
           <template #bottom>
             <slot name="page-bottom" />
