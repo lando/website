@@ -145,8 +145,8 @@ export default {
 <style lang="scss" scoped>
 @import '../../styles/palette.scss';
 #footer {
-  background-color: var(--c-bg);
-  color: hsl(var(--c-bg), 44%);
+  background-color: $background-dark;
+  color: $text-dark;
   font-size: 0.875em;
 
   .footer-top {

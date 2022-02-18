@@ -15,7 +15,9 @@
           :key="page.path"
         >
           <template #top>
-            
+            <div class="page-orbit orbit-1"></div>
+            <div class="page-orbit orbit-2"></div>
+            <div class="page-orbit orbit-3"></div>
             <slot name="page-top" />
           </template>
           <template #bottom>

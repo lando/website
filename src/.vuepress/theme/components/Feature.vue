@@ -62,7 +62,7 @@ $default-orbit-margin-top: 150 - $default-orbit-height;
 }
 
 .feature {
-  margin-bottom: 10rem;
+  margin: 5rem 0rem;
   display: flex;
   flex-wrap: wrap;
   gap: 4rem;
