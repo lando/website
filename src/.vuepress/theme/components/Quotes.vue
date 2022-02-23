@@ -1,5 +1,16 @@
 <template>
-  <ul class="quotes">
+  <carousel v-if="isMobile" :items-to-show="1.2" class="quotes">
+    <slide v-for="(quote, index) in quotes" :key="index" class="quote">
+      <div class="quote-quote">“</div>
+      <div class="quote-text" v-html="quote.text"></div>
+      <div class="quote-author" v-html="quote.author"></div>
+    </slide>
+    <template #addons>
+      <navigation />
+      <pagination />
+    </template>
+  </carousel>
+  <ul v-else class="quotes">
     <li v-for="(quote, index) in quotes" :key="index" class="quote">
       <div class="quote-quote">“</div>
       <div class="quote-text" v-html="quote.text"></div>
@@ -9,6 +20,7 @@
 </template>
 
 <style lang="scss" scoped>
+@import '../../styles/palette.scss';
   .quotes {
     display: flex;
     flex-wrap: wrap;
@@ -23,6 +35,9 @@
       border-radius: 10px;
       width: 48%;
       padding: 1.75rem;
+      margin-right: 1.125rem;
+      display: block;
+      text-align: left;
       .quote-quote {
         font-weight: 800;
         font-size: 12.5rem;
@@ -44,9 +59,25 @@
       }
     }
   }
+
+@media (max-width: $MQNarrow) {
+  .quotes {
+    .quote {
+      .quote-text {
+        font-size: 1.375rem;
+      }
+      .quote-author {
+        font-size: 1.125rem;
+      }
+    }
+  }
+}
 </style>
 
 <script>
+import 'vue3-carousel/dist/carousel.css';
+import { Carousel, Slide, Pagination, Navigation } from 'vue3-carousel';
+
 export default {
   props: {
     quotes: {
@@ -71,5 +102,16 @@ export default {
       ],
     },
   },
+  computed: {
+    isMobile() {
+      return window.innerWidth < 800;
+    }
+  },
+  components: {
+    Carousel,
+    Slide,
+    Pagination,
+    Navigation
+  }
 }
 </script>

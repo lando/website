@@ -1,7 +1,7 @@
 <template>
   <div class="logos">
     <h3>Trusted by over 300 companies and organizations</h3>
-    <Icons :icons="icons" />
+    <Icons :mobileSlideshow="true" :icons="icons"/>
   </div>
 </template>
 

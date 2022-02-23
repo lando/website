@@ -13,7 +13,7 @@
     padding: 5.875rem;
     text-align: center;
     font-size: 1.25rem;
-    a {
+    a.btn {
       color: var(--c-brand);
       font-weight: bold;
       text-transform: uppercase;

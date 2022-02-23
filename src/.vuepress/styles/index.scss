@@ -36,7 +36,7 @@ html.dark {
   --c-bg-lighter: #412B6B;
 
   // text colors
-  --c-text: #eeedef;
+  --c-text: $text-dark;
   --c-text-accent: var(--c-brand);
   --c-text-light: #eeedef;
   --c-text-lighter: #eeedef;

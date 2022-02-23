@@ -1,5 +1,10 @@
 <template>
-  <ul class="icons">
+  <carousel v-if="isMobile && mobileSlideshow" :items-to-show="2.5" class="icons">
+    <slide v-for="(icon, index) in icons" :key="index" class="icon">
+      <img :src="icon.src" :alt="icon.alt">
+    </slide>
+  </carousel>
+  <ul v-else class="icons">
     <li v-for="(icon, index) in icons" :key="index" class="icon">
       <img :src="icon.src" :alt="icon.alt">
     </li>
@@ -20,6 +25,9 @@
 </style>
 
 <script>
+import 'vue3-carousel/dist/carousel.css';
+import { Carousel, Slide, Pagination, Navigation } from 'vue3-carousel';
+
 export default {
   props: {
     icons: {
@@ -34,6 +42,21 @@ export default {
         { src: 'images/icons/firefox.png', alt:'Firefox logo.' },
       ],
     },
+    mobileSlideshow: {
+      type: Boolean,
+      default: false
+    }
   },
+  computed: {
+    isMobile() {
+      return window.innerWidth < 800;
+    }
+  },
+  components: {
+    Carousel,
+    Slide,
+    Pagination,
+    Navigation
+  }
 }
 </script>
