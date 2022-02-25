@@ -34,7 +34,7 @@ image: https://raw.githubusercontent.com/lando/lando/master/docs/.vuepress/publi
 mkdir hello && cd hello
 
 # And add a nice homepage
-echo "<h1>Lando says hellooo what have we here?</h1>" > index.html
+echo "<h1>Hellooo what have we here?</h1>" > index.html
 
 # Initialize a basic LAMP stack using the cwd as the source
 lando init --source cwd --recipe lamp --webroot . --name hello-lando

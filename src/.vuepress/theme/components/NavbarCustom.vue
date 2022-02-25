@@ -123,6 +123,9 @@ function getCssValue(el: HTMLElement | null, property: string): number {
   max-width: var(--content-width);
   margin: auto;
   z-index: 200;
+  .logo {
+    margin-right: 3.8125rem;
+  }
   .navbar-interior {
     width: var(--content-width);
     display: flex;
