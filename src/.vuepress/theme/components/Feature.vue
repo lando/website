@@ -5,7 +5,7 @@
   <div class="feature" :class="orientation">
     <div class="feature-content">
       <h3 v-html="featureHeading"></h3>
-      <p v-html="featureText"></p>
+      <p v-if="featureText" v-html="featureText"></p>
       <slot name="afterFeatureContent" />
     </div>
     <div class="feature-image">

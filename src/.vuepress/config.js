@@ -27,6 +27,6 @@ module.exports = {
         id: 'G-HPJSRFPPPR',
       },
     ],
-  ]
+  ],
   bundler: '@vuepress/bundler-webpack',
 }
