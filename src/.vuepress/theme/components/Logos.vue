@@ -5,7 +5,7 @@
   </div>
 </template>
 
-<style lang="scss" scoped>
+<style lang="scss">
   .logos {
     h3 {
       font-size: .875rem;
