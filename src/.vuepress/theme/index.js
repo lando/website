@@ -2,13 +2,17 @@ const { path } = require('@vuepress/utils')
 
 module.exports = {
   theme: path.resolve(__dirname, '.'),
-  extends: '@vuepress/theme-default',
+  extends: '@lando/vuepress-theme-default-plus',
   alias: {
     '@theme/Navbar.vue': path.resolve(__dirname, 'components', 'NavbarCustom.vue'),
     '@theme/ToggleSidebarButton.vue': path.resolve(__dirname, 'components', 'ToggleSidebarButtonCustom.vue'),
   },
   darkMode: false,
   layouts: path.resolve(__dirname, 'layouts'),
+  ga: {
+    enabled: true,
+    id: 'G-HPJSRFPPPR',
+  },
   plugins: [
     ['@vuepress/register-components',
       {
