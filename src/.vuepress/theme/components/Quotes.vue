@@ -1,5 +1,5 @@
 <template>
-  <carousel v-if="isMobile" :items-to-show="1.2" class="quotes">
+  <carousel v-if="isMobile" :items-to-show="1" class="quotes">
     <slide v-for="(quote, index) in quotes" :key="index" class="quote">
       <div class="quote-quote">“</div>
       <div class="quote-text" v-html="quote.text"></div>
@@ -7,7 +7,6 @@
     </slide>
     <template #addons>
       <navigation />
-      <pagination />
     </template>
   </carousel>
   <ul v-else class="quotes">
@@ -29,6 +28,7 @@
     margin-top: 6rem;
     .quote {
       flex-grow: 2;
+      flex-basis: calc(50% - 3rem);
       border: 1.5px dashed #794993;
       box-sizing: border-box;
       filter: drop-shadow(0px 2px 60px rgba(38, 29, 45, 0.2));
@@ -63,12 +63,22 @@
 @media (max-width: $MQNarrow) {
   .quotes {
     .quote {
+      padding-bottom: 2.75rem;
       .quote-text {
         font-size: 1.375rem;
       }
       .quote-author {
         font-size: 1.125rem;
       }
+    }
+  }
+}
+
+@media (max-width: $MQMobile) {
+  .quotes {
+    .quote {
+      margin: auto;
+      flex-basis: 100%;
     }
   }
 }

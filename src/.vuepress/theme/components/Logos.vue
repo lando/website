@@ -19,6 +19,10 @@
       justify-content: center;
       .icon {
         height: 3rem;
+        img {
+          height: 80px;
+          object-fit: none;
+        }
       }
     }
   }

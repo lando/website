@@ -1,5 +1,5 @@
 <template>
-  <carousel v-if="isMobile && mobileSlideshow" :items-to-show="2.5" class="icons">
+  <carousel v-if="isMobile && mobileSlideshow" :items-to-show="2.5" class="carousel icons">
     <slide v-for="(icon, index) in icons" :key="index" class="icon">
       <img :src="icon.src" :alt="icon.alt">
     </slide>
@@ -12,6 +12,7 @@
 </template>
 
 <style lang="scss" scoped>
+@import '../../styles/palette.scss';
   .icons {
     display: flex;
     gap:1.5rem;
@@ -20,6 +21,14 @@
     .icon {
       display: flex;
       justify-content: center;
+    }
+  }
+
+
+  @media (max-width: $MQNarrow) {
+    .carousel .icon.carousel__slide--next img {
+      mask-image: linear-gradient(to left, transparent 40%, black); 
+      -webkit-mask-image: linear-gradient(to left, transparent 40%, black);
     }
   }
 </style>

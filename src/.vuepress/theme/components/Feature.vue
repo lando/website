@@ -71,7 +71,7 @@ $default-orbit-margin-top: 150 - $default-orbit-height;
   .feature-image {
     width: 50%;
     flex-grow: 1;
-    flex-basis: 42%;
+    flex-basis: calc(50% - 4rem);
   }
   .feature-image {
     display: flex;
@@ -89,6 +89,12 @@ $default-orbit-margin-top: 150 - $default-orbit-height;
 @media (max-width: $MQMobile) {
   .feature {
     margin-top: 1rem;
+    .feature-content,
+    .feature-image {
+      width: 100%;
+      flex-grow: 1;
+      flex-basis: 100%;
+    }
   }
   .feature-orbit {
     position: relative;
@@ -105,7 +111,6 @@ $default-orbit-margin-top: 150 - $default-orbit-height;
 
 @media (max-width: $MQMobileNarrow) {
   .feature {
-    flex-wrap: wrap-reverse;
     gap: 2rem;
   }
 }
