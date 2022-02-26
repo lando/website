@@ -63,7 +63,6 @@ lando start
 </template>
 
 <script setup>
-  import { onMounted } from 'vue'
   import Hero from "./Hero.vue";
   import Feature from "./Feature.vue";
   import Icons from "./Icons.vue";
@@ -72,10 +71,8 @@ lando start
   import FooterCta from '../components/FooterCta.vue';
   import Footer from '../components/Footer.vue';
   import CodeHighlightCustom from '../components/CodeHighlightCustom.vue';
-  onMounted(() => {
-    document.documentElement.classList.toggle('dark', true)
-    document.body.classList.add('home-page')
-  })
+	document.documentElement.classList.toggle('dark', true);
+	document.body.classList.add('home-page');
 
 </script>
 

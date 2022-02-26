@@ -56,16 +56,9 @@ export default {
       default: false
     }
   },
-  data() { return { windowWidth: window.innerWidth } },
-  mounted() {
-    window.addEventListener('resize', () => {
-      this.windowWidth = window.innerWidth
-      console.log(this.isMobile)
-    })
-  },
   computed: {
     isMobile() {
-      return this.windowWidth < 800
+      return window.innerWidth < 800;
     }
   },
   components: {
