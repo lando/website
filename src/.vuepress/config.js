@@ -9,8 +9,8 @@ module.exports = {
     contributors: false,
     editLink: false,
     lastUpdated: false,
-    logo: '/images/logo-small-pink.png',
-    logoDark: '/images/logo-small-white.png',
+    logo: '/images/logo.png',
+    logoDark: '/images/logo-white.png',
     navbar: [
       {text: 'Docs', link: 'https://docs.lando.dev'},
       {text: 'Blog', link: 'https://blog.lando.dev'},
