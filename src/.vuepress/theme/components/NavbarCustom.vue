@@ -39,19 +39,14 @@ defineEmits(['toggle-sidebar'])
 const routeLocale = useRouteLocale()
 const siteLocale = useSiteLocaleData()
 const themeLocale = useThemeLocaleData()
-const isDarkMode = useDarkMode()
+const isDarkMode = true
 
 const navbar = ref<HTMLElement | null>(null)
 const siteBrand = ref<HTMLElement | null>(null)
 const siteBrandLink = computed(
   () => themeLocale.value.home || routeLocale.value
 )
-const navbarBrandLogo = computed(() => {
-  if (document.documentElement.classList.contains('dark')) {
-    return themeLocale.value.logoDark
-  }
-  return themeLocale.value.logo
-})
+const navbarBrandLogo = ref(themeLocale.value.logoDark)
 const navbarBrandTitle = computed(() => siteLocale.value.title)
 const linksWrapperMaxWidth = ref(0)
 const linksWrapperStyle = computed(() => {

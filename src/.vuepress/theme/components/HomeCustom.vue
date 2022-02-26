@@ -71,8 +71,10 @@ lando start
   import FooterCta from '../components/FooterCta.vue';
   import Footer from '../components/Footer.vue';
   import CodeHighlightCustom from '../components/CodeHighlightCustom.vue';
-	document.documentElement.classList.toggle('dark', true);
-	document.body.classList.add('home-page');
+
+  // Set Dark Mode for everything
+  const htmlEl = window === null || window === void 0 ? void 0 : window.document.querySelector('html');
+  htmlEl === null || htmlEl === void 0 ? void 0 : htmlEl.classList.toggle('dark', true);
 
 </script>
 

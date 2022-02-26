@@ -1,6 +1,7 @@
 const { path } = require('@vuepress/utils')
 const _ = require('lodash');
 
+
 module.exports = (options, app) => {
   return {
     theme: path.resolve(__dirname, '.'),

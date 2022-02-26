@@ -56,6 +56,9 @@ const page = usePageData();
 const {carbonAds, showSponsors, sidebarTitle, sidebarTitleIcon} = themeData.value;
 const {version, versionLink} = page.value;
 
+// Set Dark Mode for everything
+const htmlEl = window === null || window === void 0 ? void 0 : window.document.querySelector('html');
+htmlEl === null || htmlEl === void 0 ? void 0 : htmlEl.classList.toggle('dark', true);
 </script>
 
 <style lang="scss">
