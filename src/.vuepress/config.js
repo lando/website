@@ -16,17 +16,17 @@ module.exports = {
       {text: 'Blog', link: 'https://blog.lando.dev'},
     ],
     sidebar: false,
-    pages: {
-      contributors: {
-        enabled: false,
-      },
-      versions: {
-        enabled: false,
-      }
-    },
   },
   head: [
     ['link', {rel: 'preconnect', href: 'https://www.google-analytics.com/analytics.js', crossorigin: 'true'}],
+  ],
+  plugins: [
+    [
+      '@vuepress/plugin-google-analytics',
+      {
+        id: 'G-HPJSRFPPPR',
+      },
+    ],
   ],
   bundler: '@vuepress/bundler-webpack',
 }

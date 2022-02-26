@@ -33,7 +33,7 @@ export default {
 <style lang="scss">
 @import '../../styles/palette.scss';
 $default-orbit-height: 1000px;
-$default-orbit-margin-top: 220px - $default-orbit-height;
+$default-orbit-margin-top: 150 - $default-orbit-height;
 .feature-orbit {
   position: absolute;
   border-bottom: 1.5px dashed #794993;
@@ -49,7 +49,7 @@ $default-orbit-margin-top: 220px - $default-orbit-height;
   }
   &.orbit-3 {
     height: $default-orbit-height - 600;
-    margin-top: $default-orbit-margin-top + 460;
+    margin-top: $default-orbit-margin-top + 600;
     .feature-planet {
       bottom: -5px;
     }
