@@ -1,0 +1,100 @@
+body {
+    font-size: 1.375rem;
+    .btn {
+        padding: .5rem 2rem;
+        border-radius: 42px;
+        background: var(--c-brand);
+        color: #fff;
+        font-size: 1rem;
+        display: inline-block;
+        line-height: 2rem;
+        height: 2rem;
+    }
+    .btn-primary {
+        font-weight: bold;
+        text-transform: uppercase;
+    }
+    .btn-full-width {
+        width: 100%;
+        max-width: 400px;
+        margin: auto;
+        padding: 1rem 3rem;
+        text-align: center;
+        vertical-align: middle;
+    }
+    h1, h2, h3 {
+        border-bottom: none;
+    }
+    h2 {
+        .emphasis {
+            color: var(--c-brand);
+        }
+    }
+    h3 {
+      font-weight: 800;
+      font-size: 3rem;
+      line-height: 3.25rem;
+      letter-spacing: -0.03em;
+      .emphasis {
+        color: var(--c-brand-light);
+      }
+    }
+    .page {
+        position: relative;
+        overflow: hidden;
+        padding-top: 2em;
+    }
+
+    .page-orbit {
+        $default-orbit-height: 400px;
+        $default-orbit-width: 800px;
+        $default-orbit-top: 150 - $default-orbit-height;
+        position: absolute;
+        left: calc(50% - $default-orbit-width/2);
+        top: calc(50px - $default-orbit-height);
+        border-bottom: 1.5px dashed #DFDDE3;
+        border-radius: 100%;
+        z-index: 0;
+        width: $default-orbit-width;
+        height: $default-orbit-height;
+        &.orbit-2 {
+            $orbit2-height: calc($default-orbit-height * 1.5);    
+            $orbit2-width: calc($default-orbit-width * 2);    
+            height: $orbit2-height;
+            width: $orbit2-width;
+            top: calc(0px - $orbit2-height * .6);
+            left: calc(50% - $orbit2-width/2);        }
+        &.orbit-3 {
+            $orbit3-height: calc($default-orbit-height * 1.75);    
+            $orbit3-width: calc($default-orbit-width *2.5);    
+            height: $orbit3-height;
+            width: $orbit3-width;
+            top: calc(0px - $orbit3-height * .3);
+            left: calc(50% - $orbit3-width/2);
+        }
+    }
+}
+
+body.home-page {
+    .page-orbit {
+        display: none;
+    }
+}
+
+html.dark {
+    body {
+        background: radial-gradient(121.65% 71.43% at 91.1% 13.63%, var(--c-bg-lighter) 0%, var(--c-bg) 100%);
+        .btn {
+            color: var(--c-text);
+        }
+        h1,
+        h2,
+        h3 {
+            color: var(--c-text-lightest);
+            margin: 1rem 0;
+        }
+        .page-orbit {
+            border-color: #794993;
+        }
+    }
+}

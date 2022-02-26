@@ -1,157 +1,131 @@
 <template>
-  <div id="hero-component">
-    <div class="inner">
-      <div class="hero-header">
-        <div class="hero-left">
-          <img class="hero-logo" v-if="heroImage" :src="$withBase(heroImage)" :alt="heroAlt || 'lando logo'">
+  <div class="hero-wrapper">
+    <div class="hero">
+      <div class="hero-left">
+        <h2 v-html="heroHeading"></h2>
+        <p v-html="heroText"></p>
+        <a :href="ctaLink" class="btn btn-primary">{{ ctaText }}</a>
+      </div>
+      <div class="hero-right">
+        <div class="orbit-wrapper">
+          <div class="orbit inner-orbit"></div>
         </div>
-        <div class="hero-right">
-          <h2 class="hide">Lando.</h2>
-          <h1>{{ title }}</h1>
-          <div class="byline">
-            <p>{{ byline }}</p>
-          </div>
-          <div class="hero-action">
-            <div class="hero-primary">
-              <a class="button blue" :href="heroLinkPrimary">{{ heroLinkPrimaryText }}</a>
-            </div>
-            <div v-if="heroLinkSecondary" class="hero-primary">
-              <a class="button " :href="heroLinkSecondary">{{ heroLinkSecondaryText }}</a>
-            </div>
-          </div>
+        <div class="orbit-wrapper">
+          <div class="orbit outer-orbit"></div>
         </div>
+        <img class="hero-planet" src="images/yellow-planet.svg" alt="Image of a yellow planet." />
       </div>
     </div>
+    <slot />
   </div>
 </template>
 
 <script>
-
+import Stats from "./Stats.vue";
 export default {
   props: {
-    title: {
-      type: String,
-      default: 'Instant Dev Environments For Every Project',
-    },
-    byline: {
-      type: String,
-      default: 'Free yourself from the mind-forged manacles of lesser dev tools. Save time, headaches, frustration and do more real work.',
-    },
-    heroImage: {
-      type: String,
-      default: '',
-    },
-    heroAlt: {
-      type: String,
-      default: '',
-    },
-    heroLinkPrimary: {
-      type: String,
-      default: '',
-    },
-    heroLinkPrimaryText: {
-      type: String,
-      default: '',
-    },
-    heroLinkSecondary: {
-      type: String,
-      default: '',
-    },
-    heroLinkSecondaryText: {
-      type: String,
-      default: '',
-    },
+    heroHeading: String,
+    heroText: String,
+    ctaText: String,
+    ctaLink: String
   },
-  data() {
-    return {
-      data: {},
-    };
-  },
-  mounted() {
-    // Dump the frontmatter
-    this.data = this.$page.frontmatter;
-  },
-};
+}
 </script>
 
-<style lang="stylus">
-#hero-component
-  display: flex
-  align-items: center
-  flex-direction: column
-  background-color: rgba($landoPink, .92)
-  background-image: none
-  margin-top: -1em
-  .inner
-    max-width: 1100px
-    align-self: flex-end
-  h1
-    padding-top: 0
-    margin-top: .5em
-    color: #2c3e50
-  h2
-    font-size: 5em
-    margin: 0 0 10px
-    padding: 0
-    display: none
-  .hero-header
-    padding: 6em 0em
-  .hero-left, .hero-right
-    display: inline-block
-    vertical-align: top
-  .hero-left
-    width: 38%
-  .hero-right
-    width: 60%
-    text-align: right
-  .hero-logo
-    width: 100%
-    margin-right: 60px
-    padding: 0em
-    max-width: 400px
-  .hero-primary
-    .button
-      margin: .1em
-    a
-      width: 70%
-  .hero-secondary
-    a
-      width: 35%
-  .button
-    width: 30%
-    margin: 1em 0
-    font-size: 1.4em
-    font-weight: 500
-    letter-spacing: .05em
-    min-width: 8em
-    text-align: center
-    &:not(:last-child)
-      margin-right: 1%
-  .byline
-    margin-top: -3em
-    color: lighten($landoPink, 80%)
-    p
-      line-height: 1.67
-      font-size: 2em
-  @media (max-width: $MQMobile)
-    h1
-      font-size: 4em
-    .byline
-      p
-        font-size: 1.5em
-        padding-top: 3em
-    .hero-logo
-      float: none
-      margin: 30px 0 15px
-      width: 240px
-      height: 240px
-    .hero-left, .hero-right
-      text-align: center
-      width: 100%
-  @media (max-width: $MQMobileNarrow)
-    h1
-      font-size: 2.8em
-    .byline
-      font-size: 1em
+<style lang="scss" scoped>
+  @import '../../styles/palette.scss';
+  .hero-wrapper {
+    min-height: 100vh;
+    height: 100%;
+    padding-bottom: 4rem;
+    .hero {
+      display: flex;
+      margin: 2rem 0em 8rem 0rem;
+      .hero-left, .hero-right {
+        width: 50%;
+        font-size: 1.375rem;
+      }
+      .hero-left {
+        z-index: 10;
+        h2 {
+          font-size: 4rem;
+          font-weight: 800;
+          line-height: 4rem;
+        }
+      }
+      .hero-right {
+        z-index: 4;
+        display: flex;
+        justify-content: center;
+        align-self: center;
+        align-items: center;
+        max-height: 30vh;
+        .hero-planet {
+          width: 9.875rem;
+          filter: drop-shadow(0px 4px 130px rgba(232, 218, 88, 0.6));
+        }
+      }
+      .orbit-wrapper {
+        position: absolute;
+        overflow: hidden;
+        .orbit {
+          border: 1.5px dashed #794993;
+          border-radius: 100%;
+        }
+        .inner-orbit {
+          width: 1081px;
+          height: 469px;
+        }
+        .outer-orbit {
+          width: 2081px;
+          height: 869px;
+        }
+      }
+    }
+    @import '../../styles/prism-twilight.scss';
+    pre {
+      margin-top: 2rem;
+    }
+  }
 
+
+  @media (max-width: $MQMobileNarrow) {
+    .hero-wrapper {
+      .hero {
+        flex-wrap: wrap-reverse;
+        margin-bottom: 3rem;
+        gap: 2rem;
+        .hero-left {
+          width: 100%;
+          h2 {
+            font-size: 2.75rem;
+          }
+          p {
+            font-size: 1.125rem;
+          }
+        }
+        .hero-right {
+          width: 100%;
+          justify-content: flex-end;
+          .hero-planet {
+            margin-right: 2rem;
+            width: 7.25rem;
+          }
+        }
+        .orbit-wrapper {
+          .inner-orbit {
+            width: 500px;
+            height: 250px;
+            position: relative;
+            right: -100px;
+          }
+          .outer-orbit {
+            width: 1900px;
+            position: relative;
+            right: -800px;
+          }
+        }
+      }
+    }
+  }
 </style>

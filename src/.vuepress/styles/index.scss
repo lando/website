@@ -1,0 +1,48 @@
+@import url('https://fonts.googleapis.com/css2?family=Lexend:wght@400;700;800&display=swap');
+@import 'palette.scss';
+
+:root {
+  // brand colors
+  --c-brand: #DD3F8F;
+  --c-brand-light: #DEDB8E;
+ 
+  // background colors
+  --c-bg: #FFF;
+
+  // layout vars
+  --navbar-height: 3.6rem;
+  --navbar-padding-v: 0.7rem;
+  --navbar-padding-h: 1.5rem;
+
+  --content-width: 1242px;
+  --homepage-width: 1081px;
+
+  --c-text-accent: var(--c-brand);
+
+  // font vars
+  --font-family: 'Lexend', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen,
+    Ubuntu, Cantarell, 'Fira Sans', 'Droid Sans', 'Helvetica Neue', sans-serif;
+  --font-family-code: Consolas, Monaco, 'Andale Mono', 'Ubuntu Mono', monospace;
+}
+
+html.dark {
+  // brand colors
+  --c-brand: #DD3F8F;
+  --c-brand-light: #DEDB8E;
+
+  // background colors
+  --c-bg: #261D2D;
+  --c-bg-light: #261D2D;
+  --c-bg-lighter: #412B6B;
+
+  // text colors
+  --c-text: $text-dark;
+  --c-text-accent: var(--c-brand);
+  --c-text-light: #eeedef;
+  --c-text-lighter: #eeedef;
+  --c-text-lightest: #ffffff;
+  --c-text-quote: #999999;
+ 
+}
+
+@import 'custom.scss';
