@@ -65,7 +65,7 @@ export default {
   },
   computed: {
     isMobile() {
-      return this.windowWidth < 800
+      return this.windowWidth < 719
     }
   },
   components: {

@@ -15,7 +15,7 @@ module.exports = {
       {text: 'Docs', link: 'https://docs.lando.dev'},
       {text: 'Blog', link: 'https://blog.lando.dev'},
     ],
-    sidebar: false,
+    sidebar: [],
     pages: {
       contributors: {
         enabled: false,
