@@ -63,7 +63,6 @@
                 <li><a href="https://blog.lando.dev/tag/case-study/">Case Studies</a></li>
                 <li><a href="https://blog.lando.dev/tag/lando/">Blog</a></li>
                 <li><a href="https://events.lando.dev">Events</a></li>
-                <li><a href="/contact/">Contact</a></li>
               </ul>
               <h4>Legal</h4>
               <ul>
