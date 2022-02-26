@@ -1,116 +1,158 @@
 <template>
-  <div class="layout-wrapper">
-    <ParentLayout>
-      <template #sidebar-bottom>
-        <FooterCta 
-          heading="What are you waiting for?"
-          ctaText="Get Lando Now"
-          ctaLink="/download"
-        />
+  <div class="theme-container" :class="pageClasses" @touchstart="onTouchStart" @touchend="onTouchEnd">
+    <Navbar v-if="shouldShowNavbar" @toggle-sidebar="toggleSidebar"/>
+
+    <div class="sidebar-mask" @click="toggleSidebar(false)"></div>
+
+    <Sidebar :items="sidebarItems" @toggle-sidebar="toggleSidebar">
+      <template #top>
+        <slot name="sidebar-top" />
       </template>
-      <template #page>
-        <HomeCustom v-if="frontmatter.type === 'home'" />
-        <Page
-          v-else
-          :key="page.path"
-        >
-          <template #top>
-            <div class="page-orbit orbit-1"></div>
-            <div class="page-orbit orbit-2"></div>
-            <div class="page-orbit orbit-3"></div>
-            <slot name="page-top" />
-          </template>
-          <template #bottom>
-            <slot name="page-bottom" />
-          </template>
-        </Page>
+      <template #bottom>
+        <slot name="sidebar-bottom"/>
       </template>
-    </ParentLayout>
+    </Sidebar>
+
+    <Home v-if="$page.frontmatter.home"/>
+
+    <Page v-else :sidebar-items="sidebarItems" id="content">
+      <template #top>
+        <slot name="page-top"/>
+      </template>
+      <template #bottom>
+        <slot name="page-bottom"/>
+      </template>
+    </Page>
+
     <Footer />
   </div>
 </template>
 
-<script setup lang="ts">
+<script>
+// Core components and things
+import Home from '@theme/components/Home.vue';
+import Navbar from '@theme/components/Navbar.vue';
+import Page from '@parent-theme/components/Page.vue';
+import Sidebar from '@theme/components/Sidebar.vue';
+import {resolveSidebarItems} from '@parent-theme/util/index.js';
 
-// Deps
-import {computed, Transition, ref} from 'vue'; // eslint-disable-line no-unused-vars
-import {usePageData, usePageFrontmatter} from '@vuepress/client';
-import {useThemeData} from '@vuepress/plugin-theme-data/lib/client';
-import {useScrollPromise, useThemeLocaleData, useSidebarItems} from '@vuepress/theme-default/lib/client/composables';
-
-// Parent components
-import ParentLayout from '@vuepress/theme-default/lib/client/layouts/Layout.vue';
-import Page from '@vuepress/theme-default/lib/client/components/Page.vue';
-
-// Theme components
-import Footer from '../components/Footer.vue';
-import FooterCta from '../components/FooterCta.vue';
-import HomeCustom from '../components/HomeCustom.vue';
-
-// Get theme data
-const frontmatter = usePageFrontmatter();
-const themeLocale = useThemeLocaleData()
-const themeData = useThemeData();
-const page = usePageData();
-// Get the config from themedata
-const {carbonAds, showSponsors, sidebarTitle, sidebarTitleIcon} = themeData.value;
-const {version, versionLink} = page.value;
-
-// Set Dark Mode for everything
-const htmlEl = window === null || window === void 0 ? void 0 : window.document.querySelector('html');
-htmlEl === null || htmlEl === void 0 ? void 0 : htmlEl.classList.toggle('dark', true);
-</script>
-
-<style lang="scss">
-@import '../../styles/index.scss';
-.page {
-  padding: 0rem;
-}
-
-.theme-container {
-
-  .sidebar-open .sidebar {
-    transform: translateY(0);
-    top: var(--navbar-height);
-  }
-  .sidebar {
-    display: none;
-    width: 100%;
-    z-index: 100;
-    background: radial-gradient(148.29% 119.48% at 105.77% -28.17%, #412B6B 0%, #34244D 46.09%, #302243 96.16%);
-  }
-}
-
-@media (max-width: 719px) {
-  .theme-container.sidebar-open {
-    overflow: hidden;
-
-    .sidebar {
-      transform: none;
-      display: block;
-      background: radial-gradient(148.29% 119.48% at 105.77% -28.17%, #412B6B 0%, #34244D 46.09%, #302243 96.16%);
-      height: 100%;
-      position: fixed;
-      transition: .5s;
-      padding-top: calc(var(--navbar-height) + 2.5rem);
-      .navbar-items {
-        border: none;
-        .navbar-item {
-          border-bottom: 1px solid rgba(255, 255, 255, 0.14);
-          padding: 1.3125rem 0 1.5rem 0rem;
-          margin: 0 1.5rem;
-          a {
-            font-weight: normal;
-            font-size: 1.125rem;
-            &:after {
-              content: url('../../public/images/down-arrow.svg');
-              position: absolute;
-              right: 1.125rem;
-            }
-          }
+// Lando components
+import Footer from '@theme/components/Footer';
+export default {
+  components: {Home, Footer, Navbar, Page, Sidebar},
+  data() {
+    return {
+      isSidebarOpen: false,
+      data: {},
+    };
+  },
+  computed: {
+    shouldShowNavbar() {
+      const {themeConfig} = this.$site;
+      const {frontmatter} = this.$page;
+      if (
+        frontmatter.navbar === false
+        || themeConfig.navbar === false) {
+        return false;
+      }
+      return (
+        this.$title
+        || themeConfig.logo
+        || themeConfig.repo
+        || themeConfig.nav
+        || this.$themeLocaleConfig.nav
+      );
+    },
+    shouldShowSidebar() {
+      const {frontmatter} = this.$page;
+      return (
+        !frontmatter.home
+        && frontmatter.sidebar !== false
+        && this.sidebarItems.length
+      );
+    },
+    sidebarItems() {
+      return resolveSidebarItems(
+        this.$page,
+        this.$page.regularPath,
+        this.$site,
+        this.$localePath
+      );
+    },
+    pageClasses() {
+      const userPageClass = this.$page.frontmatter.pageClass;
+      return [
+        {
+          'no-navbar': !this.shouldShowNavbar,
+          'sidebar-open': this.isSidebarOpen,
+          'no-sidebar': !this.shouldShowSidebar,
+        },
+        userPageClass,
+      ];
+    },
+  },
+  mounted() {
+    this.$router.afterEach(() => {
+      this.isSidebarOpen = false;
+    });
+    this.data = this.$page.frontmatter;
+  },
+  methods: {
+    toggleSidebar(to) {
+      this.isSidebarOpen = typeof to === 'boolean' ? to : !this.isSidebarOpen;
+    },
+    // side swipe
+    onTouchStart(e) {
+      this.touchStart = {
+        x: e.changedTouches[0].clientX,
+        y: e.changedTouches[0].clientY,
+      };
+    },
+    onTouchEnd(e) {
+      const dx = e.changedTouches[0].clientX - this.touchStart.x;
+      const dy = e.changedTouches[0].clientY - this.touchStart.y;
+      if (Math.abs(dx) > Math.abs(dy) && Math.abs(dx) > 40) {
+        if (dx > 0 && this.touchStart.x <= 80) {
+          this.toggleSidebar(true);
+        } else {
+          this.toggleSidebar(false);
         }
       }
-    }
-  }
-}
+    },
+  },
+};
+</script>
+
+<style lang="stylus">
+.button
+  background-color: $landoPink
+  font-size: 1.2em
+  margin: 2em 0
+  &.big
+    font-size: 2em
+#content
+  img
+    padding: 2em
+  background-color: #fff
+  padding-bottom: 70px
+  padding-top: 4em
+  .theme-default-content
+    font-size: .8em
+    max-width: 800px;
+    margin: 0 auto
+    padding: 0 1.5em;
+    h2, h3
+      padding-left: 0
+      margin-left: -12px
+    h3
+      padding-left: 0
+      margin-left: -8px
+    ul
+      li
+        font-size 1.2em
+@media (max-width: $MQMobile)
+  #content
+    .button
+      &.big
+        font-size: 1.5em
 </style>

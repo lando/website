@@ -29,7 +29,3 @@ lando.env
 _blog
 _events
 _site
-
-# vuepress
-.temp
-.cache
