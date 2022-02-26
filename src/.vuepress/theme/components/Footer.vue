@@ -3,7 +3,7 @@
     <div class="theme-default-content">
       <div class="footer-top">
         <div class="footer-image">
-          <img src="/images/logo-small-white.png" alt="lando logo">
+          <img src="/images/logo-white.png" alt="lando logo">
         </div>
         <div class="footer-newsletter">
           <Subscribe
