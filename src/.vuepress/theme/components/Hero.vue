@@ -13,7 +13,7 @@
         <div class="orbit-wrapper">
           <div class="orbit outer-orbit"></div>
         </div>
-        <img class="hero-planet" src="images/yellow-planet.svg" alt="Image of a yellow planet." />
+        <img class="hero-planet" src="../../public/images/yellow-planet.svg" alt="Image of a yellow planet." />
       </div>
     </div>
     <slot />

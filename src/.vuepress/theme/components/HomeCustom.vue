@@ -37,7 +37,7 @@ lando start
         orientation='right'
         customClass='orbit-2'
       >
-        <img src="images/integrate-dev-tools.png" alt="Image of developer and their associated tools" />
+        <img src="../../public/images/integrate-dev-tools.png" alt="Image of developer and their associated tools" />
       </Feature>
 
       <Feature 
@@ -46,7 +46,7 @@ lando start
         customClass='orbit-3'
         planetImage="images/Planet2.svg"
       >
-        <img src="images/share-with-team.png" alt="Image of developer distributing Lando config to their team." />
+        <img src="../../public/images/share-with-team.png" alt="Image of developer distributing Lando config to their team." />
       </Feature>
 
       <Logos />
