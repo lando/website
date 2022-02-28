@@ -5,7 +5,7 @@
 </template>
 
 <script>
-import Prism from 'prism-es6';
+import Prism from 'prismjs';
 
 export default {
   name: 'code-highlight',
