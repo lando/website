@@ -15,7 +15,7 @@ module.exports = {
       {text: 'Docs', link: 'https://docs.lando.dev'},
       {text: 'Blog', link: 'https://blog.lando.dev'},
     ],
-    sidebar: false,
+    sidebar: [],
   },
   head: [
     ['link', {rel: 'preconnect', href: 'https://www.google-analytics.com/analytics.js', crossorigin: 'true'}],
@@ -28,5 +28,4 @@ module.exports = {
       },
     ],
   ],
-  bundler: '@vuepress/bundler-webpack',
 }
