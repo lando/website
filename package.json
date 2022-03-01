@@ -12,7 +12,7 @@
     "build": "vuepress build src -d _site",
     "lint": "eslint --quiet --no-ignore scripts",
     "release": "bump --prompt --tag --all --push",
-    "dev": "vuepress dev --port 8013 src --clean-cache",
+    "dev": "vuepress dev src --port 8013 --clean-cache --clean-temp",
     "test": "yarn lint"
   },
   "devDependencies": {
@@ -24,7 +24,7 @@
     "lodash": "^4.17.21",
     "prismjs": "^1.27.0",
     "vue3-carousel": "^0.1.36",
-    "vuepress": "^2.0.0-beta.32"
+    "vuepress": "^2.0.0-beta.36"
   },
   "main": "index.js",
   "private": true
