@@ -97,9 +97,30 @@ body {
     textarea {
         height: 10rem;
     }
-    button {
-        
+    form.netlify {
+        button[type=submit] {
+            padding: 1.5rem 3rem;
+            border-radius: 42px;
+            background: var(--c-brand);
+            color: #fff;
+            font-size: 1rem;
+            display: inline-block;
+            line-height: 2rem;
+            height: 2rem;
+            margin: 0rem;
+            border: none;
+            font-family: var(--font-family);
+            display: flex;
+            align-items: center;
+            justify-items: center;
+            width: auto;
+            &:hover {
+                background: var(--c-brand);
+            }
+        }
+
     }
+
 }
 
 body.home-page {
