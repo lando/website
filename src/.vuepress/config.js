@@ -12,8 +12,9 @@ module.exports = {
     logo: '/images/logo.png',
     logoDark: '/images/logo-white.png',
     navbar: [
+      {text: 'Blog', link: 'https://lando.dev/blog'},
+      {text: 'Support', link: 'https://lando.dev/support'},
       {text: 'Docs', link: 'https://docs.lando.dev'},
-      {text: 'Blog', link: 'https://blog.lando.dev'},
     ],
     sidebar: [],
   },
@@ -21,6 +22,13 @@ module.exports = {
     ['link', {rel: 'preconnect', href: 'https://www.google-analytics.com/analytics.js', crossorigin: 'true'}],
     ['link', {rel: 'preconnect', href: 'https://fonts.googleapis.com', crossorigin: 'true'}],
     ['link', { rel: 'stylesheet', href: 'https://fonts.googleapis.com/css2?family=Lexend:wght@400;700;800&display=swap' }],
+    ['link', { rel: 'icon', type:'image/png', sizes:'32x32', href: '/favicon-32x32.png' }],
+    ['link', { rel: 'icon', type:'image/png', sizes:'16x16', href: '/favicon-16x16.png' }],
+    ['link', { rel: 'apple-touch-icon', sizes:'180x180', href: '/apple-touch-icon.png' }],
+    ['link', { rel: 'manifest', href: '/site.webmanifest' }],
+    ['link', { rel: 'mask-icon', href: '/safari-pinned-tab.svg', color: '#DD3F8F' }],
+    ['meta', { name: 'msapplication-TileColor', content: '#DD3F8F' }],
+    ['meta', { name: 'theme-color', content: '#ffffff' }],
   ],
   plugins: [
     [

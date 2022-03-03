@@ -10,6 +10,8 @@ body {
         line-height: 2rem;
         height: 2rem;
         margin: 0rem;
+        border: none;
+        font-family: var(--font-family);
     }
     .btn-primary {
         font-weight: bold;
@@ -73,6 +75,30 @@ body {
             top: calc(0px - $orbit3-height * .3);
             left: calc(50% - $orbit3-width/2);
         }
+    }
+    input, textarea {
+        width: 100%;
+        box-sizing: border-box;
+        padding: 10px 80px 10px 20px;
+        margin-bottom: 1em;
+        height: 50px;
+        border: none;
+        font-size: 16px;
+        background-color: rgba(238, 237, 239, 0.1);
+        font-family: var(--font-family);
+        &:focus {
+          outline: none;
+          border-color: hsl(var(--c-brand), 18%);
+        }
+        &.disabled {
+          opacity: .5;
+        }
+    }
+    textarea {
+        height: 10rem;
+    }
+    button {
+        
     }
 }
 

@@ -68,7 +68,9 @@ htmlEl === null || htmlEl === void 0 ? void 0 : htmlEl.classList.toggle('dark', 
 }
 
 .theme-container {
-
+  .theme-default-content {
+    position: relative;
+  }
   .sidebar-open .sidebar {
     transform: translateY(0);
     top: var(--navbar-height);

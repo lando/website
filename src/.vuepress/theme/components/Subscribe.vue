@@ -85,6 +85,7 @@ export default {
 
 <style lang="scss" scoped>
 @import '../../styles/index.scss';
+
 .subscribe {
   margin: auto;
   padding: 2em 0;
@@ -123,7 +124,8 @@ export default {
         opacity: .5;
       }
     }
-    .btn {
+    input.btn {
+      opacity: 1;
       display: inline-block;
       border-radius: 0px 6px 6px 0px;
       height: 50px;

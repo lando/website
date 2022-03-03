@@ -95,7 +95,7 @@ export default {
       default:[
         { 
           text: "People love it when I introduce them to Lando.", 
-          author:'– Senior Developer, US House of Representatives' 
+          author:'– Federal Contractor, US House of Representatives' 
         },
         { 
           text: "I don't have to handhold junior devs anymore... thank god in heaven.", 
@@ -103,11 +103,11 @@ export default {
         },
         {  
           text: "Lando lets our devs just get to freaking work.", 
-          author:'– Senior Developer, University of California' 
+          author:'– Systems Developer, University of California' 
         },
         { 
           text: "The [hosting partner] integrations are the bee's knees.", 
-          author:'– Senior Developer, US House of Representatives' 
+          author:'– Enterprise Consultant' 
         },
       ],
     },

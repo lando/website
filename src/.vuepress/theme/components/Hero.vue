@@ -37,7 +37,6 @@ export default {
   .hero-wrapper {
     min-height: 100vh;
     height: 100%;
-    padding-bottom: 4rem;
     .hero {
       display: flex;
       margin: 2rem 0em 8rem 0rem;

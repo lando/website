@@ -4,6 +4,7 @@ byline: Free yourself from the mind-forged manacles of lesser dev tools. Save ti
 metaTitle: Get Lando | Lando
 description: Download Lando and take your local development and DevOps workflow to lightspeed.
 image: https://raw.githubusercontent.com/lando/lando/master/docs/.vuepress/public/images/hero-pink.png
+pageClass: download
 
 ---
 

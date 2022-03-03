@@ -7,6 +7,7 @@
         </div>
         <div class="footer-newsletter">
           <Subscribe
+            v-if="frontmatter.value.pageClass !== 'download'"
             :customStyles="customStyles"
             :interests="interests"
             :title="title"/>
@@ -63,11 +64,7 @@
                 <li><a href="https://blog.lando.dev/tag/case-study/">Case Studies</a></li>
                 <li><a href="https://blog.lando.dev/tag/lando/">Blog</a></li>
                 <li><a href="https://events.lando.dev">Events</a></li>
-              </ul>
-              <h4>Legal</h4>
-              <ul>
-                <li><a href="/terms/">Terms</a></li>
-                <li><a href="/privacy/">Privacy Policy</a></li>
+                <li><a href="/contact/">Contact Us</a></li>
               </ul>
             </div>
           </div>
@@ -100,9 +97,15 @@
 <script>
 // Lando components
 import Subscribe from './Subscribe.vue';
+import {usePageFrontmatter} from '@vuepress/client';
 
 export default {
   components: {Subscribe},
+  computed: {
+    frontmatter() {
+      return usePageFrontmatter();
+    },
+  },
   data() {
     return {
       customStyles: {
@@ -127,6 +130,7 @@ export default {
   background-color: $background-dark;
   color: $text-dark;
   font-size: 0.875em;
+  margin-top: 2rem;
 
   .footer-top {
     display: flex;
@@ -228,7 +232,7 @@ export default {
       a {
         svg {
           height: 1.5625rem;
-          fill: var(--c-text);
+          fill: $text-dark;
         }
       }
     }
