@@ -82,6 +82,11 @@
   status = 200
   force = true
 [[redirects]]
+  from = "/blog.html"
+  to = "https://lando-blog.netlify.app"
+  status = 200
+  force = true
+[[redirects]]
   from = "/events/*"
   to = "https://lando-events.netlify.app/:splat"
   status = 200
