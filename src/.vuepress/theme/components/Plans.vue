@@ -101,6 +101,16 @@ export default {
 }
 
 
-@media (max-width: $MQMobileNarrow) {
+@media (max-width: $MQMobile) {
+  .plans-header {
+    margin-top: 8rem;
+  }
+  .plans {
+    display: block;
+    .plan {
+      flex-basis: 100%;
+      margin-bottom: 2.625rem;
+    }
+  }
 }
 </style>
