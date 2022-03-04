@@ -12,8 +12,8 @@ module.exports = {
     logo: '/images/logo.png',
     logoDark: '/images/logo-white.png',
     navbar: [
-      {text: 'Blog', link: 'https://lando.dev/blog'},
-      {text: 'Support', link: 'https://lando.dev/support'},
+      {text: 'Blog', link: '/blog'},
+      {text: 'Support', link: '/support'},
       {text: 'Docs', link: 'https://docs.lando.dev'},
     ],
     sidebar: [],

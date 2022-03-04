@@ -10,9 +10,9 @@ image: https://raw.githubusercontent.com/lando/lando/master/docs/.vuepress/publi
 
 ## Contact
 
-If you're interested in sponsoring Lando at a corporate level, want to form a partnerhips, or want to engage in a paid team support plan, then please contact us below.
+If you're interested in sponsoring Lando at a corporate level, want to form a partnerhip, or want to engage in a paid team support plan, then please contact us below.
 
-To ask Lando questions and receive community support, please use [Slack](https://launchpass.com/devwithlando).
+To ask Lando questions and receive community support, please see our [Support page](/support).
 
 
 <form class="netlify" name="contact" method="POST" netflify data-netlify="true">

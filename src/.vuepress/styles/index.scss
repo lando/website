@@ -6,7 +6,7 @@
   --c-brand-light: #DEDB8E;
  
   // background colors
-  --c-bg: #FFF;
+  --c-bg: $background-light;
 
   // layout vars
   --navbar-height: 3.6rem;
@@ -16,6 +16,7 @@
   --content-width: 1242px;
   --homepage-width: 1081px;
 
+  --c-text: $space-grey;
   --c-text-accent: var(--c-brand);
 
   // font vars
