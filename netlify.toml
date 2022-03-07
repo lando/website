@@ -1,6 +1,6 @@
 [build]
   base = "./"
-  publish = "_site"
+  publish = ".vuepress/dist"
   command = "yarn build"
 
 # Sets our asset optimization
@@ -30,49 +30,31 @@
   from = "https://lndo.io/*"
   to = "https://lando.dev/:splat"
   status = 301
-[[redirects]]
-  from = "https://blog.devwithlando.io/*"
-  to = "https://lando.dev/blog/:splat"
-  status = 301
-  force = true
-[[redirects]]
-  from = "https://blog.lando.dev/*"
-  to = "https://lando.dev/blog/:splat"
-  status = 301
-  force = true
-[[redirects]]
-  from = "https://blog.lndo.io/*"
-  to = "https://lando.dev/blog/:splat"
-  status = 301
-  force = true
-[[redirects]]
-  from = "https://events.devwithlando.io/*"
-  to = "https://lando.dev/events/:splat"
-  status = 301
-  force = true
-[[redirects]]
-  from = "https://events.lando.dev/*"
-  to = "https://lando.dev/events/:splat"
-  status = 301
-  force = true
-[[redirects]]
-  from = "https://events.lndo.io/*"
-  to = "https://lando.dev/events/:splat"
-  status = 301
-  force = true
 
-# Legacy redirects from cloudflare
+# .html to / redirects
 [[redirects]]
-  from = "https://lando.dev/sponsor/"
-  to = "https://github.com/sponsors/lando"
+  from = "/contact.html"
+  to = "/contact"
   status = 301
 [[redirects]]
-  from = "https://lando.dev/join/"
-  to = "https://docs.lando.dev/contrib/contributing.html"
+  from = "/download.html"
+  to = "/download"
   status = 301
 [[redirects]]
-  from = "https://lando.dev/alliance/join/"
-  to = "https://docs.lando.dev/contrib/contributing.html"
+  from = "/features.html"
+  to = "/features"
+  status = 301
+[[redirects]]
+  from = "/privacy.html"
+  to = "/privacy"
+  status = 301
+[[redirects]]
+  from = "/support.html"
+  to = "/support"
+  status = 301
+[[redirects]]
+  from = "/terms.html"
+  to = "/terms"
   status = 301
 
 # Subsite redirects
@@ -91,3 +73,17 @@
   to = "https://lando-events.netlify.app/:splat"
   status = 200
   force = true
+
+# Legacy redirects from cloudflare
+[[redirects]]
+  from = "https://lando.dev/sponsor/"
+  to = "https://github.com/sponsors/lando"
+  status = 301
+[[redirects]]
+  from = "https://lando.dev/join/"
+  to = "https://docs.lando.dev/contrib/contributing.html"
+  status = 301
+[[redirects]]
+  from = "https://lando.dev/alliance/join/"
+  to = "https://docs.lando.dev/contrib/contributing.html"
+  status = 301
