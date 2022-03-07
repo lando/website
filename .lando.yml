@@ -1,30 +1,20 @@
 name: lando-website
-env_file:
-  - lando.env
-excludes:
-  - node_modules
-proxy:
-  cli:
-    - site.lndo.site:8013
 services:
-  cli:
+  node:
     type: node:14
     build:
       - yarn install
     scanner: false
-    ssl: true
+    ssl: false
     sslExpose: false
     overrides:
       ports:
-        - '8013:8013'
+        - 8010:8010
 tooling:
-  build:
-    service: cli
-    cmd: yarn dev
-    description: Launch the marketing site
   node:
-    service: cli
-  vuepress:
-    service: cli
+    service: node
   yarn:
-    service: cli
+    service: node
+  dev:
+    service: node
+    cmd: yarn dev --port 8010

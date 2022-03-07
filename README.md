@@ -12,37 +12,44 @@ If you'd like to report a bug or submit a feature request then please [use the i
 
 We try to log all changes big and small in both [THE CHANGELOG](https://github.com/lando/website/blob/main/CHANGELOG.md) and the [release notes](https://github.com/lando/website/releases).
 
-
-## Development
-
-* Requires [Lando](https://lando.dev/)
+* Requires [Node 14+](https://nodejs.org/dist/latest-v14.x/)
 * Prefers [Yarn](https://classic.yarnpkg.com/lang/en/docs/install)
+* Alternatively you can also use Lando
 
 ```bash
-git clone https://github.com/lando/website.git && cd website
-yarn install
+git clone https://github.com/lando/docs.git && cd docs
 ```
 
-If you dont' want to install Node 14 or Yarn for whatever reason you can install [Lando](https://docs.lando.dev/basics/installation.html) and use that:
+### Using Node/Yarn
 
 ```bash
-git clone https://github.com/lando/website.git && cd website
-# Install deps and get node
-lando start
+# Install deps
+yarn | npm install
 
-# Run commands
-lando node
-lando yarn
-```
+# Launch dev site
+yarn dev
 
-## Testing
-
-```bash
-# Lint the code
+# Lint
 yarn lint
 
-# Run unit tests
-yarn test
+# Build site
+yarn build
+```
+
+### Using Lando
+
+```bash
+# Install deps
+lando start
+
+# Launch dev site
+lando dev
+
+# Lint
+lando yarn lint
+
+# Build site
+lando yarn build
 ```
 
 ## Releasing
