@@ -96,10 +96,28 @@ htmlEl === null || htmlEl === void 0 ? void 0 : htmlEl.classList.toggle('dark', 
           a {
             font-weight: normal;
             font-size: 1.125rem;
-            &:after {
-              content: url('../../public/images/down-arrow.svg');
-              position: absolute;
-              right: 1.125rem;
+            width: 100%;
+          }
+        }
+        .navbar-dropdown-wrapper {
+          &:after {
+            content: url('../../public/images/down-arrow.svg');
+            position: absolute;
+            right: 1.125rem;
+            top: 1.5rem;
+
+          }
+          .title {
+            font-weight: normal;
+            font-size: 1.125rem;
+          }
+          .navbar-dropdown-title-mobile {
+            width: 100%;
+            text-align: left;
+          }
+          button {
+            .arrow {
+              display: none;
             }
           }
         }
