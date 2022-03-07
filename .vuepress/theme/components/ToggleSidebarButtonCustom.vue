@@ -16,7 +16,7 @@
   </div>
 </template>
 
-<script>
+<script setup>
 import {useThemeLocaleData} from '@vuepress/theme-default/lib/client/composables';
 import {computed, ref} from 'vue';
 
