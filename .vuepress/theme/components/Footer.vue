@@ -43,8 +43,8 @@
             <div class="footer-column-third">
               <h4>Community</h4>
               <ul>
-                <li><a href="https://docs.lando.dev/guides/lando-info.html" target="_blank">Slack</a></li>
-                <li><a href="https://docs.lando.dev/help/logs.html" target="_blank">GitHub Issues</a></li>
+                <li><a href="https://launchpass.com/devwithlando" target="_blank">Slack</a></li>
+                <li><a href="https://github.com/issues?q=is%3Aopen+is%3Aissue+org%3Alando" target="_blank">GitHub Issues</a></li>
               </ul>
               <h4>Sponsor</h4>
               <ul>
