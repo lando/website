@@ -1,10 +1,6 @@
 ---
 title: Support
-byline: Free yourself from the mind-forged manacles of lesser dev tools. Save time, headaches, frustration and do more real work.
-metaTitle: Support | Lando
 description: Discover resources for getting support with Lando.
-image: https://raw.githubusercontent.com/lando/lando/master/docs/.vuepress/public/images/hero-pink.png
-
 ---
 
 <Plans />

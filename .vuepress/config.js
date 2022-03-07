@@ -7,6 +7,7 @@ module.exports = {
   theme: path.resolve(__dirname, './theme'),
   themeConfig: {
     baseUrl: 'https://lando.dev',
+    canonicalUrl: 'https://lando.dev',
     contributors: false,
     editLink: false,
     lastUpdated: false,

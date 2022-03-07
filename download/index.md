@@ -1,11 +1,8 @@
 ---
 title: Get Lando!
-byline: Free yourself from the mind-forged manacles of lesser dev tools. Save time, headaches, frustration and do more real work.
 metaTitle: Get Lando | Lando
 description: Download Lando and take your local development and DevOps workflow to lightspeed.
-image: https://raw.githubusercontent.com/lando/lando/master/docs/.vuepress/public/images/hero-pink.png
 pageClass: download
-
 ---
 
 <Feature featureHeading='1. Download & Install Lando'
@@ -16,7 +13,7 @@ pageClass: download
     <p>Head over to the releases section of our GitHub page and <a href="https://github.com/lando/lando/releases" target="_blank">download</a> the version that makes sense for your operating system.</p>
     <p>Double click the package in the download and consult the <a href="https://docs.lando.dev/basics/installation.html" target="_blank">documentation</a> if you have trouble.</p>
   </template>
-  <a href="https://github.com/lando/lando/releases" class="btn btn-primary btn-full-width">Download Lando</a> 
+  <a href="https://github.com/lando/lando/releases" class="btn btn-primary btn-full-width">Download Lando</a>
 </Feature>
 
 <Feature featureHeading='2. Spin Up Your First App'

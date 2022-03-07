@@ -1,12 +1,7 @@
 ---
 title: Contact Us
-byline: Free yourself from the mind-forged manacles of lesser dev tools. Save time, headaches, frustration and do more real work.
-metaTitle: Contact Us | Lando
 description: Reach out to Lando regarding sponsorship, partnerships, paid support options, and contribution opportunities.
-image: https://raw.githubusercontent.com/lando/lando/master/docs/.vuepress/public/images/hero-pink.png
-
 ---
-
 
 ## Contact
 
