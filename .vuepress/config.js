@@ -40,12 +40,4 @@ module.exports = {
     ['meta', {name: 'msapplication-TileColor', content: '#DD3F8F'}],
     ['meta', {name: 'theme-color', content: '#ffffff'}],
   ],
-  plugins: [
-    [
-      '@vuepress/plugin-google-analytics',
-      {
-        id: 'G-HPJSRFPPPR',
-      },
-    ],
-  ],
 };

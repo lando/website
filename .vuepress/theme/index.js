@@ -21,12 +21,6 @@ module.exports = (options, app) => {
           componentsPatterns: ['*.vue', '**/*.vue'],
         },
       ],
-      // Use sass palette stuff
-      ['@vuepress/plugin-palette',
-        {
-          preset: 'sass',
-        },
-      ],
     ],
   };
 };

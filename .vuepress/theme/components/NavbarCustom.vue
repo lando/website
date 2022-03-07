@@ -2,9 +2,12 @@
   <header ref="navbar" class="navbar">
     <div class="navbar-interior">
       <span ref="siteBrand">
-        <RouterLink :to="siteBrandLink">
-          <NavbarBrandLogo />
-        </RouterLink>
+          <a
+            :href="siteBrandLink"
+            aria-current="page"
+          >
+            <NavbarBrandLogo />
+          </a>
       </span>
 
       <div class="navbar-links-wrapper" :style="linksWrapperStyle">
