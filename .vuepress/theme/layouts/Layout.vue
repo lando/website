@@ -2,7 +2,7 @@
   <div class="layout-wrapper">
     <ParentLayout>
       <template #sidebar-bottom>
-        <FooterCta 
+        <FooterCta
           heading="What are you waiting for?"
           ctaText="Get Lando Now"
           ctaLink="/download"
@@ -30,13 +30,10 @@
   </div>
 </template>
 
-<script setup lang="ts">
+<script setup>
 
 // Deps
-import {computed, Transition, ref} from 'vue'; // eslint-disable-line no-unused-vars
 import {usePageData, usePageFrontmatter} from '@vuepress/client';
-import {useThemeData} from '@vuepress/plugin-theme-data/lib/client';
-import {useScrollPromise, useThemeLocaleData, useSidebarItems} from '@vuepress/theme-default/lib/client/composables';
 
 // Parent components
 import ParentLayout from '@vuepress/theme-default/lib/client/layouts/Layout.vue';
@@ -49,12 +46,7 @@ import HomeCustom from '../components/HomeCustom.vue';
 
 // Get theme data
 const frontmatter = usePageFrontmatter();
-const themeLocale = useThemeLocaleData()
-const themeData = useThemeData();
 const page = usePageData();
-// Get the config from themedata
-const {carbonAds, showSponsors, sidebarTitle, sidebarTitleIcon} = themeData.value;
-const {version, versionLink} = page.value;
 
 // Set Dark Mode for everything
 const htmlEl = window === null || window === void 0 ? void 0 : window.document.querySelector('html');

@@ -21,15 +21,15 @@
 </template>
 
 <script>
-import Stats from "./Stats.vue";
+import Stats from './Stats.vue';
 export default {
   props: {
     heroHeading: String,
     heroText: String,
     ctaText: String,
-    ctaLink: String
+    ctaLink: String,
   },
-}
+};
 </script>
 
 <style lang="scss" scoped>

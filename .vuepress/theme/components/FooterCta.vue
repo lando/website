@@ -51,7 +51,7 @@
       a {
         font-size: 1rem;
       }
-    } 
+    }
   }
 </style>
 
@@ -61,7 +61,7 @@ export default {
     heading: String,
     text: String,
     ctaText: String,
-    ctaLink: String
+    ctaLink: String,
   },
-}
+};
 </script>

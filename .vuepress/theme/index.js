@@ -1,6 +1,4 @@
-const { path } = require('@vuepress/utils')
-const _ = require('lodash');
-
+const {path} = require('@vuepress/utils');
 
 module.exports = (options, app) => {
   return {
@@ -30,5 +28,5 @@ module.exports = (options, app) => {
         },
       ],
     ],
-  }
-}
+  };
+};

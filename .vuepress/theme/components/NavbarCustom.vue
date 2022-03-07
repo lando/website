@@ -25,86 +25,82 @@
   </header>
 </template>
 
-<script setup lang="ts">
-import { useRouteLocale, useSiteLocaleData, withBase, ClientOnly } from '@vuepress/client'
-import { computed, onMounted, ref, h } from 'vue'
-import type { FunctionalComponent } from 'vue'
-import { useDarkMode, useThemeLocaleData } from '@vuepress/theme-default/lib/client/composables'
-import NavbarItems from '@vuepress/theme-default/lib/client/components/NavbarItems.vue'
-import ToggleDarkModeButton from '@vuepress/theme-default/lib/client/components/ToggleDarkModeButton.vue'
-import ToggleSidebarButtonCustom from './ToggleSidebarButtonCustom.vue'
+<script setup>
+import {useRouteLocale, useSiteLocaleData, withBase, ClientOnly} from '@vuepress/client';
+import {computed, onMounted, ref, h} from 'vue';
+import {useDarkMode, useThemeLocaleData} from '@vuepress/theme-default/lib/client/composables';
+import NavbarItems from '@vuepress/theme-default/lib/client/components/NavbarItems.vue';
+import ToggleDarkModeButton from '@vuepress/theme-default/lib/client/components/ToggleDarkModeButton.vue';
+import ToggleSidebarButtonCustom from './ToggleSidebarButtonCustom.vue';
 
-defineEmits(['toggle-sidebar'])
+defineEmits(['toggle-sidebar']);
 
-const routeLocale = useRouteLocale()
-const siteLocale = useSiteLocaleData()
-const themeLocale = useThemeLocaleData()
-const isDarkMode = true
+const routeLocale = useRouteLocale();
+const siteLocale = useSiteLocaleData();
+const themeLocale = useThemeLocaleData();
+const isDarkMode = true;
 
-const navbar = ref<HTMLElement | null>(null)
-const siteBrand = ref<HTMLElement | null>(null)
+const navbar = ref<HTMLElement | null>(null);
+const siteBrand = ref<HTMLElement | null>(null);
 const siteBrandLink = computed(
   () => themeLocale.value.home || routeLocale.value
-)
-const navbarBrandLogo = ref(themeLocale.value.logoDark)
-const navbarBrandTitle = computed(() => siteLocale.value.title)
-const linksWrapperMaxWidth = ref(0)
+);
+const navbarBrandLogo = ref(themeLocale.value.logoDark);
+const navbarBrandTitle = computed(() => siteLocale.value.title);
+const linksWrapperMaxWidth = ref(0);
 const linksWrapperStyle = computed(() => {
   if (!linksWrapperMaxWidth.value) {
-    return {}
+    return {};
   }
   return {
     maxWidth: linksWrapperMaxWidth.value + 'px',
-  }
-})
-const enableDarkMode = computed(() => themeLocale.value.darkMode)
+  };
+});
+const enableDarkMode = computed(() => themeLocale.value.darkMode);
 
 // avoid overlapping of long title and long navbar links
 onMounted(() => {
   // TODO: migrate to css var
   // refer to _variables.scss
-  const MOBILE_DESKTOP_BREAKPOINT = 719
+  const MOBILE_DESKTOP_BREAKPOINT = 719;
   const navbarHorizontalPadding =
     getCssValue(navbar.value, 'paddingLeft') +
-    getCssValue(navbar.value, 'paddingRight')
-  const handleLinksWrapWidth = (): void => {
+    getCssValue(navbar.value, 'paddingRight');
+  const handleLinksWrapWidth = () => {
+    let _a;
     if (window.innerWidth <= MOBILE_DESKTOP_BREAKPOINT) {
-      linksWrapperMaxWidth.value = 0
+      linksWrapperMaxWidth.value = 0;
     } else {
-      linksWrapperMaxWidth.value =
-        navbar.value!.offsetWidth -
-        navbarHorizontalPadding -
-        (siteBrand.value?.offsetWidth || 0)
+      linksWrapperMaxWidth.value = navbar.value.offsetWidth - navbarHorizontalPadding - (((_a = siteBrand.value) === null || _a === void 0 ? void 0 : _a.offsetWidth) || 0);
     }
-  }
-  handleLinksWrapWidth()
-  window.addEventListener('resize', handleLinksWrapWidth, false)
-  window.addEventListener('orientationchange', handleLinksWrapWidth, false)
-})
+  };
+  handleLinksWrapWidth();
+  window.addEventListener('resize', handleLinksWrapWidth, false);
+  window.addEventListener('orientationchange', handleLinksWrapWidth, false);
+});
 
-const NavbarBrandLogo: FunctionalComponent = () => {
-  if (!navbarBrandLogo.value) return null
-  const img = h('img', {
+const NavbarBrandLogo = () => {
+  if (!navbarBrandLogo.value) return null;
+  let img = h('img', {
     class: 'logo',
     src: withBase(navbarBrandLogo.value),
     alt: navbarBrandTitle.value,
-  })
+  });
   if (themeLocale.value.logoDark === undefined) {
-    return img
+    return img;
   }
   // wrap brand logo with <ClientOnly> to avoid ssr-mismatch
   // when using a different brand logo in dark mode
-  return h(ClientOnly, img)
-}
+  return h(ClientOnly, img);
+};
 
-function getCssValue(el: HTMLElement | null, property: string): number {
+const getCssValue = (el, property) => {
+  let _a; let _b; let _c;
   // NOTE: Known bug, will return 'auto' if style value is 'auto'
-  const val = el?.ownerDocument?.defaultView?.getComputedStyle(el, null)?.[
-    property
-  ]
-  const num = Number.parseInt(val, 10)
-  return Number.isNaN(num) ? 0 : num
-}
+  let val = (_c = (_b = (_a = el === null || el === void 0 ? void 0 : el.ownerDocument) === null || _a === void 0 ? void 0 : _a.defaultView) === null || _b === void 0 ? void 0 : _b.getComputedStyle(el, null)) === null || _c === void 0 ? void 0 : _c[property];
+  let num = Number.parseInt(val, 10);
+  return Number.isNaN(num) ? 0 : num;
+};
 </script>
 
 <style lang="scss">

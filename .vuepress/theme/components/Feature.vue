@@ -1,15 +1,17 @@
 <template>
-  <div v-if="showOrbit" class="feature-orbit orbit" :class="customClass">
-    <img :src="planetImage" class="feature-planet" />
-  </div>
-  <div class="feature" :class="orientation">
-    <div class="feature-content">
-      <h3 v-html="featureHeading"></h3>
-      <p v-if="featureText" v-html="featureText"></p>
-      <slot name="afterFeatureContent" />
+  <div class="feature-wrapper">
+    <div v-if="showOrbit" class="feature-orbit orbit" :class="customClass">
+      <img :src="planetImage" class="feature-planet" />
     </div>
-    <div class="feature-image">
-      <slot/>
+    <div class="feature" :class="orientation">
+      <div class="feature-content">
+        <h3 v-html="featureHeading"></h3>
+        <p v-if="featureText" v-html="featureText"></p>
+        <slot name="afterFeatureContent" />
+      </div>
+      <div class="feature-image">
+        <slot/>
+      </div>
     </div>
   </div>
 </template>
@@ -24,10 +26,10 @@ export default {
     planetImage: String,
     showOrbit: {
       type: Boolean,
-      default: true
-    }
+      default: true,
+    },
   },
-}
+};
 </script>
 
 <style lang="scss">

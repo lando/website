@@ -18,6 +18,47 @@
   </ul>
 </template>
 
+<script>
+import 'vue3-carousel/dist/carousel.css';
+import {Carousel, Slide, Pagination, Navigation} from 'vue3-carousel';
+
+export default {
+  props: {
+    quotes: {
+      type: Array,
+      default: () => ([
+        {
+          text: 'People love it when I introduce them to Lando.',
+          author: '– Federal Contractor, US House of Representatives',
+        },
+        {
+          text: 'I don\'t have to handhold junior devs anymore... thank god in heaven.',
+          author: '– Senior Developer, Blue State Digital',
+        },
+        {
+          text: 'Lando lets our devs just get to freaking work.',
+          author: '– Systems Developer, University of California',
+        },
+        {
+          text: 'The [hosting partner] integrations are the bee\'s knees.',
+          author: '– Enterprise Consultant',
+        },
+      ]),
+    },
+  },
+  computed: {
+    isMobile() {
+      return window.innerWidth < 800;
+    },
+  },
+  components: {
+    Carousel,
+    Slide,
+    Navigation,
+  },
+};
+</script>
+
 <style lang="scss" scoped>
 @import '../../styles/palette.scss';
   .quotes {
@@ -83,45 +124,3 @@
   }
 }
 </style>
-
-<script>
-import 'vue3-carousel/dist/carousel.css';
-import { Carousel, Slide, Pagination, Navigation } from 'vue3-carousel';
-
-export default {
-  props: {
-    quotes: {
-      type: Array,
-      default:[
-        { 
-          text: "People love it when I introduce them to Lando.", 
-          author:'– Federal Contractor, US House of Representatives' 
-        },
-        { 
-          text: "I don't have to handhold junior devs anymore... thank god in heaven.", 
-          author:'– Senior Developer, Blue State Digital' 
-        },
-        {  
-          text: "Lando lets our devs just get to freaking work.", 
-          author:'– Systems Developer, University of California' 
-        },
-        { 
-          text: "The [hosting partner] integrations are the bee's knees.", 
-          author:'– Enterprise Consultant' 
-        },
-      ],
-    },
-  },
-  computed: {
-    isMobile() {
-      return window.innerWidth < 800;
-    }
-  },
-  components: {
-    Carousel,
-    Slide,
-    Pagination,
-    Navigation
-  }
-}
-</script>
