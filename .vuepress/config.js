@@ -6,17 +6,27 @@ module.exports = {
   description: 'Instant dev environments for all your projects.',
   theme: path.resolve(__dirname, './theme'),
   themeConfig: {
+    baseUrl: 'https://lando.dev',
     contributors: false,
     editLink: false,
     lastUpdated: false,
     logo: '/images/logo.png',
     logoDark: '/images/logo-white.png',
-    navbar: [
+    pages: {
+      contributors: {
+        enabled: false,
+      },
+      versions: {
+        enabled: false,
+      },
+    },
+    sharedNavbar: [
       {text: 'Blog', link: 'https://lando.dev/blog/'},
       {text: 'Support', link: '/support'},
+    ],
+    navbar: [
       {text: 'Docs', link: 'https://docs.lando.dev'},
     ],
-    sidebar: [],
   },
   head: [
     ['link', {rel: 'preconnect', href: 'https://www.google-analytics.com/analytics.js', crossorigin: 'true'}],

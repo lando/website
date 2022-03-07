@@ -9,16 +9,12 @@
 
       <div class="navbar-links-wrapper" :style="linksWrapperStyle">
         <slot name="before" />
-
         <NavbarItems class="can-hide" />
-
         <slot name="after" />
-
       </div>
+
       <div class="navbar-links-right-wrapper" :style="linksWrapperStyle">
-
         <a href="/download/" class="btn btn-primary can-hide">Get Lando!</a>
-
         <ToggleSidebarButtonCustom @toggle="$emit('toggle-sidebar')" />
       </div>
     </div>
@@ -40,8 +36,8 @@ const siteLocale = useSiteLocaleData();
 const themeLocale = useThemeLocaleData();
 const isDarkMode = true;
 
-const navbar = ref<HTMLElement | null>(null);
-const siteBrand = ref<HTMLElement | null>(null);
+const navbar = ref(null);
+const siteBrand = ref(null);
 const siteBrandLink = computed(
   () => themeLocale.value.home || routeLocale.value
 );
