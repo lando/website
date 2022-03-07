@@ -33,14 +33,14 @@ export default {
   data() {
     return {
       icons: [
-        { src: 'images/logos/autodesk.png', alt:'Autodesk company logo.' },
-        { src: 'images/logos/accenture.png', alt:'Accenture company logo.' },
-        { src: 'images/logos/cbs.png', alt:'CBS company logo.' },
-        { src: 'images/logos/cagov.png', alt:'CA.gov logo.' },
-        { src: 'images/logos/tata.png', alt:'Tata company logo.' },
-        { src: 'images/logos/yale.png', alt:'Yale university logo.' },
-      ]
-    }
-  }
-}
+        {src: 'images/logos/autodesk.png', alt: 'Autodesk company logo.'},
+        {src: 'images/logos/accenture.png', alt: 'Accenture company logo.'},
+        {src: 'images/logos/cbs.png', alt: 'CBS company logo.'},
+        {src: 'images/logos/cagov.png', alt: 'CA.gov logo.'},
+        {src: 'images/logos/tata.png', alt: 'Tata company logo.'},
+        {src: 'images/logos/yale.png', alt: 'Yale university logo.'},
+      ],
+    };
+  },
+};
 </script>

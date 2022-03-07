@@ -33,3 +33,8 @@ _site
 # vuepress
 .temp
 .cache
+# Vuepress
+.temp
+.cache
+dist
+

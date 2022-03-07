@@ -1,27 +1,3 @@
-<script setup lang="ts">
-import { useThemeLocaleData } from '@vuepress/theme-default/lib/client/composables'
-import { computed, ref,} from 'vue'
-
-defineEmits(['toggle'])
-
-const themeLocale = useThemeLocaleData()
-// classes
-const isActive = computed(() => [
-  {
-    'is-active': isSidebarOpen.value,
-  },
-]);
-
-const isSidebarOpen = ref(false)
-const toggleSidebar = (to?: boolean): void => {
-  document.body.classList.add('noscroll')
-  isSidebarOpen.value = typeof to === 'boolean' ? to : !isSidebarOpen.value
-  isSidebarOpen.value ? document.body.classList.add('noscroll') : document.body.classList.remove('noscroll') 
-}
-
-
-</script>
-
 <template>
   <div
     class="toggle-sidebar-button hamburger hamburger--squeeze"
@@ -40,6 +16,28 @@ const toggleSidebar = (to?: boolean): void => {
   </div>
 </template>
 
+<script setup>
+import {useThemeLocaleData} from '@vuepress/theme-default/lib/client/composables';
+import {computed, ref} from 'vue';
+
+defineEmits(['toggle']);
+
+const themeLocale = useThemeLocaleData();
+// classes
+const isActive = computed(() => [
+  {
+    'is-active': isSidebarOpen.value,
+  },
+]);
+
+const isSidebarOpen = ref(false);
+const toggleSidebar = () => {
+  document.body.classList.add('noscroll');
+  isSidebarOpen.value = typeof to === 'boolean' ? to : !isSidebarOpen.value;
+  isSidebarOpen.value ? document.body.classList.add('noscroll') : document.body.classList.remove('noscroll');
+};
+</script>
+
 <style lang="scss">
 $hamburger-padding-x: 20px;
 $hamburger-padding-y: 15px;
@@ -49,7 +47,7 @@ $hamburger-layer-width         : 1.5rem !default;
 $hamburger-layer-height        : 2px !default;
 
 
-@import "../../../../node_modules/hamburgers/_sass/hamburgers/hamburgers.scss";
+@import "node_modules/hamburgers/_sass/hamburgers/hamburgers.scss";
 @import '../../styles/palette.scss';
 
 @media (min-width: $MQMobile) {
