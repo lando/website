@@ -23,6 +23,7 @@ module.exports = {
     },
     sharedNavbar: [
       {text: 'Blog', link: 'https://lando.dev/blog/'},
+      {text: 'Events', link: 'https://lando.dev/events/'},
       {text: 'Support', link: '/support'},
     ],
     navbar: [
