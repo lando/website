@@ -69,7 +69,6 @@ lando start
   import Logos from './Logos.vue';
   import Quotes from './Quotes.vue';
   import FooterCta from '../components/FooterCta.vue';
-  import Footer from '../components/Footer.vue';
   import CodeHighlightCustom from '../components/CodeHighlightCustom.vue';
 
   // Set Dark Mode for everything

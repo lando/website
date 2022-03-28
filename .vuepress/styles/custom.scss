@@ -30,6 +30,11 @@ body {
     h1, h2, h3 {
         border-bottom: none;
     }
+    h1 {
+        .emphasis {
+            color: var(--c-brand);
+        }
+    }
     h2 {
         .emphasis {
             color: var(--c-brand);
@@ -63,15 +68,15 @@ body {
         width: $default-orbit-width;
         height: $default-orbit-height;
         &.orbit-2 {
-            $orbit2-height: calc($default-orbit-height * 1.5);    
-            $orbit2-width: calc($default-orbit-width * 2);    
+            $orbit2-height: calc($default-orbit-height * 1.5);
+            $orbit2-width: calc($default-orbit-width * 2);
             height: $orbit2-height;
             width: $orbit2-width;
             top: calc(0px - $orbit2-height * .6);
             left: calc(50% - $orbit2-width/2);        }
         &.orbit-3 {
-            $orbit3-height: calc($default-orbit-height * 1.75);    
-            $orbit3-width: calc($default-orbit-width *2.5);    
+            $orbit3-height: calc($default-orbit-height * 1.75);
+            $orbit3-width: calc($default-orbit-width *2.5);
             height: $orbit3-height;
             width: $orbit3-width;
             top: calc(0px - $orbit3-height * .3);

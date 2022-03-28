@@ -1,13 +1,22 @@
 {
+  "env": {
+    "node": true,
+    "mocha": true,
+    "es6": true
+  },
+  "parser": "vue-eslint-parser",
   "parserOptions": {
+    "parser": "babel-eslint",
+    "allowImportExportEverywhere": true,
     "sourceType": "module",
-    "ecmaVersion": 6
+    "ecmaVersion": 9
   },
   "extends": [
     "plugin:vue/recommended",
     "google"
   ],
   "rules": {
+    "vue/multi-word-component-names": 0,
     "linebreak-style": 0,
     "arrow-parens": ["error",
       "as-needed"
@@ -16,7 +25,15 @@
       "code": 12000,
       "ignoreComments": true
     }],
-    "no-unused-vars": "off",
-    "vue/multi-word-component-names": "off"
+    "require-jsdoc": ["error", {
+      "require": {
+        "FunctionDeclaration": true,
+        "MethodDefinition": false,
+        "ClassDeclaration": false,
+        "ArrowFunctionExpression": false,
+        "FunctionExpression": false
+      }
+    }]
+
   }
 }

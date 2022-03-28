@@ -6,29 +6,58 @@ module.exports = {
   description: 'Instant dev environments for all your projects.',
   theme: path.resolve(__dirname, './theme'),
   themeConfig: {
-    baseUrl: 'https://lando.dev',
-    canonicalUrl: 'https://lando.dev',
+ // PARENT CONFIG
     contributors: false,
+    darkMode: true,
+    docsDir: '.',
+    docsBranch: 'main',
     editLink: false,
+    editLinkText: 'Suggest an edit to this page',
     lastUpdated: false,
-    logo: '/images/logo.png',
+    lastUpdatedText: 'Updated',
+    logo: '/lando/logo.png',
     logoDark: '/images/logo-white.png',
-    pages: {
-      contributors: {
-        enabled: false,
-      },
-      versions: {
-        enabled: false,
-      },
+    repo: 'lando/events',
+    sidebar: [],
+
+    // THEME CONFIG
+    baseUrl: 'https://lando.dev',
+    autometa: {
+      twitter: '@devwithlando',
+      canonicalUrl: 'https://lando.dev/',
     },
-    sharedNavbar: [
-      {text: 'Blog', link: 'https://lando.dev/blog/'},
-      {text: 'Events', link: 'https://lando.dev/events/'},
-      {text: 'Support', link: '/support'},
+    carbonAds: false,
+    contributorsPage: false,
+    contributorsExclude: [
+      'dependabot[bot]',
     ],
-    navbar: [
+    ga: {
+      id: 'G-HPJSRFPPPR',
+    },
+    hubspot: {
+      id: '6478338',
+    },
+    jobs: false,
+    readMode: false,
+    rightbar: false,
+    robots: {
+      allowAll: true,
+    },
+    sitemap: true,
+    sharedNavbar: [
+      {text: 'Blog', link: 'https://lando.dev/blog'},
+      {text: 'Events', link: '/'},
+      {text: 'Support', link: 'https://lando.dev/support'},
       {text: 'Docs', link: 'https://docs.lando.dev'},
     ],
+    sidebar: false,
+    sidebarHeader: false,
+    search: false,
+    social: false,
+    sponsors: false,
+    tags: false,
+    toc: false,
+    versionsPage: false,
   },
   head: [
     ['link', {rel: 'preconnect', href: 'https://www.google-analytics.com/analytics.js', crossorigin: 'true'}],

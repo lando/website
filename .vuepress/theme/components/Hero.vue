@@ -21,7 +21,6 @@
 </template>
 
 <script>
-import Stats from './Stats.vue';
 export default {
   props: {
     heroHeading: String,
@@ -46,6 +45,11 @@ export default {
       }
       .hero-left {
         z-index: 10;
+        h1 {
+          font-size: 4rem;
+          font-weight: 800;
+          line-height: 4rem;
+        }
         h2 {
           font-size: 4rem;
           font-weight: 800;

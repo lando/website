@@ -27,9 +27,8 @@
 <script setup>
 import {useRouteLocale, useSiteLocaleData, withBase, ClientOnly} from '@vuepress/client';
 import {computed, onMounted, ref, h} from 'vue';
-import {useDarkMode, useThemeLocaleData} from '@vuepress/theme-default/lib/client/composables';
+import {useThemeLocaleData} from '@vuepress/theme-default/lib/client/composables';
 import NavbarItems from '@vuepress/theme-default/lib/client/components/NavbarItems.vue';
-import ToggleDarkModeButton from '@vuepress/theme-default/lib/client/components/ToggleDarkModeButton.vue';
 import ToggleSidebarButtonCustom from './ToggleSidebarButtonCustom.vue';
 
 defineEmits(['toggle-sidebar']);
@@ -37,12 +36,11 @@ defineEmits(['toggle-sidebar']);
 const routeLocale = useRouteLocale();
 const siteLocale = useSiteLocaleData();
 const themeLocale = useThemeLocaleData();
-const isDarkMode = true;
 
 const navbar = ref(null);
 const siteBrand = ref(null);
 const siteBrandLink = computed(
-  () => themeLocale.value.home || routeLocale.value
+  () => themeLocale.value.home || routeLocale.value,
 );
 const navbarBrandLogo = ref(themeLocale.value.logoDark);
 const navbarBrandTitle = computed(() => siteLocale.value.title);
@@ -55,7 +53,6 @@ const linksWrapperStyle = computed(() => {
     maxWidth: linksWrapperMaxWidth.value + 'px',
   };
 });
-const enableDarkMode = computed(() => themeLocale.value.darkMode);
 
 // avoid overlapping of long title and long navbar links
 onMounted(() => {
