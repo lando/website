@@ -2,7 +2,7 @@
   <div class="hero-wrapper">
     <div class="hero">
       <div class="hero-left">
-        <h2 v-html="heroHeading"></h2>
+        <h1 v-html="heroHeading"></h1>
         <p v-html="heroText"></p>
         <a :href="ctaLink" class="btn btn-primary">{{ ctaText }}</a>
       </div>
