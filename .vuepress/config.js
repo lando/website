@@ -15,7 +15,7 @@ module.exports = {
     editLinkText: 'Suggest an edit to this page',
     lastUpdated: false,
     lastUpdatedText: 'Updated',
-    logo: '/lando/logo.png',
+    logo: '/images/logo.png',
     logoDark: '/images/logo-white.png',
     repo: 'lando/events',
     sidebar: [],

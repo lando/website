@@ -130,7 +130,7 @@ export default {
   background-color: $background-dark;
   color: $text-dark;
   font-size: 0.875em;
-  margin-top: 2rem;
+  padding-top: 2rem;
 
   .footer-top {
     display: flex;

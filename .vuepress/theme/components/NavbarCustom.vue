@@ -1,7 +1,7 @@
 <template>
   <header ref="navbar" class="navbar">
     <div class="navbar-interior">
-      <span ref="siteBrand">
+      <span class="logo-wrapper" ref="siteBrand">
           <a
             :href="siteBrandLink"
             aria-current="page"
@@ -17,6 +17,7 @@
       </div>
 
       <div class="navbar-links-right-wrapper" :style="linksWrapperStyle">
+        <ToggleDarkModeButton v-if="enableDarkMode" />
         <a href="/download/" class="btn btn-primary can-hide">Get Lando!</a>
         <ToggleSidebarButtonCustom @toggle="$emit('toggle-sidebar')" />
       </div>
@@ -27,22 +28,31 @@
 <script setup>
 import {useRouteLocale, useSiteLocaleData, withBase, ClientOnly} from '@vuepress/client';
 import {computed, onMounted, ref, h} from 'vue';
-import {useThemeLocaleData} from '@vuepress/theme-default/lib/client/composables';
+import {useThemeLocaleData, useDarkMode} from '@vuepress/theme-default/lib/client/composables';
 import NavbarItems from '@vuepress/theme-default/lib/client/components/NavbarItems.vue';
 import ToggleSidebarButtonCustom from './ToggleSidebarButtonCustom.vue';
+import ToggleDarkModeButton from '@theme/ToggleDarkModeButton.vue';
 
 defineEmits(['toggle-sidebar']);
+
+const enableDarkMode = computed(() => themeLocale.value.darkMode);
 
 const routeLocale = useRouteLocale();
 const siteLocale = useSiteLocaleData();
 const themeLocale = useThemeLocaleData();
+const isDarkMode = useDarkMode();
 
 const navbar = ref(null);
 const siteBrand = ref(null);
 const siteBrandLink = computed(
   () => themeLocale.value.home || routeLocale.value,
 );
-const navbarBrandLogo = ref(themeLocale.value.logoDark);
+const navbarBrandLogo = computed(() => {
+  if (isDarkMode.value && themeLocale.value.logoDark !== undefined) {
+    return themeLocale.value.logoDark;
+  }
+  return themeLocale.value.logo;
+});
 const navbarBrandTitle = computed(() => siteLocale.value.title);
 const linksWrapperMaxWidth = ref(0);
 const linksWrapperStyle = computed(() => {
@@ -100,7 +110,7 @@ const getCssValue = (el, property) => {
 </script>
 
 <style lang="scss">
-@import '../../styles/palette.scss';
+@import '../../styles/index.scss';
 .navbar {
   position: relative;
   background: inherit;
@@ -110,11 +120,15 @@ const getCssValue = (el, property) => {
   max-width: var(--content-width);
   margin: auto;
   z-index: 200;
+  font-size: 1.375rem;
+  .logo-wrapper {
+    width: 173px;
+  }
   .logo {
     margin-right: 3.8125rem;
   }
   .navbar-interior {
-    width: var(--content-width);
+    width: var(--total-width);
     display: flex;
     .navbar-items-wrapper, .navbar-links-right-wrapper {
       position: static;
@@ -122,6 +136,7 @@ const getCssValue = (el, property) => {
       margin-left: 3rem;
       position: static;
       flex-grow: 1;
+      align-items: center;
       // Should probably make our own navbar-links and do this there.
       .navbar-items {
         .navbar-item {
@@ -146,6 +161,12 @@ const getCssValue = (el, property) => {
 @media (max-width: $MQNarrow) {
   .navbar {
     padding: 2rem;
+    .logo-wrapper {
+      a {
+        position: relative;
+        top: -18px;
+      }
+    }
   }
 }
 

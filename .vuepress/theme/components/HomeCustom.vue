@@ -70,11 +70,6 @@ lando start
   import Quotes from './Quotes.vue';
   import FooterCta from '../components/FooterCta.vue';
   import CodeHighlightCustom from '../components/CodeHighlightCustom.vue';
-
-  // Set Dark Mode for everything
-  const htmlEl = window === null || window === void 0 ? void 0 : window.document.querySelector('html');
-  htmlEl === null || htmlEl === void 0 ? void 0 : htmlEl.classList.toggle('dark', true);
-
 </script>
 
 <style lang="scss" scoped>

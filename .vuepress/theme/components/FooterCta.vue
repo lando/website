@@ -13,11 +13,12 @@
     padding: 5.875rem;
     text-align: center;
     font-size: 1.25rem;
+    color: $text-dark;
     a.btn {
       color: var(--c-brand);
       font-weight: bold;
       text-transform: uppercase;
-      background-color: var(--c-text-lightest);
+      background-color: $text-dark;
       &:after {
         content: url('../../public/images/button-arrow.svg');
         margin-left: 1rem;
@@ -33,9 +34,11 @@
     font-size: 1rem;
     h3 {
       font-size: 1.5rem;
+      color: $text-dark;
     }
     a {
       font-size: 1rem;
+      color: $text-dark;
     }
   }
 

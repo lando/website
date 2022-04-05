@@ -8,7 +8,7 @@ module.exports = (options, app) => {
       '@theme/Navbar.vue': path.resolve(__dirname, 'components', 'NavbarCustom.vue'),
       '@theme/ToggleSidebarButton.vue': path.resolve(__dirname, 'components', 'ToggleSidebarButtonCustom.vue'),
     },
-    darkMode: false,
+    darkMode: true,
     layouts: path.resolve(__dirname, 'layouts'),
     ga: {
       enabled: true,

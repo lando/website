@@ -3,7 +3,7 @@
 :root {
   // brand colors
   --c-brand: #DD3F8F;
-  --c-brand-light: #DEDB8E;
+  --c-brand-light: #DD3F8F;
  
   // background colors
   --c-bg: $background-light;
@@ -18,11 +18,13 @@
 
   --c-text: $space-grey;
   --c-text-accent: var(--c-brand);
+  --c-text-quote: #999999;
 
   // font vars
   --font-family: 'Lexend', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen,
     Ubuntu, Cantarell, 'Fira Sans', 'Droid Sans', 'Helvetica Neue', sans-serif;
   --font-family-code: Consolas, Monaco, 'Andale Mono', 'Ubuntu Mono', monospace;
+  
 }
 
 html.dark {
