@@ -14,7 +14,7 @@
     text-align: center;
     font-size: 1.25rem;
     a.btn {
-      color: var(--c-brand);
+      color: var(--c-brand) !important;
       font-weight: bold;
       text-transform: uppercase;
       background-color: var(--c-text-lightest);
