@@ -21,7 +21,7 @@
 </template>
 
 <style lang="scss" scoped>
-  @import '../../styles/palette.scss';
+  @import '../styles/main.scss';
   .stats {
     display: flex;
     position: relative;

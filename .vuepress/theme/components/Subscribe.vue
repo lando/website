@@ -84,7 +84,7 @@ export default {
 </script>
 
 <style lang="scss" scoped>
-@import '../../styles/index.scss';
+@import '../styles/main.scss';
 
 .subscribe {
   margin: auto;

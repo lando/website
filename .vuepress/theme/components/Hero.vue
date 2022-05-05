@@ -32,7 +32,7 @@ export default {
 </script>
 
 <style lang="scss" scoped>
-  @import '../../styles/palette.scss';
+  @import '../styles/main.scss';
   .hero-wrapper {
     min-height: 100vh;
     height: 100%;
@@ -85,7 +85,7 @@ export default {
         }
       }
     }
-    @import '../../styles/prism-twilight.scss';
+    @import '../styles/prism-twilight.scss';
     pre {
       margin-top: 2rem;
     }

@@ -100,7 +100,7 @@ const getCssValue = (el, property) => {
 </script>
 
 <style lang="scss">
-@import '../../styles/palette.scss';
+@import '../styles/main.scss';
 .navbar {
   position: relative;
   background: inherit;

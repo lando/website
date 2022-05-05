@@ -35,7 +35,7 @@ export default {
 </script>
 
 <style lang="scss" scoped>
-  @import '../../styles/palette.scss';
+  @import '../styles/main.scss';
   div pre[class*="language-"] {
     display: inline-block;
     padding-top: 3rem;
