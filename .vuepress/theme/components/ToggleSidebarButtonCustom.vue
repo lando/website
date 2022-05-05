@@ -48,7 +48,7 @@ $hamburger-layer-height        : 2px !default;
 
 
 @import "node_modules/hamburgers/_sass/hamburgers/hamburgers.scss";
-@import '../../styles/palette.scss';
+@import '../styles/main.scss';
 
 @media (min-width: $MQMobile) {
   .toggle-sidebar-button {

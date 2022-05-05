@@ -1,10 +1,10 @@
-@import 'palette.scss';
+@import '@lando/vuepress-theme-default-plus/styles/index';
 
 :root {
   // brand colors
   --c-brand: #DD3F8F;
   --c-brand-light: #DEDB8E;
- 
+
   // background colors
   --c-bg: $background-light;
 
@@ -42,7 +42,5 @@ html.dark {
   --c-text-lighter: #eeedef;
   --c-text-lightest: #ffffff;
   --c-text-quote: #999999;
- 
-}
 
-@import 'custom.scss';
+}

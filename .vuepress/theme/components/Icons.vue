@@ -47,7 +47,7 @@ export default {
 </script>
 
 <style lang="scss" scoped>
-@import '../../styles/palette.scss';
+@import '../styles/main.scss';
   .icons {
     display: flex;
     gap:1.5rem;

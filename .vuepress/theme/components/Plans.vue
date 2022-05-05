@@ -51,7 +51,7 @@ export default {
 </script>
 
 <style lang="scss">
-@import '../../styles/palette.scss';
+@import '../styles/main.scss';
 .plans-header {
   text-align: center;
   margin: 10rem 0 6rem 0;

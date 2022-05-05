@@ -54,7 +54,7 @@ htmlEl === null || htmlEl === void 0 ? void 0 : htmlEl.classList.toggle('dark', 
 </script>
 
 <style lang="scss">
-@import '../../styles/index.scss';
+@import '../styles/main.scss';
 .page {
   padding: 0rem;
 }

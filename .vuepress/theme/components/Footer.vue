@@ -125,7 +125,7 @@ export default {
 </script>
 
 <style lang="scss" scoped>
-@import '../../styles/palette.scss';
+@import '../styles/main.scss';
 #footer {
   background-color: $background-dark;
   color: $text-dark;
