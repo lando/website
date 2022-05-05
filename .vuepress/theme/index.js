@@ -1,9 +1,11 @@
 const {path} = require('@vuepress/utils');
+const parentTheme = require('@lando/vuepress-theme-default-plus');
+const {registerComponentsPlugin} = require('@vuepress/plugin-register-components');
 
-module.exports = (options, app) => {
+module.exports = options => {
   return {
-    theme: path.resolve(__dirname, '.'),
-    extends: '@lando/vuepress-theme-default-plus',
+    name: '@lando/website-theme',
+    extends: parentTheme(options),
     alias: {
       '@theme/Navbar.vue': path.resolve(__dirname, 'components', 'NavbarCustom.vue'),
       '@theme/ToggleSidebarButton.vue': path.resolve(__dirname, 'components', 'ToggleSidebarButtonCustom.vue'),
@@ -15,12 +17,10 @@ module.exports = (options, app) => {
       id: 'G-HPJSRFPPPR',
     },
     plugins: [
-      ['@vuepress/register-components',
-        {
-          componentsDir: path.resolve(__dirname, './components'),
-          componentsPatterns: ['*.vue', '**/*.vue'],
-        },
-      ],
+      registerComponentsPlugin({
+        componentsDir: path.resolve(__dirname, './components'),
+        componentsPatterns: ['*.vue', '**/*.vue'],
+      }),
     ],
   };
 };

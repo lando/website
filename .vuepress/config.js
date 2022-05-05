@@ -1,11 +1,11 @@
 const {path} = require('@vuepress/utils');
+const customTheme = require(path.resolve(__dirname, 'theme'));
 
 module.exports = {
   lang: 'en-US',
   title: 'Lando',
   description: 'Instant dev environments for all your projects.',
-  theme: path.resolve(__dirname, './theme'),
-  themeConfig: {
+  theme: customTheme({
  // PARENT CONFIG
     contributors: false,
     darkMode: true,
@@ -58,7 +58,7 @@ module.exports = {
     tags: false,
     toc: false,
     versionsPage: false,
-  },
+  }),
   head: [
     ['link', {rel: 'preconnect', href: 'https://www.google-analytics.com/analytics.js', crossorigin: 'true'}],
     ['link', {rel: 'preconnect', href: 'https://fonts.googleapis.com', crossorigin: 'true'}],
