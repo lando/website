@@ -6,9 +6,9 @@ module.exports = {
   title: 'Lando',
   description: 'Instant dev environments for all your projects.',
   theme: customTheme({
- // PARENT CONFIG
+  // PARENT CONFIG
     contributors: false,
-    darkMode: true,
+    darkMode: false,
     docsDir: '.',
     docsBranch: 'main',
     editLink: false,
