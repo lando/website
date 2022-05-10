@@ -14,7 +14,7 @@
         3,000+
       </div>
       <div class="stat-title">
-        Github Stars
+        GitHub Stars
       </div>
     </div>
   </div>
