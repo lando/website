@@ -16,7 +16,7 @@
   },
   "devDependencies": {
     "@babel/eslint-parser": "^7.17.0",
-    "@lando/vuepress-theme-default-plus": "1.0.0-beta.34",
+    "@lando/vuepress-theme-default-plus": "1.0.0-beta.45",
     "babel-eslint": "^10.1.0",
     "eslint": "^7.32.0",
     "eslint-config-google": "^0.9.1",
