@@ -95,6 +95,7 @@ export default {
     line-height: 150%;
     color: var(--c-text);
     margin-bottom: 0px;
+    padding-top: 0;
   }
   &.subscribe-dark {
     background-color: hsl(var(--c-bg), 12%);

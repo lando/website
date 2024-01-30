@@ -10,7 +10,8 @@
             v-if="frontmatter.value.pageClass !== 'download'"
             :customStyles="customStyles"
             :interests="interests"
-            :title="title"/>
+            :title="title"
+          />
         </div>
       </div>
       <div class="footer-content">
@@ -132,13 +133,23 @@ export default {
   font-size: 0.875em;
   margin-top: 2rem;
 
+  .theme-default-content:not(.custom) {
+    max-width: var(--content-width);
+    margin: 0 auto;
+    padding: 2rem 2.5rem;
+    padding-top: 0;
+  }
+
+  .theme-default-content h3 {
+    padding-top: 0;
+  }
+
   .footer-top {
     display: flex;
     flex-wrap: wrap;
     align-items: center;
-    .footer-image {
-      flex-grow: 3;
-    }
+    justify-content: space-between;
+
     .footer-newsletter {
       .subscribe-input {
         width: 100%;
@@ -254,9 +265,6 @@ export default {
 @media (max-width: $MQMobileNarrow) {
   #footer {
     .footer-top {
-      h4,
-      li {
-      }
       li {
         font-size: .875rem;
       }
