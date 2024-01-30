@@ -26,15 +26,13 @@ env.yml
 lando.env
 
 # docs
-_blog
-_events
+.temp
+.cache
 _site
-
-# vuepress
-.temp
-.cache
-# Vuepress
-.temp
-.cache
 dist
+cache
+temp
+config.*.timestamp-*-*.*
 
+# YARN
+yarn.lock
