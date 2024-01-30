@@ -1,7 +1,7 @@
 [build]
   base = "./"
   publish = ".vuepress/dist"
-  command = "npm build"
+  command = "npm run build"
 
 # Sets our asset optimization
 [build.processing.css]
