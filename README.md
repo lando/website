@@ -20,42 +20,32 @@ We try to log all changes big and small in both [THE CHANGELOG](https://github.c
 git clone https://github.com/lando/docs.git && cd docs
 ```
 
-### Using Node/Yarn
+## Development
 
-```bash
-# Install deps
-yarn | npm install
+* [Node.js](https://nodejs.org/) version 18 or higher.
+* Text Editor with [Markdown](https://en.wikipedia.org/wiki/Markdown) syntax support.
+  * [VSCode](https://code.visualstudio.com/) is recommended, along with the [official Vue extension](https://marketplace.visualstudio.com/items?itemName=Vue.volar).
 
-# Launch dev site
-yarn dev
+VitePress can be used on its own, or be installed into an existing project. In both cases, you can install it with:
 
-# Lint
-yarn lint
 
-# Build site
-yarn build
-```
+```sh
+# clone repo and install deps
+git clone https://github.com/lando/website &&
+  \ cd website &&
+  \ npm install
 
-### Using Lando
+# start dev server
+npm run dev
 
-```bash
-# Install deps
-lando start
+# run lint
+npm run lint
 
-# Launch dev site
-lando dev
+# build the static site
+npm run build
 
-# Lint
-lando yarn lint
-
-# Build site
-lando yarn build
-```
-
-## Releasing
-
-```bash
-yarn release
+# preview the static site
+npm run preview
 ```
 
 ## Contributors

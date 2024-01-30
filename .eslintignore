@@ -1,8 +1,5 @@
-.temp
-.cache
+cache
 dist
+temp
 _site
-
-.vuepress/dist
-.vuepress/.cache
-.vuepress/.temp
+!.vuepress

@@ -11,8 +11,7 @@
   "scripts": {
     "dev": "vuepress dev . --clean-cache --clean-temp",
     "build": "vuepress build .",
-    "lint": "eslint  --quiet --ext .js,.vue --config .eslintrc.json .vuepress",
-    "release": "bump --prompt --tag --all --push"
+    "lint": "eslint ."
   },
   "devDependencies": {
     "@babel/eslint-parser": "^7.17.0",
