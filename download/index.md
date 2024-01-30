@@ -22,7 +22,7 @@ pageClass: download
 
   <template v-slot:afterFeatureContent>
     <p>
-      Try spinning up a basic <em>Hello World!</em> app before spinning up <a href="https://docs.lando.dev/basics/first-app.html" target="_blank">more complex apps</a> or trying any of our <a href="https://github.com/lando/lando/tree/master/examples" target="_blank">myriad examples</a>.
+      Try spinning up a basic <em>Hello World!</em> app before spinning up <a href="https://docs.lando.dev/basics/first-app.html" target="_blank">more complex apps</a> or trying any of our <a href="https://docs.lando.dev/core/v3/recipes.html" target="_blank">myriad recipes</a>.
     </p>
   </template>
 

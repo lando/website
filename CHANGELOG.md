@@ -1,6 +1,8 @@
 ## v4.0.1 [January 30, 2024](https://github.com/lando/website/releases/tag/v4.0.1)
 
 * Deyarned
+* Fixed broken "Myriad Examples" link on `/download` page [#45](https://github.com/lando/website/issues/45)
+* Fixed weird footer styling
 * Updated various `devops` things
 
 ## v4.0.0 [March 7, 2021](https://github.com/lando/website/releases/tag/v4.0.0)
