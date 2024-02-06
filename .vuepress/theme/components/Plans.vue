@@ -21,7 +21,7 @@ export default {
   props: {
     planetImage: {
       type: String,
-      default: 'images/yellow-planet.svg',
+      default: '/images/yellow-planet.svg',
     },
     plans: {
       type: Array,
