@@ -71,6 +71,10 @@
   from = "/terms.html"
   to = "/terms"
   status = 301
+[[redirects]]
+  from = "/get"
+  to = "/download.html"
+  status = 301
 
 # Subsite redirects
 [[redirects]]

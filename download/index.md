@@ -5,7 +5,27 @@ description: Download Lando and take your local development and DevOps workflow 
 pageClass: download
 ---
 
-<Feature featureHeading='1. Download & Install Lando'
+<script setup>
+import {UAParser} from 'ua-parser-js';
+import {computed} from 'vue';
+
+const parser = new UAParser();
+
+
+const isWindows = computed(() => {
+  const os = parser.getOS();
+  switch (os.name) {
+    case 'Windows':
+    case 'Windows Phone':
+    case 'Windows Mobile':
+      return true;
+    default:
+      return false;
+  };
+})
+</script>
+
+<Feature v-if="isWindows" featureHeading='1. Download & Install Lando'
   :showOrbit="false"
 >
 
@@ -14,6 +34,21 @@ pageClass: download
     <p>Double click the package in the download and consult the <a href="https://docs.lando.dev/basics/installation.html" target="_blank">documentation</a> if you have trouble.</p>
   </template>
   <a href="https://github.com/lando/lando/releases" class="btn btn-primary btn-full-width">Download Lando</a>
+</Feature>
+
+<Feature v-else featureHeading='1. Get Lando'
+  :showOrbit="false"
+>
+
+  <template v-slot:afterFeatureContent>
+    <p>Run our convenience script one-liner to get started.</p>
+    <p>Or check out the <a href="https://docs.lando.dev/install.html" target="_blank">docs</a> to customize your install.</p>
+  </template>
+
+```bash:no-line-numbers
+# Paste our convenience script into a terminal and execute
+/bin/bash -c "$(curl -fsSL https://get.lando.dev/setup-lando.sh)"
+```
 </Feature>
 
 <Feature featureHeading='2. Spin Up Your First App'
