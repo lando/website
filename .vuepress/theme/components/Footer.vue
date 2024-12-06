@@ -26,7 +26,7 @@
                 <li><a href="https://docs.lando.dev/basics/installation.html" target="_blank">Installation</a></li>
                 <li><a href="https://docs.lando.dev/basics/first-app.html" target="_blank">First App</a></li>
                 <li><a href="https://docs.lando.dev/basics/usage" target="_blank">Usage</a></li>
-                <li><a href="https://docs.lando.dev/config/lando.html" target="_blank">Landofile</a></li>
+                <li><a href="https://docs.lando.dev/landofile/" target="_blank">Landofile</a></li>
               </ul>
             </div>
             <div class="footer-column-third">
