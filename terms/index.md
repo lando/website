@@ -4,7 +4,7 @@ description: The Terms of Use for Lando web properties and Lando as software
 ---
 # Terms and Conditions
 
-**Last updated:** _March 7, 2022_
+**Last updated:** _July 4, 2025_
 
 These Terms and Conditions ("Terms", "Terms and Conditions") govern your relationship with <https://lando.dev> website (the "Service") operated by Lando System, Inc ("us", "we", or "our").
 
@@ -98,7 +98,7 @@ Your use of the Service is at your sole risk. The Service is provided on an "AS 
 
 Lando System, Inc its subsidiaries, affiliates, and its licensors do not warrant that a) the Service will function uninterrupted, secure or available at any particular time or location; b) any errors or defects will be corrected; c) the Service is free of viruses or other harmful components; or d) the results of using the Service will meet your requirements.
 
-Kalabox Inc DBA offers sponsorship Subscriptions ("Membership(s)") in exchange for various perks and benefits ("Benefits"). We will make a good faith effort to provide Benefits for Memberships within a reasonable amount of time. These Benefits represent the only Benefits to be received.
+Lando Alliance offers sponsorship Subscriptions ("Membership(s)") in exchange for various perks and benefits ("Benefits"). We will make a good faith effort to provide Benefits for Memberships within a reasonable amount of time. These Benefits represent the only Benefits to be received.
 
 We reserve the right to modify the Membership Benefits at any time and at our sole discretion. To secure Benefits or add additional Benefits you will need another agreement made directly with Kalabox Inc DBA.
 
