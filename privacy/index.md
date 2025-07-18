@@ -5,9 +5,9 @@ description: The privacy policies for Lando web properties and Lando as software
 
 # Privacy Policy
 
-**Last updated:** _March 7, 2022_
+**Last updated:** _July 4, 2025_
 
-Lando System, Inc ("us", "we", or "our") operates the <https://lando.dev> website (hereinafter referred to as the "Service").
+Lando Alliance ("us", "we", or "our") operates the <https://lando.dev> website (hereinafter referred to as the "Service").
 
 This page informs you of our policies regarding the collection, use and disclosure of personal data when you use our Service and the choices you have associated with that data.
 
@@ -21,7 +21,7 @@ If you are looking for the Privacy Policy for the Lando software itself you shou
 
 *   **Service**
 
-    Service is the <https://lando.dev> website operated by Lando System, Inc
+    Service is the <https://lando.dev> website operated by Lando Alliance
 
 *   **Personal Data**
 
@@ -96,7 +96,7 @@ Examples of Cookies we use:
 
 ## Use of Data
 
-Lando System, Inc uses the collected data for various purposes:
+Lando Alliance uses the collected data for various purposes:
 
 *   To provide and maintain our Service
 *   To notify you about changes to our Service
@@ -109,9 +109,9 @@ Lando System, Inc uses the collected data for various purposes:
 
 ## Legal Basis for Processing Personal Data under the General Data Protection Regulation (GDPR)
 
-If you are from the European Economic Area (EEA), Lando System, Inc legal basis for collecting and using the personal information described in this Privacy Policy depends on the Personal Data we collect and the specific context in which we collect it.
+If you are from the European Economic Area (EEA), Lando Alliance legal basis for collecting and using the personal information described in this Privacy Policy depends on the Personal Data we collect and the specific context in which we collect it.
 
-Lando System, Inc may process your Personal Data because:
+Lando Alliance may process your Personal Data because:
 
 *   We need to perform a contract with you
 *   You have given us permission to do so
@@ -120,9 +120,9 @@ Lando System, Inc may process your Personal Data because:
 
 ## Retention of Data
 
-Lando System, Inc will retain your Personal Data only for as long as is necessary for the purposes set out in this Privacy Policy. We will retain and use your Personal Data to the extent necessary to comply with our legal obligations (for example, if we are required to retain your data to comply with applicable laws), resolve disputes and enforce our legal agreements and policies.
+Lando Alliance will retain your Personal Data only for as long as is necessary for the purposes set out in this Privacy Policy. We will retain and use your Personal Data to the extent necessary to comply with our legal obligations (for example, if we are required to retain your data to comply with applicable laws), resolve disputes and enforce our legal agreements and policies.
 
-Lando System, Inc will also retain Usage Data for internal analysis purposes. Usage Data is generally retained for a shorter period of time, except when this data is used to strengthen the security or to improve the functionality of our Service, or we are legally obligated to retain this data for longer periods.
+Lando Alliance will also retain Usage Data for internal analysis purposes. Usage Data is generally retained for a shorter period of time, except when this data is used to strengthen the security or to improve the functionality of our Service, or we are legally obligated to retain this data for longer periods.
 
 ## Transfer of Data
 
@@ -132,16 +132,16 @@ If you are located outside United States and choose to provide information to us
 
 Your consent to this Privacy Policy followed by your submission of such information represents your agreement to that transfer.
 
-Lando System, Inc will take all the steps reasonably necessary to ensure that your data is treated securely and in accordance with this Privacy Policy and no transfer of your Personal Data will take place to an organisation or a country unless there are adequate controls in place including the security of your data and other personal information.
+Lando Alliance will take all the steps reasonably necessary to ensure that your data is treated securely and in accordance with this Privacy Policy and no transfer of your Personal Data will take place to an organisation or a country unless there are adequate controls in place including the security of your data and other personal information.
 
 ## Disclosure of Data
 
 ### Legal Requirements
 
-Lando System, Inc may disclose your Personal Data in the good faith belief that such action is necessary to:
+Lando Alliance may disclose your Personal Data in the good faith belief that such action is necessary to:
 
 *   To comply with a legal obligation
-*   To protect and defend the rights or property of Lando System, Inc
+*   To protect and defend the rights or property of Lando Alliance
 *   To prevent or investigate possible wrongdoing in connection with the Service
 *   To protect the personal safety of users of the Service or the public
 *   To protect against legal liability
@@ -158,7 +158,7 @@ You can enable or disable Do Not Track by visiting the Preferences or Settings p
 
 ## Your Data Protection Rights under the General Data Protection Regulation (GDPR)
 
-If you are a resident of the European Economic Area (EEA), you have certain data protection rights. Lando System, Inc aims to take reasonable steps to allow you to correct, amend, delete or limit the use of your Personal Data.
+If you are a resident of the European Economic Area (EEA), you have certain data protection rights. Lando Alliance aims to take reasonable steps to allow you to correct, amend, delete or limit the use of your Personal Data.
 
 If you wish to be informed about what Personal Data we hold about you and if you want it to be removed from our systems, please contact us.
 
@@ -174,7 +174,7 @@ In certain circumstances, you have the following data protection rights:
 
 *   **The right to data portability.** You have the right to be provided with a copy of the information we have on you in a structured, machine-readable and commonly used format.
 
-*   **The right to withdraw consent.** You also have the right to withdraw your consent at any time where Lando System, Inc relied on your consent to process your personal information.
+*   **The right to withdraw consent.** You also have the right to withdraw your consent at any time where Lando Alliance relied on your consent to process your personal information.
 
 Please note that we may ask you to verify your identity before responding to such requests.
 
