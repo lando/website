@@ -74,7 +74,7 @@
     </div>
     <div class="footer-bottom-wrapper">
       <div class="footer-bottom">
-        <div class="footer-copyright">© 2022 Lando System, Inc.</div>
+        <div class="footer-copyright">© 2025 Lando Alliance</div>
         <ul class="footer-bottom-menu">
           <li><a href="/terms">Terms</a></li>
           <li><a href="/privacy">Privacy Policy</a></li>
