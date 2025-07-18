@@ -100,7 +100,7 @@ Lando Alliance its subsidiaries, affiliates, and its licensors do not warrant th
 
 Lando Alliance offers sponsorship Subscriptions ("Membership(s)") in exchange for various perks and benefits ("Benefits"). We will make a good faith effort to provide Benefits for Memberships within a reasonable amount of time. These Benefits represent the only Benefits to be received.
 
-We reserve the right to modify the Membership Benefits at any time and at our sole discretion. To secure Benefits or add additional Benefits you will need another agreement made directly with Kalabox Inc DBA.
+We reserve the right to modify the Membership Benefits at any time and at our sole discretion. To secure Benefits or add additional Benefits you will need another agreement made directly with Lando Alliance.
 
 ## Governing Law
 
