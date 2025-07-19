@@ -1,7 +1,7 @@
 {
   "name": "@lando/website",
   "description": "Lando Website for the best local development solution in the galaxy.",
-  "license": "GPL-3.0",
+  "license": "MIT",
   "version": "4.0.1",
   "repository": "https://github.com/lando/website",
   "bugs": {
