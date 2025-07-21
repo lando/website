@@ -50,7 +50,7 @@ You must ensure you have the right to submit such content and that it does not v
 
 ## 5. Privacy
 
-Please refer to our [Privacy Policy](/privacy) to learn how we collect, use, and protect your information.
+Please refer to our [Privacy Policy](/privacy.md) to learn how we collect, use, and protect your information.
 
 ---
 
