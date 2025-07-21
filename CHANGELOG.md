@@ -1,5 +1,7 @@
 ## {{ UNRELEASED_VERSION }} - [{{ UNRELEASED_DATE }}]({{ UNRELEASED_LINK }})
 
+## v4.0.2 - [July 21, 2025](https://github.com/lando/website/releases/tag/v4.0.2)
+
 * Updated policies for Lando Alliance migration
 
 ## v4.0.1 [January 30, 2024](https://github.com/lando/website/releases/tag/v4.0.1)
