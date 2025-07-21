@@ -1,10 +1,11 @@
 ---
 title: Terms of Use
 description: The Terms of Use for Lando web properties and Lando as software
+pageClass: terms
 ---
 # Terms of Use
 
-**Effective Date:** July 4, 2025
+**Effective Date:** _July 4, 2025_\
 **Entity:** Lando Alliance (“we”, “us”, or “our”)
 
 These Terms of Use (“Terms”) govern your access to and use of the Software and Services provided by Lando Alliance, a nonprofit organization based in Washington, D.C.

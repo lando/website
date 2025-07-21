@@ -1,10 +1,11 @@
 ---
 title: Privacy Policy
 description: The privacy policies for Lando web properties and Lando as software
+pageClass: terms
 ---
 # Privacy Policy
 
-**Effective Date:** _July 4, 2025_
+**Effective Date:** _July 4, 2025_\
 **Entity:** Lando Alliance ("Lando", "we", "us", or "our")
 
 This Privacy Policy describes how Lando Alliance collects, uses, discloses, and protects your information when you use:
