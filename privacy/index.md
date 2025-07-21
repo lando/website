@@ -15,8 +15,6 @@ This Privacy Policy describes how Lando Alliance collects, uses, discloses, and 
 
 By using our Services or Software, you agree to the collection and use of information in accordance with this policy.
 
----
-
 ## Definitions
 
 - **Service(s)**: All Lando websites, documentation, support tools, and public-facing applications.
@@ -27,8 +25,6 @@ By using our Services or Software, you agree to the collection and use of inform
 - **Cookies**: Small files stored on your device for tracking or preference storage.
 - **Data Controller**: Lando Alliance is the controller of your Personal Data.
 - **Data Processors**: Third-party services used to process data on our behalf.
-
----
 
 ## What We Collect
 
@@ -49,8 +45,6 @@ By using our Services or Software, you agree to the collection and use of inform
 
 We **do not collect** Personal Data automatically from the Software. Any such data is collected only if you explicitly provide it. Instructions for opting out of telemetry or crash reporting are available in the Lando documentation.
 
----
-
 ## How We Use Data
 
 - To provide, maintain, and improve our Services and Software
@@ -58,8 +52,6 @@ We **do not collect** Personal Data automatically from the Software. Any such da
 - To provide support and respond to inquiries
 - To send updates and newsletters (if subscribed)
 - To comply with legal obligations
-
----
 
 ## Legal Basis for Processing (GDPR)
 
@@ -69,8 +61,6 @@ For individuals in the EEA, our legal bases include:
 - Fulfillment of a contract
 - Legitimate interests not overridden by your rights
 - Legal obligations
-
----
 
 ## Retention
 
@@ -82,8 +72,6 @@ We retain Personal Data only as long as necessary to:
 
 Usage and crash data are retained for a shorter period unless needed for debugging or security.
 
----
-
 ## Disclosure of Data
 
 We may disclose your Personal Data if required to do so by law or in response to valid legal requests by public authorities (e.g., court or government agency), or to:
@@ -92,13 +80,9 @@ We may disclose your Personal Data if required to do so by law or in response to
 - Protect the personal safety of users or the public
 - Protect against legal liability
 
----
-
 ## Data Transfers
 
 Data may be stored and processed outside your jurisdiction, including the United States. We ensure adequate safeguards are in place.
-
----
 
 ## Your Rights (EEA Residents)
 
@@ -111,8 +95,6 @@ Data may be stored and processed outside your jurisdiction, including the United
 
 Contact us at [privacy@lando.dev](mailto\:privacy@lando.dev) to exercise your rights. We may require identity verification.
 
----
-
 ## Service Providers
 
 We use trusted partners to operate and analyze our Services and Software:
@@ -122,37 +104,25 @@ We use trusted partners to operate and analyze our Services and Software:
 - **Bugsnag**: Error logging (for Software)
 - **Amplitude**: Product usage analytics (for Software)
 
----
-
 ## Links to Other Sites
 
 Our Services may contain links to other websites not operated by us. We are not responsible for the content or privacy practices of these third-party sites.
-
----
 
 ## Children's Privacy
 
 Our Services and Software are not directed to individuals under 18. If we discover we collected Personal Data from a child, we will delete it promptly.
 
----
-
 ## Do Not Track
 
 We do not respond to browser-based Do Not Track (DNT) signals.
-
----
 
 ## Security
 
 We take appropriate technical and organizational measures to protect your data. However, no method of electronic transmission or storage is completely secure. We cannot guarantee absolute security.
 
----
-
 ## Changes to This Policy
 
 We may update this policy from time to time. The latest version is always available at [lando.dev/privacy](https://lando.dev/privacy). We will notify users of significant changes via email or notice.
-
----
 
 ## Contact Us
 
