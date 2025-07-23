@@ -60,6 +60,10 @@
   to = "/features"
   status = 301
 [[redirects]]
+  from = "/coc.html"
+  to = "/coc"
+  status = 301
+[[redirects]]
   from = "/privacy.html"
   to = "/privacy"
   status = 301

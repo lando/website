@@ -78,6 +78,7 @@
         <ul class="footer-bottom-menu">
           <li><a href="/terms">Terms</a></li>
           <li><a href="/privacy">Privacy Policy</a></li>
+          <li><a href="/coc">Code of Conduct</a></li>
         </ul>
         <div class="footer-social">
           <a class="social-icon" href="https://github.com/lando/lando" target="_blank">
@@ -226,14 +227,24 @@ export default {
     align-items: center;
     max-width: var(--content-width);
     .footer-copyright {
-      color: hsl(var(--c-bg), 99%);
+      color: var(--c-brand-light);
     }
     .footer-bottom-menu {
       display: flex;
       list-style: none;
-      gap: 2rem;
+      gap: 0rem;
       li a {
         color: var(--c-text);
+        &:hover {
+          text-decoration: underline;
+        }
+      }
+      li {
+        &:not(:last-child)::after {
+          color: var(--c-brand-light);
+          content: " |";
+          padding: 0 0.5em;
+        }
       }
     }
     .footer-social {
@@ -253,12 +264,21 @@ export default {
   #footer .footer-content .footer-column.company {
     margin-left: 0rem;
   }
+  #footer .footer-bottom {
+    flex-direction: column;
+    .footer-social {
+      margin-left: 0;
+    }
+  }
 }
 @media (max-width: $MQMobile) {
   #footer {
     padding: 0rem;
     .footer-column {
       width: auto;
+    }
+    .footer-bottom-wrapper {
+      padding: 1rem 1rem;
     }
   }
 }
