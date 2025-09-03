@@ -3,7 +3,7 @@ name: Bump version
 on:
   release:
     types:
-      - published
+      - created
 
 jobs:
   deploy:
