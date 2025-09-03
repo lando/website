@@ -1,5 +1,7 @@
 ## {{ UNRELEASED_VERSION }} - [{{ UNRELEASED_DATE }}]({{ UNRELEASED_LINK }})
 
+* Added 501(c)(3) status and link to IRS Determination Letter
+
 ## v4.0.2 - [July 21, 2025](https://github.com/lando/website/releases/tag/v4.0.2)
 
 * Updated policies for Lando Alliance migration

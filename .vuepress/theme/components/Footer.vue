@@ -74,7 +74,14 @@
     </div>
     <div class="footer-bottom-wrapper">
       <div class="footer-bottom">
-        <div class="footer-copyright">© 2025 Lando Alliance</div>
+        <div class="footer-copyright">© 2025 Lando Alliance
+          <a
+            target="_blank"
+            href="https://drive.google.com/file/d/1Gms46fU-PKHnze49cKE-sCIxJWv7SeiF/view"
+          >
+            a 501(c)(3) nonprofit organization
+          </a>
+        </div>
         <ul class="footer-bottom-menu">
           <li><a href="/terms">Terms</a></li>
           <li><a href="/privacy">Privacy Policy</a></li>
@@ -219,7 +226,7 @@ export default {
   background-color: var(--c-brand);
   color: var(--c-text);
   font-size: .875rem;
-  padding: 1rem 6.25rem;
+  padding: 1rem 0rem;
   .footer-bottom {
     margin: auto;
     display: flex;
@@ -227,7 +234,17 @@ export default {
     align-items: center;
     max-width: var(--content-width);
     .footer-copyright {
+      display: flex;
+      text-align: center;
+      gap: 15px;;
       color: var(--c-brand-light);
+      a {
+        gap: 1em;
+        color: var(--c-text-light);
+        &:hover {
+          text-decoration: underline;
+        }
+      }
     }
     .footer-bottom-menu {
       display: flex;
@@ -260,6 +277,13 @@ export default {
     }
   }
 }
+
+@media (max-width: 1350px) {
+  #footer .footer-bottom-wrapper {
+    padding: 1rem 2rem;
+  }
+}
+
 @media (max-width: $MQNarrow) {
   #footer .footer-content .footer-column.company {
     margin-left: 0rem;
@@ -271,6 +295,7 @@ export default {
     }
   }
 }
+
 @media (max-width: $MQMobile) {
   #footer {
     padding: 0rem;
@@ -279,6 +304,11 @@ export default {
     }
     .footer-bottom-wrapper {
       padding: 1rem 1rem;
+      .footer-copyright {
+        display: flex;
+        text-align: center;
+        flex-direction: column;
+      }
     }
   }
 }
