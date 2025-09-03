@@ -2,7 +2,7 @@
   "name": "@lando/website",
   "description": "Lando Website for the best local development solution in the galaxy.",
   "license": "MIT",
-  "version": "4.0.2",
+  "version": "4.0.3",
   "repository": "https://github.com/lando/website",
   "bugs": {
     "email": "mike@lando.dev",
