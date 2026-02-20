@@ -17,7 +17,7 @@
 </template>
 
 <script setup>
-import {useThemeLocaleData} from '@vuepress/theme-default/lib/client/composables';
+import {useThemeLocaleData} from '@vuepress/theme-default/client';
 import {computed, ref} from 'vue';
 
 defineEmits(['toggle']);
