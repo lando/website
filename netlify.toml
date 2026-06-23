@@ -33,7 +33,7 @@
   package = "netlify-plugin-checklinks"
   [plugins.inputs]
     todoPatterns = [ "self-signed certificate", "hub.docker.com" ]
-    skipPatterns = [ ".rss", ".gif", ".jpg", 'x.com', 'twitter.com' ]
+    skipPatterns = [ ".rss", ".gif", ".jpg", 'fonts.googleapis.com', 'https://lando.dev/blog', 'https://lando.dev/events', 'x.com', 'twitter.com' ]
     checkExternal = true
 
 # Domain redirects
@@ -82,6 +82,11 @@
 
 # Subsite redirects
 [[redirects]]
+  from = "/blog"
+  to = "https://lando-blog.netlify.app"
+  status = 200
+  force = true
+[[redirects]]
   from = "/blog/*"
   to = "https://lando-blog.netlify.app/:splat"
   status = 200
@@ -89,6 +94,11 @@
 [[redirects]]
   from = "/blog.html"
   to = "https://lando-blog.netlify.app"
+  status = 200
+  force = true
+[[redirects]]
+  from = "/events"
+  to = "https://lando-events.netlify.app"
   status = 200
   force = true
 [[redirects]]

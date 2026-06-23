@@ -1,11 +1,11 @@
-const {path} = require('@vuepress/utils');
-const customTheme = require(path.resolve(__dirname, 'theme'));
+import {defineUserConfig} from '@vuepress/cli';
+import {websiteTheme} from './theme/index.js';
 
-module.exports = {
+export default defineUserConfig({
   lang: 'en-US',
   title: 'Lando',
   description: 'Instant dev environments for all your projects.',
-  theme: customTheme({
+  theme: websiteTheme({
   // PARENT CONFIG
     contributors: false,
     darkMode: false,
@@ -21,7 +21,7 @@ module.exports = {
     sidebar: [],
 
     // THEME CONFIG
-    baseUrl: 'https://lando.dev',
+    baseUrl: null,
     autometa: {
       twitter: '@devwithlando',
       canonicalUrl: 'https://lando.dev/',
@@ -71,4 +71,4 @@ module.exports = {
     ['meta', {name: 'msapplication-TileColor', content: '#DD3F8F'}],
     ['meta', {name: 'theme-color', content: '#ffffff'}],
   ],
-};
+});
