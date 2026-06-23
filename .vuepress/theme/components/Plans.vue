@@ -41,7 +41,7 @@ export default {
         {
           title: '3. Lando Slack',
           description: 'We have a very dedicated core team (which relies on your <a href="https://github.com/sponsors/lando">sponsorship</a>) which tries to answer questions on the Slack. We\'re also backed up by a community of thousands of users who often chime in with helpful tips.',
-          linkHref: 'https://launchpass.com/devwithlando',
+          linkHref: 'https://www.launchpass.com/devwithlando',
           linkText: 'Register',
         },
       ]),

@@ -57,7 +57,7 @@ const isWindows = computed(() => {
 
   <template v-slot:afterFeatureContent>
     <p>
-      Try spinning up a basic <em>Hello World!</em> app before spinning up <a href="https://docs.lando.dev/basics/first-app.html" target="_blank">more complex apps</a> or trying any of our <a href="https://docs.lando.dev/core/v3/recipes.html" target="_blank">myriad recipes</a>.
+      Try spinning up a basic <em>Hello World!</em> app before spinning up <a href="https://docs.lando.dev/getting-started/first-app.html" target="_blank">more complex apps</a> or trying any of our <a href="https://docs.lando.dev/landofile/recipes.html" target="_blank">myriad recipes</a>.
     </p>
   </template>
 
