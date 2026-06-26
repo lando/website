@@ -55,6 +55,6 @@ Donations help sustain the free software, documentation, community events, and s
 - [Lando source repository](https://github.com/lando/lando)
 - [Lando documentation](https://docs.lando.dev)
 - [Lando Slack community](https://www.launchpass.com/devwithlando)
-- [Lando events](https://lando.dev/events)
+- [Lando events](https://www.lando.dev/events)
 - [Code of Conduct](/coc/)
 - [IRS 501(c)(3) determination letter](https://drive.google.com/file/d/1Gms46fU-PKHnze49cKE-sCIxJWv7SeiF/view)

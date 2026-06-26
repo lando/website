@@ -58,11 +58,11 @@
             <div class="footer-column-half">
               <h4>Nonprofit</h4>
               <ul>
-                <li><a href="https://lando.dev/mission">Mission</a></li>
-                <li><a href="https://lando.dev/blog">Blog</a></li>
-                <li><a href="https://lando.dev/events">Events</a></li>
-                <li><a href="https://lando.dev/support">Support</a></li>
-                <li><a href="https://lando.dev/contact">Contact</a></li>
+                <li><a href="https://www.lando.dev/mission">Mission</a></li>
+                <li><a href="https://www.lando.dev/blog">Blog</a></li>
+                <li><a href="https://www.lando.dev/events">Events</a></li>
+                <li><a href="https://www.lando.dev/support">Support</a></li>
+                <li><a href="https://www.lando.dev/contact">Contact</a></li>
                 <li><a href="https://github.com/sponsors/lando" target="_blank" rel="noopener noreferrer">Donate</a></li>
               </ul>
               <hr>

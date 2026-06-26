@@ -21,10 +21,10 @@ module.exports = {
     sidebar: [],
 
     // THEME CONFIG
-    baseUrl: 'https://lando.dev',
+    baseUrl: 'https://www.lando.dev',
     autometa: {
       twitter: '@devwithlando',
-      canonicalUrl: 'https://lando.dev/',
+      canonicalUrl: 'https://www.lando.dev/',
     },
     carbonAds: false,
     contributorsPage: false,
@@ -45,10 +45,10 @@ module.exports = {
     },
     sitemap: true,
     sharedNavbar: [
-      {text: 'Mission', link: 'https://lando.dev/mission'},
-      {text: 'Blog', link: 'https://lando.dev/blog'},
-      {text: 'Events', link: 'https://lando.dev/events'},
-      {text: 'Support', link: 'https://lando.dev/support'},
+      {text: 'Mission', link: 'https://www.lando.dev/mission'},
+      {text: 'Blog', link: 'https://www.lando.dev/blog'},
+      {text: 'Events', link: 'https://www.lando.dev/events'},
+      {text: 'Support', link: 'https://www.lando.dev/support'},
       {text: 'Docs', link: 'https://docs.lando.dev'},
     ],
     sidebar: false,

@@ -26,7 +26,7 @@
   package = "netlify-plugin-checklinks"
   [context.deploy-preview.plugins.inputs]
     todoPatterns = [ "self-signed certificate", "hub.docker.com", " https://github.com/issues" ]
-    skipPatterns = [ ".rss", ".gif", ".jpg", 'fonts.googleapis.com', 'https://lando.dev/blog', 'https://lando.dev/events', 'x.com', 'twitter.com' ]
+    skipPatterns = [ ".rss", ".gif", ".jpg", 'fonts.googleapis.com', 'https://www.lando.dev/blog', 'https://www.lando.dev/events', 'x.com', 'twitter.com' ]
     checkExternal = true
 
 # pluginz
@@ -39,11 +39,11 @@
 # Domain redirects
 [[redirects]]
   from = "https://devwithlando.io/*"
-  to = "https://lando.dev/:splat"
+  to = "https://www.lando.dev/:splat"
   status = 301
 [[redirects]]
   from = "https://lndo.io/*"
-  to = "https://lando.dev/:splat"
+  to = "https://www.lando.dev/:splat"
   status = 301
 
 # .html to / redirects
@@ -151,14 +151,26 @@
 
 # Legacy redirects from cloudflare
 [[redirects]]
-  from = "https://lando.dev/sponsor/"
+  from = "/sponsor"
   to = "https://github.com/sponsors/lando"
   status = 302
 [[redirects]]
-  from = "https://lando.dev/join/"
+  from = "/sponsor/"
+  to = "https://github.com/sponsors/lando"
+  status = 302
+[[redirects]]
+  from = "/join"
   to = "https://docs.lando.dev/contrib/contributing.html"
   status = 301
 [[redirects]]
-  from = "https://lando.dev/alliance/join/"
+  from = "/join/"
+  to = "https://docs.lando.dev/contrib/contributing.html"
+  status = 301
+[[redirects]]
+  from = "/alliance/join"
+  to = "https://docs.lando.dev/contrib/contributing.html"
+  status = 301
+[[redirects]]
+  from = "/alliance/join/"
   to = "https://docs.lando.dev/contrib/contributing.html"
   status = 301

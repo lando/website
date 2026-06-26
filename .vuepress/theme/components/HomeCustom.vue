@@ -8,7 +8,7 @@
         ctaText='Get Lando'
         ctaTarget='_blank'
         ctaRel='noopener noreferrer'
-        secondaryCtaLink='https://lando.dev/mission'
+        secondaryCtaLink='https://www.lando.dev/mission'
         secondaryCtaText='Our Mission'
       >
         <template v-slot:heroVisual>
@@ -38,8 +38,8 @@
       >
         <template v-slot:afterFeatureContent>
           <nav class="feature-resource-links" aria-label="Learning resources">
-            <a href="https://lando.dev/blog" target="_blank" rel="noopener noreferrer">Blog</a>
-            <a href="https://lando.dev/events" target="_blank" rel="noopener noreferrer">Events</a>
+            <a href="https://www.lando.dev/blog" target="_blank" rel="noopener noreferrer">Blog</a>
+            <a href="https://www.lando.dev/events" target="_blank" rel="noopener noreferrer">Events</a>
             <a href="https://www.youtube.com/channel/UCl_QBNuGJNoo7yH-n18K7Kg" target="_blank" rel="noopener noreferrer">YouTube</a>
           </nav>
         </template>
@@ -56,7 +56,7 @@
           <nav class="feature-resource-links" aria-label="Community resources">
             <a href="https://www.launchpass.com/devwithlando" target="_blank" rel="noopener noreferrer">Slack</a>
             <a href="https://github.com/issues?q=is%3Aopen+is%3Aissue+org%3Alando" target="_blank" rel="noopener noreferrer">GitHub Issues</a>
-            <a href="https://lando.dev/events" target="_blank" rel="noopener noreferrer">Find an Event</a>
+            <a href="https://www.lando.dev/events" target="_blank" rel="noopener noreferrer">Find an Event</a>
           </nav>
         </template>
         <CommunityVisual />
@@ -108,7 +108,7 @@
     kicker: 'Our Origin Story',
     title: 'Journey to <span class="emphasis">Lando</span>',
     text: 'The Kalabox-to-Lando story shows how a long-running open-source project learned from early mistakes, opened up its tooling, and rebuilt around simpler, more flexible developer workflows.',
-    link: 'https://lando.dev/blog/2017/10/24/journey-lando.html',
+    link: 'https://www.lando.dev/blog/2017/10/24/journey-lando.html',
   };
 
   // Set Dark Mode for everything
