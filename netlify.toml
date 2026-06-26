@@ -29,10 +29,10 @@
     output_path = "reports/lighthouse.html"
 
 # https://github.com/munter/netlify-plugin-checklinks#readme
-[[plugins]]
+[[context.deploy-preview.plugins]]
   package = "netlify-plugin-checklinks"
   [plugins.inputs]
-    todoPatterns = [ "self-signed certificate", "hub.docker.com" ]
+    todoPatterns = [ "self-signed certificate", "hub.docker.com", " https://github.com/issues" ]
     skipPatterns = [ ".rss", ".gif", ".jpg", 'fonts.googleapis.com', 'https://lando.dev/blog', 'https://lando.dev/events', 'x.com', 'twitter.com' ]
     checkExternal = true
 

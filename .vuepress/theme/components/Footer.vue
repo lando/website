@@ -21,11 +21,11 @@
             <div class="footer-column-third">
               <h4>Getting Started</h4>
               <ul>
-                <li><a href="https://docs.lando.dev/basics/" target="_blank">Introduction</a></li>
-                <li><a href="https://docs.lando.dev/basics/basics.html" target="_blank">Basics</a></li>
-                <li><a href="https://docs.lando.dev/basics/installation.html" target="_blank">Installation</a></li>
-                <li><a href="https://docs.lando.dev/basics/first-app.html" target="_blank">First App</a></li>
-                <li><a href="https://docs.lando.dev/basics/usage" target="_blank">Usage</a></li>
+                <li><a href="https://docs.lando.dev/getting-started/" target="_blank">Introduction</a></li>
+                <li><a href="https://docs.lando.dev/getting-started/what-it-do.html" target="_blank">Basics</a></li>
+                <li><a href="https://docs.lando.dev/install/" target="_blank">Installation</a></li>
+                <li><a href="https://docs.lando.dev/getting-started/first-app.html" target="_blank">First App</a></li>
+                <li><a href="https://docs.lando.dev/cli/" target="_blank">Usage</a></li>
                 <li><a href="https://docs.lando.dev/landofile/" target="_blank">Landofile</a></li>
               </ul>
             </div>
