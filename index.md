@@ -1,5 +1,5 @@
 ---
 title: Home
 type: home
-description: Instant dev environments for all your projects.
+description: Free and open-source tools for learning, building, and maintaining the web.
 ---

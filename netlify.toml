@@ -53,7 +53,15 @@
   status = 301
 [[redirects]]
   from = "/download.html"
-  to = "/download"
+  to = "https://docs.lando.dev/install"
+  status = 301
+[[redirects]]
+  from = "/download"
+  to = "https://docs.lando.dev/install"
+  status = 301
+[[redirects]]
+  from = "/download/"
+  to = "https://docs.lando.dev/install"
   status = 301
 [[redirects]]
   from = "/features.html"
@@ -77,8 +85,42 @@
   status = 301
 [[redirects]]
   from = "/get"
-  to = "/download.html"
+  to = "https://docs.lando.dev/install"
   status = 301
+[[redirects]]
+  from = "/get/"
+  to = "https://docs.lando.dev/install"
+  status = 301
+[[redirects]]
+  from = "/about"
+  to = "/mission/"
+  status = 301
+[[redirects]]
+  from = "/about/"
+  to = "/mission/"
+  status = 301
+[[redirects]]
+  from = "/nonprofit"
+  to = "/mission/"
+  status = 301
+[[redirects]]
+  from = "/nonprofit/"
+  to = "/mission/"
+  status = 301
+[[redirects]]
+  from = "/donate"
+  to = "https://github.com/sponsors/lando"
+  status = 302
+[[redirects]]
+  from = "/donate/"
+  to = "https://github.com/sponsors/lando"
+  status = 302
+
+# API routes
+[[redirects]]
+  from = "/api/lando-stats"
+  to = "/.netlify/functions/lando-stats"
+  status = 200
 
 # Subsite redirects
 [[redirects]]

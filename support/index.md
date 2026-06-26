@@ -1,24 +1,24 @@
 ---
 title: Support
-description: Discover resources for getting support with Lando.
+description: Discover free community support resources for Lando.
 ---
 
 <Plans />
 
-## Still Stumped? Make a GitHub Issue.
+## Need more help? Open a GitHub issue.
 
-If you've re-read the docs, searched Google, and asked about your issue on the Lando Slack, your last stop should be GitHub.
+If you've re-read the docs, searched GitHub Issues, and asked about your issue on the Lando Slack, your last stop should be GitHub.
 
 [Search Lando](https://github.com/search?q=org%3Alando&type=issues) for relevant past issues to make sure you're not creating a duplicate. Because each Lando plugin is its own repo, searching across the entire org can help you find past issues that might be relevant.
 
 If you can't find an existing issue, post one of your own and make sure to reference it on your existing Lando Slack conversation.
 
 
-## Contact for Paid Support
+## Donations, Partnerships, and Organizational Support
 
-The Lando Team offers paid support for larger teams.
+Lando's free docs, GitHub issue queues, and Slack community are the first stop for support.
 
-If you're interested in sponsoring Lando at a corporate level, want to form a partnerhip, or want to engage in a paid team support plan, then please contact us below.
+If your organization wants to donate, sponsor Lando Alliance, partner on community programs, or discuss organizational support, contact us below. Donations can also be made through <a href="https://github.com/sponsors/lando" target="_blank" rel="noopener noreferrer">GitHub Sponsors</a>.
 
 <form class="netlify" name="contact" method="POST" netflify data-netlify="true">
   <input type="hidden" name="form-name" value="contact" />
@@ -35,4 +35,3 @@ If you're interested in sponsoring Lando at a corporate level, want to form a pa
     <button type="submit" class="btn btn-primary">Submit</button>
   </p>
 </form>
-

@@ -4,7 +4,7 @@ const customTheme = require(path.resolve(__dirname, 'theme'));
 module.exports = {
   lang: 'en-US',
   title: 'Lando',
-  description: 'Instant dev environments for all your projects.',
+  description: 'Free and open-source developer tools and resources from Lando Alliance.',
   theme: customTheme({
   // PARENT CONFIG
     contributors: false,
@@ -45,6 +45,7 @@ module.exports = {
     },
     sitemap: true,
     sharedNavbar: [
+      {text: 'Mission', link: 'https://lando.dev/mission'},
       {text: 'Blog', link: 'https://lando.dev/blog'},
       {text: 'Events', link: 'https://lando.dev/events'},
       {text: 'Support', link: 'https://lando.dev/support'},
