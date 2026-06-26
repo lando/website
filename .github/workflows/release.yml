@@ -7,22 +7,16 @@ on:
 
 jobs:
   deploy:
-    runs-on: ${{ matrix.os }}
+    runs-on: ubuntu-22.04
     env:
       TERM: xterm
-    strategy:
-      matrix:
-        os:
-          - ubuntu-22.04
-        node-version:
-          - '18'
     steps:
       - name: Checkout code
         uses: actions/checkout@v6
-      - name: Install node ${{ matrix.node-version }}
+      - name: Install node
         uses: actions/setup-node@v6
         with:
-          node-version: ${{ matrix.node-version }}
+          node-version-file: .node-version
           registry-url: https://registry.npmjs.org
           cache: npm
       - name: Install dependencies

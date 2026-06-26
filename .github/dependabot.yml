@@ -8,6 +8,9 @@ updates:
       - dependency-name: "@lando/*"
     ignore:
       - dependency-name: "@lando/vuepress-theme-default-plus"
+      - dependency-name: "@vuepress/*"
+      - dependency-name: "vuepress"
+      - dependency-name: "vuepress-vite"
   - package-ecosystem: "github-actions"
     directory: "/"
     schedule:
