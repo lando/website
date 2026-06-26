@@ -21,20 +21,20 @@
   [headers.values]
 	  Cache-Control = "public, max-age=31536000"
 
+# https://github.com/munter/netlify-plugin-checklinks#readme
+[[context.deploy-preview.plugins]]
+  package = "netlify-plugin-checklinks"
+  [context.deploy-preview.plugins.inputs]
+    todoPatterns = [ "self-signed certificate", "hub.docker.com", " https://github.com/issues" ]
+    skipPatterns = [ ".rss", ".gif", ".jpg", 'fonts.googleapis.com', 'https://lando.dev/blog', 'https://lando.dev/events', 'x.com', 'twitter.com' ]
+    checkExternal = true
+
 # pluginz
 # https://github.com/netlify/netlify-plugin-lighthouse#readme
 [[plugins]]
   package = "@netlify/plugin-lighthouse"
   [plugins.inputs.audits]
     output_path = "reports/lighthouse.html"
-
-# https://github.com/munter/netlify-plugin-checklinks#readme
-[[plugins]]
-  package = "netlify-plugin-checklinks"
-  [plugins.inputs]
-    todoPatterns = [ "self-signed certificate", "hub.docker.com" ]
-    skipPatterns = [ ".rss", ".gif", ".jpg", 'fonts.googleapis.com', 'https://lando.dev/blog', 'https://lando.dev/events', 'x.com', 'twitter.com' ]
-    checkExternal = true
 
 # Domain redirects
 [[redirects]]
@@ -53,7 +53,15 @@
   status = 301
 [[redirects]]
   from = "/download.html"
-  to = "/download"
+  to = "https://docs.lando.dev/install"
+  status = 301
+[[redirects]]
+  from = "/download"
+  to = "https://docs.lando.dev/install"
+  status = 301
+[[redirects]]
+  from = "/download/"
+  to = "https://docs.lando.dev/install"
   status = 301
 [[redirects]]
   from = "/features.html"
@@ -77,8 +85,42 @@
   status = 301
 [[redirects]]
   from = "/get"
-  to = "/download.html"
+  to = "https://docs.lando.dev/install"
   status = 301
+[[redirects]]
+  from = "/get/"
+  to = "https://docs.lando.dev/install"
+  status = 301
+[[redirects]]
+  from = "/about"
+  to = "/mission/"
+  status = 301
+[[redirects]]
+  from = "/about/"
+  to = "/mission/"
+  status = 301
+[[redirects]]
+  from = "/nonprofit"
+  to = "/mission/"
+  status = 301
+[[redirects]]
+  from = "/nonprofit/"
+  to = "/mission/"
+  status = 301
+[[redirects]]
+  from = "/donate"
+  to = "https://github.com/sponsors/lando"
+  status = 302
+[[redirects]]
+  from = "/donate/"
+  to = "https://github.com/sponsors/lando"
+  status = 302
+
+# API routes
+[[redirects]]
+  from = "/api/lando-stats"
+  to = "/.netlify/functions/lando-stats"
+  status = 200
 
 # Subsite redirects
 [[redirects]]

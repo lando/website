@@ -2,8 +2,8 @@
   <div class="plans-wrapper">
     <div class="plans-header">
       <img v-if="planetImage" :src="planetImage" class="feature-planet" />
-      <h1>Get some help.</h1>
-      <p>Lando is a free and open source project. If you're having a problem with Lando or want to get an answer to a question, don't go immediately post an issue to GitHub or fill out our contact form. Make sure you check out these three resources first.</p>
+      <h1>Free community support.</h1>
+      <p>Lando Alliance provides free docs, public issue queues, and community support channels for Lando users. If you're having a problem with Lando or want to ask a question, start with these public resources.</p>
 
     </div>
     <div class="plans">
@@ -28,19 +28,19 @@ export default {
       default: () => ([
         {
           title: '1. Lando Docs',
-          description: 'A LARGE number of Lando questions can be answered by reading the Lando docs. Double-check your `.lando.yml` and make sure you understand all configuration options before taking any further steps.',
+          description: 'The Lando docs are free and public. They cover installation, configuration, recipes, and common workflows for development and DevOps tasks.',
           linkHref: 'https://docs.lando.dev/',
           linkText: 'Lando Docs',
         },
         {
-          title: '2. Google It!',
-          description: 'Lando has been around for a few years. Use your Google-fu and search for relevant error codes; it\'s likely you might find an old GitHub issue or blog post about your problem.',
-          linkHref: 'https://www.google.com',
-          linkText: 'Google Time',
+          title: '2. GitHub Issues',
+          description: 'Lando is developed in the open. Search public GitHub issues for existing reports, fixes, workarounds, and conversations before opening a new issue.',
+          linkHref: 'https://github.com/issues?q=is%3Aopen+is%3Aissue+org%3Alando',
+          linkText: 'Search Issues',
         },
         {
           title: '3. Lando Slack',
-          description: 'We have a very dedicated core team (which relies on your <a href="https://github.com/sponsors/lando">sponsorship</a>) which tries to answer questions on the Slack. We\'re also backed up by a community of thousands of users who often chime in with helpful tips.',
+          description: 'Join the free Lando Slack to ask questions, share context, and learn from other developers using Lando in their own projects and organizations.',
           linkHref: 'https://www.launchpass.com/devwithlando',
           linkText: 'Register',
         },

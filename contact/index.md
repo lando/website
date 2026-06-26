@@ -1,13 +1,13 @@
 ---
 title: Contact Us
-description: Reach out to Lando regarding sponsorship, partnerships, paid support options, and contribution opportunities.
+description: Reach out to Lando Alliance about donations, sponsorship, partnerships, organizational support, and contribution opportunities.
 ---
 
 ## Contact
 
-If you're interested in sponsoring Lando at a corporate level, want to form a partnerhip, or want to engage in a paid team support plan, then please contact us below.
+For free Lando questions and community support, please use our [Support page](https://lando.dev/support), public GitHub issues, or the Lando Slack.
 
-To ask Lando questions and receive community support, please see our [Support page](/support).
+For donations, sponsorships, partnerships, nonprofit inquiries, organizational support, or contribution opportunities, contact us below. You can also <a href="https://github.com/sponsors/lando" target="_blank" rel="noopener noreferrer">donate through GitHub Sponsors</a>.
 
 
 <form class="netlify" name="contact" method="POST" netflify data-netlify="true">
@@ -25,4 +25,3 @@ To ask Lando questions and receive community support, please see our [Support pa
     <button type="submit" class="btn btn-primary">Submit</button>
   </p>
 </form>
-

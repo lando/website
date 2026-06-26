@@ -17,7 +17,15 @@
       </div>
 
       <div class="navbar-links-right-wrapper" :style="linksWrapperStyle">
-        <a href="/download/" class="btn btn-primary can-hide">Get Lando!</a>
+        <a
+          href="https://github.com/sponsors/lando"
+          class="btn btn-primary has-heart can-hide"
+          target="_blank"
+          rel="noopener noreferrer"
+        >
+          <DonateHeart />
+          Donate
+        </a>
         <ToggleSidebarButtonCustom @toggle="$emit('toggle-sidebar')" />
       </div>
     </div>
@@ -28,6 +36,7 @@
 import {useRouteLocale, useSiteLocaleData, withBase, ClientOnly} from '@vuepress/client';
 import {computed, onMounted, ref, h} from 'vue';
 import {useThemeLocaleData} from '@vuepress/theme-default/lib/client/composables';
+import DonateHeart from './DonateHeart.vue';
 import NavbarItems from '@vuepress/theme-default/lib/client/components/NavbarItems.vue';
 import ToggleSidebarButtonCustom from './ToggleSidebarButtonCustom.vue';
 

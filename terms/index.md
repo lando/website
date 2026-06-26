@@ -19,7 +19,7 @@ By accessing or using the Software or Services, you agree to be bound by these T
 
 ## 2. Software License
 
-Unless otherwise specified, all Software is provided under the [MIT License](https://opensource.org/licenses/MIT). You are free to use, copy, modify, merge, publish, distribute, sublicense, and/or sell copies of the Software, provided you include the original copyright and license.
+Unless otherwise specified, all Software is provided under the [MIT License](https://opensource.org/license/MIT). You are free to use, copy, modify, merge, publish, distribute, sublicense, and/or sell copies of the Software, provided you include the original copyright and license.
 
 We provide the Software “as is,” without warranty or guarantee of any kind.
 
@@ -40,7 +40,7 @@ You must ensure you have the right to submit such content and that it does not v
 
 ## 5. Privacy
 
-Please refer to our [Privacy Policy](/privacy.md) to learn how we collect, use, and protect your information.
+Please refer to our [Privacy Policy](/privacy) to learn how we collect, use, and protect your information.
 
 ## 6. Third-Party Links
 

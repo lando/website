@@ -1,7 +1,7 @@
 ---
 title: Get Lando!
 metaTitle: Get Lando | Lando
-description: Download Lando and take your local development and DevOps workflow to lightspeed.
+description: Install Lando, the free and open-source local development and DevOps tool maintained by Lando Alliance.
 pageClass: download
 ---
 
@@ -30,10 +30,10 @@ const isWindows = computed(() => {
 >
 
   <template v-slot:afterFeatureContent>
-    <p>Head over to the releases section of our GitHub page and <a href="https://github.com/lando/lando/releases" target="_blank">download</a> the version that makes sense for your operating system.</p>
-    <p>Double click the package in the download and consult the <a href="https://docs.lando.dev/basics/installation.html" target="_blank">documentation</a> if you have trouble.</p>
+    <p>Head over to the releases section of our GitHub page and <a href="https://github.com/lando/lando/releases" target="_blank" rel="noopener noreferrer">download</a> the version that makes sense for your operating system.</p>
+    <p>Double click the package in the download and consult the <a href="https://docs.lando.dev/install" target="_blank" rel="noopener noreferrer">documentation</a> if you have trouble.</p>
   </template>
-  <a href="https://github.com/lando/lando/releases" class="btn btn-primary btn-full-width">Download Lando</a>
+  <a href="https://github.com/lando/lando/releases" target="_blank" rel="noopener noreferrer" class="btn btn-primary btn-full-width">Download Lando</a>
 </Feature>
 
 <Feature v-else featureHeading='1. Get Lando'
@@ -42,7 +42,7 @@ const isWindows = computed(() => {
 
   <template v-slot:afterFeatureContent>
     <p>Run our convenience script one-liner to get started.</p>
-    <p>Or check out the <a href="https://docs.lando.dev/install.html" target="_blank">docs</a> to customize your install.</p>
+    <p>Or check out the <a href="https://docs.lando.dev/install" target="_blank" rel="noopener noreferrer">docs</a> to customize your install.</p>
   </template>
 
 ```bash:no-line-numbers

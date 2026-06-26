@@ -21,11 +21,11 @@
             <div class="footer-column-third">
               <h4>Getting Started</h4>
               <ul>
-                <li><a href="https://docs.lando.dev/basics/" target="_blank">Introduction</a></li>
-                <li><a href="https://docs.lando.dev/basics/basics.html" target="_blank">Basics</a></li>
-                <li><a href="https://docs.lando.dev/basics/installation.html" target="_blank">Installation</a></li>
-                <li><a href="https://docs.lando.dev/basics/first-app.html" target="_blank">First App</a></li>
-                <li><a href="https://docs.lando.dev/basics/usage" target="_blank">Usage</a></li>
+                <li><a href="https://docs.lando.dev/getting-started/" target="_blank">Introduction</a></li>
+                <li><a href="https://docs.lando.dev/getting-started/what-it-do.html" target="_blank">Basics</a></li>
+                <li><a href="https://docs.lando.dev/install/" target="_blank">Installation</a></li>
+                <li><a href="https://docs.lando.dev/getting-started/first-app.html" target="_blank">First App</a></li>
+                <li><a href="https://docs.lando.dev/cli/" target="_blank">Usage</a></li>
                 <li><a href="https://docs.lando.dev/landofile/" target="_blank">Landofile</a></li>
               </ul>
             </div>
@@ -35,7 +35,7 @@
                 <li><a href="https://github.com/lando/lando" target="_blank">Lando</a></li>
                 <li><a href="https://github.com/lando/hyperdrive" target="_blank">Hyperdrive</a></li>
                 <li><a href="https://github.com/lando/leia" target="_blank">Leia</a></li>
-                <li><a href="https://github.com/lando/docs/" target="_blank">Docs</a></li>
+                <li><a href="https://github.com/lando/core/" target="_blank">Docs</a></li>
                 <li><a href="https://github.com/lando/website" target="_blank">Website</a></li>
                 <li><a href="https://github.com/lando/blog" target="_blank">Blog</a></li>
                 <li><a href="https://github.com/lando/events" target="_blank">Events</a></li>
@@ -46,26 +46,28 @@
               <ul>
                 <li><a href="https://www.launchpass.com/devwithlando" target="_blank">Slack</a></li>
                 <li><a href="https://github.com/issues?q=is%3Aopen+is%3Aissue+org%3Alando" target="_blank">GitHub Issues</a></li>
-              </ul>
-              <h4>Sponsor</h4>
-              <ul>
-                <li><a href="https://github.com/sponsors/lando" target="_blank">GitHub</a></li>
-                <li><a href="https://www.patreon.com/join/devwithlando?" target="_blank">Patreon</a></li>
-                <li><a href="https://opencollective.com/lando" target="_blank">OpenCollective</a></li>
+                <li><a href="https://blog.lando.dev/tag/case-study/">Case Studies</a></li>
+
               </ul>
             </div>
           </div>
         </div>
         <div class="footer-column company">
-          <h3>Company</h3>
+          <h3>Lando Alliance</h3>
           <div class="footer-column-inner">
             <div class="footer-column-half">
-              <h4>About Us</h4>
+              <h4>Nonprofit</h4>
               <ul>
-                <li><a href="https://blog.lando.dev/tag/case-study/">Case Studies</a></li>
-                <li><a href="https://blog.lando.dev/tag/lando/">Blog</a></li>
-                <li><a href="https://events.lando.dev">Events</a></li>
-                <li><a href="/contact/">Contact Us</a></li>
+                <li><a href="https://lando.dev/mission">Mission</a></li>
+                <li><a href="https://lando.dev/blog">Blog</a></li>
+                <li><a href="https://lando.dev/events">Events</a></li>
+                <li><a href="https://lando.dev/support">Support</a></li>
+                <li><a href="https://lando.dev/contact">Contact</a></li>
+                <li><a href="https://github.com/sponsors/lando" target="_blank" rel="noopener noreferrer">Donate</a></li>
+              </ul>
+              <hr>
+              <ul>
+                <li><a href="https://drive.google.com/file/d/1Gms46fU-PKHnze49cKE-sCIxJWv7SeiF/view" target="_blank">501(c)(3) Letter</a></li>
               </ul>
             </div>
           </div>
@@ -74,7 +76,7 @@
     </div>
     <div class="footer-bottom-wrapper">
       <div class="footer-bottom">
-        <div class="footer-copyright">© 2025 Lando Alliance
+        <div class="footer-copyright">© 2026 Lando Alliance
           <a
             target="_blank"
             href="https://drive.google.com/file/d/1Gms46fU-PKHnze49cKE-sCIxJWv7SeiF/view"

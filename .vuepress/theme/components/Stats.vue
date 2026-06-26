@@ -6,7 +6,7 @@
         50,000+
       </div>
       <div class="stat-title">
-        Delighted Devs
+        Developers Supported
       </div>
     </div>
     <div class="stats-item">

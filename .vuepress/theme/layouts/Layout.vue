@@ -3,9 +3,11 @@
     <ParentLayout>
       <template #sidebar-bottom>
         <FooterCta
-          heading="What are you waiting for?"
-          ctaText="Get Lando Now"
-          ctaLink="/download"
+          heading="Start building with Lando"
+          ctaText="Install Lando"
+          ctaLink="https://docs.lando.dev/install"
+          ctaTarget="_blank"
+          ctaRel="noopener noreferrer"
         />
       </template>
       <template #page>
@@ -26,6 +28,15 @@
         </Page>
       </template>
     </ParentLayout>
+    <FooterCta
+      heading="Support free developer tools"
+      text="Lando is free and open source. Donations help Lando Alliance maintain the software, documentation, events, and community support that keep it accessible."
+      ctaText="Donate"
+      ctaLink="https://github.com/sponsors/lando"
+      ctaTarget="_blank"
+      ctaRel="noopener noreferrer"
+      :showHeart="true"
+    />
     <Footer />
   </div>
 </template>
@@ -49,8 +60,10 @@ const frontmatter = usePageFrontmatter();
 const page = usePageData();
 
 // Set Dark Mode for everything
-const htmlEl = window === null || window === void 0 ? void 0 : window.document.querySelector('html');
-htmlEl === null || htmlEl === void 0 ? void 0 : htmlEl.classList.toggle('dark', true);
+if (typeof window !== 'undefined') {
+  const htmlEl = window.document.querySelector('html');
+  htmlEl === null || htmlEl === void 0 ? void 0 : htmlEl.classList.toggle('dark', true);
+}
 </script>
 
 <style lang="scss">

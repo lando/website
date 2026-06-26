@@ -65,6 +65,7 @@ $default-orbit-margin-top: 225 - $default-orbit-height;
 
 .feature {
   margin: 5rem 0rem;
+  align-items: center;
   display: flex;
   flex-wrap: wrap;
   gap: 4rem;
@@ -76,8 +77,19 @@ $default-orbit-margin-top: 225 - $default-orbit-height;
     flex-basis: calc(50% - 4rem);
     margin: auto;
   }
+  .feature-content {
+    position: relative;
+    z-index: 2;
+  }
   .feature-image {
+    align-items: center;
     display: flex;
+    justify-content: flex-end;
+    position: relative;
+    z-index: 1;
+    .mission-visual {
+      transform: translate(var(--mission-visual-shift-x, 0), var(--mission-visual-shift-y, 2.25rem));
+    }
     img {
       display: block;
       margin: auto;
@@ -87,6 +99,9 @@ $default-orbit-margin-top: 225 - $default-orbit-height;
 
 .feature.right {
   flex-direction: row-reverse;
+  .feature-image {
+    justify-content: flex-start;
+  }
 }
 
 @media (max-width: $MQMobile) {
@@ -97,6 +112,10 @@ $default-orbit-margin-top: 225 - $default-orbit-height;
       width: 100%;
       flex-grow: 1;
       flex-basis: 100%;
+      justify-content: center;
+    }
+    .feature-image .mission-visual {
+      transform: none;
     }
   }
   .feature-orbit {
