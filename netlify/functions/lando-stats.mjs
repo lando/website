@@ -42,6 +42,7 @@ const getLatestCoreRelease = async () => {
 };
 
 export const handler = async () => {
+  const startedAt = Date.now();
   const year = new Date().getUTCFullYear();
   const since = `${year}-01-01`;
 
@@ -52,27 +53,42 @@ export const handler = async () => {
       getLatestCoreRelease(),
     ]);
 
+    const payload = {
+      updatedAt: new Date().toISOString(),
+      year,
+      since: {
+        date: since,
+        label: `Jan 1, ${year}`,
+      },
+      stats: {
+        mergedPullRequests,
+        closedIssues,
+        latestRelease,
+      },
+    };
+
+    console.log(JSON.stringify({
+      event: 'lando-stats.generated',
+      durationMs: Date.now() - startedAt,
+      githubTokenConfigured: Boolean(process.env.GITHUB_TOKEN),
+      payload,
+    }));
+
     return {
       statusCode: 200,
       headers: {
         ...jsonHeaders,
         'Netlify-CDN-Cache-Control': cacheControl,
       },
-      body: JSON.stringify({
-        updatedAt: new Date().toISOString(),
-        year,
-        since: {
-          date: since,
-          label: `Jan 1, ${year}`,
-        },
-        stats: {
-          mergedPullRequests,
-          closedIssues,
-          latestRelease,
-        },
-      }),
+      body: JSON.stringify(payload),
     };
   } catch (error) {
+    console.error(JSON.stringify({
+      event: 'lando-stats.error',
+      durationMs: Date.now() - startedAt,
+      message: error instanceof Error ? error.message : 'Unknown error',
+    }));
+
     return {
       statusCode: 502,
       headers: {
