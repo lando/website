@@ -1,0 +1,21 @@
+# Repository Agent Guidance
+
+## Node Runtime
+
+- Treat `.node-version` as the source of truth for the Node.js runtime.
+- GitHub Actions should use `actions/setup-node` with `node-version-file: .node-version`.
+- Do not add a separate `NODE_VERSION` value to `netlify.toml` unless Netlify stops honoring `.node-version`.
+
+## Dependency Discipline
+
+- Treat the core dependency stack as fragile, pinned infrastructure. Do not modernize, dedupe, reorganize, or "clean up" dependencies unless the user explicitly asks for a dependency migration.
+- Do not regenerate `package-lock.json` as routine maintenance.
+- Use `npm ci` for installs and validation; avoid `npm install` unless the task is explicitly a dependency migration.
+- The locked VuePress stack is fragile. Regenerating the lockfile or resolving VuePress ranges can move the site onto incompatible VuePress packages.
+- Keep `@lando/vuepress-theme-default-plus`, `@vuepress/*`, `vuepress`, and `vuepress-vite` pinned unless a deliberate VuePress migration is in scope.
+- Do not change VuePress, Vue, Vite, Webpack, theme, or plugin package versions as part of unrelated work.
+
+## VuePress Config
+
+- Keep `.vuepress/config.js` and `.vuepress/theme/index.js` in the repo's current CommonJS style for the pinned VuePress stack.
+- Do not convert those files to ESM, rename them to `.mjs`, add `"type": "module"`, or otherwise alter the module format unless the task is an explicit VuePress migration and the site is validated with a clean `npm ci`, `npm run dev`, and `npm run build`.

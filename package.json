@@ -15,7 +15,7 @@
   },
   "devDependencies": {
     "@babel/eslint-parser": "^7.17.0",
-    "@lando/vuepress-theme-default-plus": "1.0.0-beta.49",
+    "@lando/vuepress-theme-default-plus": "1.0.0-beta.34",
     "babel-eslint": "^10.1.0",
     "eslint": "^7.32.0",
     "eslint-config-google": "^0.9.1",
@@ -27,10 +27,6 @@
     "version-bump-prompt": "^4.2.1",
     "vue": "^3.4.21",
     "vue3-carousel": "^0.1.36",
-    "vuepress": "2.0.0-beta.53"
-  },
-  "overrides": {
-    "@vuepress/client": "2.0.0-beta.53",
-    "@vuepress/shared": "2.0.0-beta.53"
+    "vuepress": "^2.0.0-beta.43"
   }
 }

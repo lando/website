@@ -36,8 +36,8 @@
 import {usePageData, usePageFrontmatter} from '@vuepress/client';
 
 // Parent components
-import ParentLayout from '@vuepress/theme-default/layouts/Layout.vue';
-import Page from '@vuepress/theme-default/components/Page.vue';
+import ParentLayout from '@vuepress/theme-default/lib/client/layouts/Layout.vue';
+import Page from '@vuepress/theme-default/lib/client/components/Page.vue';
 
 // Theme components
 import Footer from '../components/Footer.vue';
