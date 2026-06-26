@@ -6,6 +6,8 @@ updates:
       interval: "daily"
     allow:
       - dependency-name: "@lando/*"
+    ignore:
+      - dependency-name: "@lando/vuepress-theme-default-plus"
   - package-ecosystem: "github-actions"
     directory: "/"
     schedule:

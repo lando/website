@@ -1,14 +1,13 @@
-import {getDirname, path} from '@vuepress/utils';
-import {defaultThemePlus} from '@lando/vuepress-theme-default-plus';
-import {palettePlugin} from '@vuepress/plugin-palette';
-import {registerComponentsPlugin} from '@vuepress/plugin-register-components';
+const {path} = require('@vuepress/utils');
 
-const __dirname = getDirname(import.meta.url);
+const parentTheme = require('@lando/vuepress-theme-default-plus');
+const {palettePlugin} = require('@vuepress/plugin-palette');
+const {registerComponentsPlugin} = require('@vuepress/plugin-register-components');
 
-export const websiteTheme = options => {
+module.exports = options => {
   return {
     name: '@lando/website-theme',
-    extends: defaultThemePlus(options),
+    extends: parentTheme(options),
     alias: {
       '@theme/Navbar.vue': path.resolve(__dirname, 'components', 'NavbarCustom.vue'),
       '@theme/ToggleSidebarButton.vue': path.resolve(__dirname, 'components', 'ToggleSidebarButtonCustom.vue'),
