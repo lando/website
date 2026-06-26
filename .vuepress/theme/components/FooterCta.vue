@@ -2,7 +2,16 @@
   <div class="footer-cta">
     <h3>{{ heading }}</h3>
     <p>{{ text }}</p>
-    <a :href="ctaLink" class="btn">{{ ctaText }}</a>
+    <a
+      :href="ctaLink"
+      :target="ctaTarget"
+      :rel="ctaRel"
+      class="btn"
+      :class="{'has-heart': showHeart}"
+    >
+      <DonateHeart v-if="showHeart" />
+      {{ ctaText }}
+    </a>
   </div>
 </template>
 
@@ -56,12 +65,20 @@
 </style>
 
 <script>
+import DonateHeart from './DonateHeart.vue';
+
 export default {
+  components: {
+    DonateHeart,
+  },
   props: {
     heading: String,
     text: String,
     ctaText: String,
     ctaLink: String,
+    ctaTarget: String,
+    ctaRel: String,
+    showHeart: Boolean,
   },
 };
 </script>

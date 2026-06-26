@@ -19,3 +19,9 @@
 
 - Keep `.vuepress/config.js` and `.vuepress/theme/index.js` in the repo's current CommonJS style for the pinned VuePress stack.
 - Do not convert those files to ESM, rename them to `.mjs`, add `"type": "module"`, or otherwise alter the module format unless the task is an explicit VuePress migration and the site is validated with a clean `npm ci`, `npm run dev`, and `npm run build`.
+
+## Site Links
+
+- Treat the public site as a seamless experience split across multiple Netlify projects. Shared navbar links in `.vuepress/config.js` should use absolute production URLs such as `https://lando.dev/mission`, not root-relative links.
+- Keep donation and sponsorship links pointed directly at `https://github.com/sponsors/lando`. The `/donate` redirect exists for convenience, but public donation CTAs should use the GitHub Sponsors URL directly.
+- External Docs and GitHub CTA links should use `target="_blank"` with `rel="noopener noreferrer"`.
