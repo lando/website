@@ -61,6 +61,8 @@ module.exports = {
     versionsPage: false,
   }),
   head: [
+    ['script', {}, 'document.documentElement.classList.add("dark");'],
+    ['style', {}, 'html, body { background-color: #261D2D; }'],
     ['link', {rel: 'preconnect', href: 'https://www.google-analytics.com/analytics.js', crossorigin: 'true'}],
     ['link', {rel: 'preconnect', href: 'https://fonts.googleapis.com', crossorigin: 'true'}],
     ['link', {rel: 'stylesheet', href: 'https://fonts.googleapis.com/css2?family=Lexend:wght@400;700;800&display=swap'}],
@@ -70,6 +72,6 @@ module.exports = {
     ['link', {rel: 'manifest', href: '/site.webmanifest'}],
     ['link', {rel: 'mask-icon', href: '/safari-pinned-tab.svg', color: '#DD3F8F'}],
     ['meta', {name: 'msapplication-TileColor', content: '#DD3F8F'}],
-    ['meta', {name: 'theme-color', content: '#ffffff'}],
+    ['meta', {name: 'theme-color', content: '#261D2D'}],
   ],
 };

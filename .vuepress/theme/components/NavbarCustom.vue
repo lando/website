@@ -33,7 +33,7 @@
 </template>
 
 <script setup>
-import {useRouteLocale, useSiteLocaleData, withBase, ClientOnly} from '@vuepress/client';
+import {useRouteLocale, useSiteLocaleData, withBase} from '@vuepress/client';
 import {computed, onMounted, ref, h} from 'vue';
 import {useThemeLocaleData} from '@vuepress/theme-default/lib/client/composables';
 import DonateHeart from './DonateHeart.vue';
@@ -86,17 +86,11 @@ onMounted(() => {
 
 const NavbarBrandLogo = () => {
   if (!navbarBrandLogo.value) return null;
-  let img = h('img', {
+  return h('img', {
     class: 'logo',
     src: withBase(navbarBrandLogo.value),
     alt: navbarBrandTitle.value,
   });
-  if (themeLocale.value.logoDark === undefined) {
-    return img;
-  }
-  // wrap brand logo with <ClientOnly> to avoid ssr-mismatch
-  // when using a different brand logo in dark mode
-  return h(ClientOnly, img);
 };
 
 const getCssValue = (el, property) => {
