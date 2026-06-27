@@ -37,7 +37,7 @@ export default {
 </script>
 
 <style lang="scss" scoped>
-@import '../styles/main.scss';
+@import '../styles/palette.scss';
   .icons {
     display: flex;
     gap: 1.5rem;

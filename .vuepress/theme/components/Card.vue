@@ -36,8 +36,6 @@ defineProps({
 </script>
 
 <style lang="scss" scoped>
-@import '../styles/main.scss';
-
 .card {
   border: 1.5px dashed #794993;
   border-radius: 8px;

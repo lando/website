@@ -51,7 +51,7 @@ export default {
 </script>
 
 <style lang="scss">
-@import '../styles/main.scss';
+@import '../styles/palette.scss';
 
 .plans {
   display: flex;

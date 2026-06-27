@@ -60,7 +60,7 @@ export default {
 </script>
 
 <style lang="scss" scoped>
-@import '../styles/main.scss';
+@import '../styles/palette.scss';
   .quotes {
     display: flex;
     flex-wrap: wrap;

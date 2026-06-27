@@ -48,7 +48,7 @@ $hamburger-layer-height        : 2px !default;
 
 
 @import "node_modules/hamburgers/_sass/hamburgers/hamburgers.scss";
-@import '../styles/main.scss';
+@import '../styles/palette.scss';
 
 .toggle-sidebar-button {
   display: block;

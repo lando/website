@@ -6,7 +6,7 @@
 </template>
 
 <style lang="scss">
-  @import '../styles/main.scss';
+  @import '../styles/palette.scss';
   .logos {
     margin-bottom: 5rem;
     h3 {

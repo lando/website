@@ -1,7 +1,7 @@
 <template>
-  <header ref="navbar" class="navbar">
+  <header class="navbar">
     <div class="navbar-interior">
-      <span ref="siteBrand">
+      <span>
           <a
             :href="siteBrandLink"
             aria-current="page"
@@ -10,13 +10,13 @@
           </a>
       </span>
 
-      <div class="navbar-links-wrapper" :style="linksWrapperStyle">
+      <div class="navbar-links-wrapper">
         <slot name="before" />
         <NavbarItems class="can-hide" />
         <slot name="after" />
       </div>
 
-      <div class="navbar-links-right-wrapper" :style="linksWrapperStyle">
+      <div class="navbar-links-right-wrapper">
         <a
           href="https://github.com/sponsors/lando"
           class="donate btn btn-primary has-heart can-hide"
@@ -34,7 +34,7 @@
 
 <script setup>
 import {useRouteLocale, useSiteLocaleData, withBase} from '@vuepress/client';
-import {computed, onMounted, ref, h} from 'vue';
+import {computed, h} from 'vue';
 import {useThemeLocaleData} from '@vuepress/theme-default/lib/client/composables';
 import DonateHeart from './DonateHeart.vue';
 import NavbarItems from '@vuepress/theme-default/lib/client/components/NavbarItems.vue';
@@ -46,43 +46,11 @@ const routeLocale = useRouteLocale();
 const siteLocale = useSiteLocaleData();
 const themeLocale = useThemeLocaleData();
 
-const navbar = ref(null);
-const siteBrand = ref(null);
 const siteBrandLink = computed(
   () => themeLocale.value.home || routeLocale.value,
 );
-const navbarBrandLogo = ref(themeLocale.value.logoDark);
+const navbarBrandLogo = computed(() => themeLocale.value.logoDark);
 const navbarBrandTitle = computed(() => siteLocale.value.title);
-const linksWrapperMaxWidth = ref(0);
-const linksWrapperStyle = computed(() => {
-  if (!linksWrapperMaxWidth.value) {
-    return {};
-  }
-  return {
-    maxWidth: linksWrapperMaxWidth.value + 'px',
-  };
-});
-
-// avoid overlapping of long title and long navbar links
-onMounted(() => {
-  // TODO: migrate to css var
-  // refer to _variables.scss
-  const MOBILE_DESKTOP_BREAKPOINT = 1024;
-  const navbarHorizontalPadding =
-    getCssValue(navbar.value, 'paddingLeft') +
-    getCssValue(navbar.value, 'paddingRight');
-  const handleLinksWrapWidth = () => {
-    let _a;
-    if (window.innerWidth <= MOBILE_DESKTOP_BREAKPOINT) {
-      linksWrapperMaxWidth.value = 0;
-    } else {
-      linksWrapperMaxWidth.value = navbar.value.offsetWidth - navbarHorizontalPadding - (((_a = siteBrand.value) === null || _a === void 0 ? void 0 : _a.offsetWidth) || 0);
-    }
-  };
-  handleLinksWrapWidth();
-  window.addEventListener('resize', handleLinksWrapWidth, false);
-  window.addEventListener('orientationchange', handleLinksWrapWidth, false);
-});
 
 const NavbarBrandLogo = () => {
   if (!navbarBrandLogo.value) return null;
@@ -92,18 +60,10 @@ const NavbarBrandLogo = () => {
     alt: navbarBrandTitle.value,
   });
 };
-
-const getCssValue = (el, property) => {
-  let _a; let _b; let _c;
-  // NOTE: Known bug, will return 'auto' if style value is 'auto'
-  let val = (_c = (_b = (_a = el === null || el === void 0 ? void 0 : el.ownerDocument) === null || _a === void 0 ? void 0 : _a.defaultView) === null || _b === void 0 ? void 0 : _b.getComputedStyle(el, null)) === null || _c === void 0 ? void 0 : _c[property];
-  let num = Number.parseInt(val, 10);
-  return Number.isNaN(num) ? 0 : num;
-};
 </script>
 
 <style lang="scss">
-@import '../styles/main.scss';
+@import '../styles/palette.scss';
 .navbar {
   position: relative;
   background: inherit;
@@ -114,17 +74,19 @@ const getCssValue = (el, property) => {
   margin: auto;
   z-index: 200;
   .logo {
+    display: block;
     margin-right: 3.8125rem;
   }
   .navbar-interior {
     width: var(--content-width);
     display: flex;
-    .navbar-items-wrapper, .navbar-links-right-wrapper {
-      position: static;
+    align-items: center;
+    .navbar-links-wrapper, .navbar-links-right-wrapper {
+      align-items: center;
       display: inline-flex;
       margin-left: 3rem;
       position: static;
-      flex-grow: 1;
+      min-width: 0;
       // Should probably make our own navbar-links and do this there.
       .navbar-items {
         .navbar-item {
@@ -132,7 +94,11 @@ const getCssValue = (el, property) => {
         }
       }
     }
+    .navbar-links-wrapper {
+      flex: 1 1 auto;
+    }
     .navbar-links-right-wrapper {
+      flex: 0 0 auto;
       justify-content: flex-end;
     }
     .toggle-dark-button {

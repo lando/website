@@ -8,6 +8,8 @@ module.exports = {
   theme: customTheme({
   // PARENT CONFIG
     contributors: false,
+    colorMode: 'dark',
+    colorModeSwitch: false,
     darkMode: false,
     docsDir: '.',
     docsBranch: 'main',
@@ -62,7 +64,7 @@ module.exports = {
   }),
   head: [
     ['script', {}, 'document.documentElement.classList.add("dark");'],
-    ['style', {}, 'html, body { background-color: #261D2D; }'],
+    ['style', {}, 'html { color-scheme: dark; } html, body { background-color: #261D2D; color: #eeedef; } h1, h2, h3 { color: #fff; }'],
     ['link', {rel: 'preconnect', href: 'https://www.google-analytics.com/analytics.js', crossorigin: 'true'}],
     ['link', {rel: 'preconnect', href: 'https://fonts.googleapis.com', crossorigin: 'true'}],
     ['link', {rel: 'stylesheet', href: 'https://fonts.googleapis.com/css2?family=Lexend:wght@400;700;800&display=swap'}],

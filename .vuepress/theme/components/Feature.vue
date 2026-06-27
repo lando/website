@@ -33,7 +33,7 @@ export default {
 </script>
 
 <style lang="scss">
-@import '../styles/main.scss';
+@import '../styles/palette.scss';
 $default-orbit-height: 1000px;
 $default-orbit-margin-top: 225 - $default-orbit-height;
 .feature-orbit {

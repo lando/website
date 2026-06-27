@@ -51,7 +51,7 @@ export default {
 </script>
 
 <style lang="scss" scoped>
-  @import '../styles/main.scss';
+  @import '../styles/palette.scss';
   .hero-wrapper {
     min-height: 100vh;
     height: 100%;

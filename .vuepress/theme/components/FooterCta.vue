@@ -16,7 +16,7 @@
 </template>
 
 <style lang="scss" scoped>
-  @import '../styles/main.scss';
+  @import '../styles/palette.scss';
   .footer-cta {
     background: radial-gradient(102.17% 322.14% at -4.98% 92.25%, #DD3F8F 13.06%, #412B6B 100%);
     padding: 5.875rem;
