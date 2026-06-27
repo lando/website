@@ -1,5 +1,7 @@
 ## {{ UNRELEASED_VERSION }} - [{{ UNRELEASED_DATE }}]({{ UNRELEASED_LINK }})
 
+## v5.0.0 - [June 27, 2026](https://github.com/lando/website/releases/tag/v5.0.0)
+
 * Fixed various long standing bugs
 * Updated site to reflect new non-profit reality
 
