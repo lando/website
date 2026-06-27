@@ -133,7 +133,7 @@ export default {
   }
 
 
-  @media (max-width: $MQMobileNarrow) {
+  @media (max-width: $MQNarrow) {
     .hero-wrapper {
       .hero {
         flex-wrap: wrap-reverse;
@@ -154,7 +154,6 @@ export default {
           transform: none;
           .hero-visual {
             margin: 0 auto;
-            width: min(17rem, 70vw);
           }
           .hero-planet {
             width: 7.25rem;

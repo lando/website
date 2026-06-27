@@ -98,6 +98,26 @@ body {
         padding-top: 2em;
     }
 
+    .page-header {
+        margin: 10rem 0 6rem 0;
+        position: relative;
+        text-align: center;
+        z-index: 1;
+        .feature-planet {
+            width: 76px;
+        }
+        h1 {
+            font-size: 4rem;
+            font-weight: 800;
+            line-height: 1.1;
+            margin: 0 0 2rem 0 !important;
+        }
+        p {
+            max-width: 900px;
+            margin: auto;
+        }
+    }
+
     .page-orbit {
         $default-orbit-height: 400px;
         $default-orbit-width: 800px;
@@ -198,6 +218,17 @@ body.home-page {
 
 .contribute {
     text-align: center;
+}
+
+@media (max-width: $MQMobile) {
+    body {
+        .page-header {
+            margin-top: 8rem;
+            h1 {
+                font-size: 3rem;
+            }
+        }
+    }
 }
 
 html.dark {

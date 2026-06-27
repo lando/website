@@ -1,10 +1,5 @@
 <template>
-  <carousel v-if="isMobile && mobileSlideshow" :items-to-show="2.5" class="carousel icons">
-    <slide v-for="(icon, index) in icons" :key="index" class="icon">
-      <img :src="icon.src" :alt="icon.alt">
-    </slide>
-  </carousel>
-  <ul v-else class="icons">
+  <ul class="icons">
     <li v-for="(icon, index) in icons" :key="index" class="icon">
       <img :src="icon.src" :alt="icon.alt">
     </li>
@@ -12,8 +7,6 @@
 </template>
 
 <script>
-import 'vue3-carousel/dist/carousel.css';
-import {Carousel, Slide} from 'vue3-carousel';
 
 export default {
   props: {
@@ -37,12 +30,8 @@ export default {
   computed: {
     isMobile() {
       if (typeof window === 'undefined') return false;
-      return window.innerWidth < 800;
+      return window.innerWidth < 719;
     },
-  },
-  components: {
-    Carousel,
-    Slide,
   },
 };
 </script>
@@ -51,7 +40,7 @@ export default {
 @import '../styles/main.scss';
   .icons {
     display: flex;
-    gap:1.5rem;
+    gap: 1.5rem;
     list-style: none;
     padding-left: 0;
     .icon {
@@ -60,9 +49,10 @@ export default {
     }
   }
   @media (max-width: $MQNarrow) {
-    .carousel .icon.carousel__slide--next img {
-      mask-image: linear-gradient(to left, transparent 40%, black);
-      -webkit-mask-image: linear-gradient(to left, transparent 40%, black);
+    .icons {
+      gap: 2rem;
+      margin: auto;
+      flex-wrap: wrap;
     }
   }
 </style>

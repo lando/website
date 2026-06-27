@@ -19,7 +19,7 @@
       <div class="navbar-links-right-wrapper" :style="linksWrapperStyle">
         <a
           href="https://github.com/sponsors/lando"
-          class="btn btn-primary has-heart can-hide"
+          class="donate btn btn-primary has-heart can-hide"
           target="_blank"
           rel="noopener noreferrer"
         >
@@ -67,7 +67,7 @@ const linksWrapperStyle = computed(() => {
 onMounted(() => {
   // TODO: migrate to css var
   // refer to _variables.scss
-  const MOBILE_DESKTOP_BREAKPOINT = 719;
+  const MOBILE_DESKTOP_BREAKPOINT = 1024;
   const navbarHorizontalPadding =
     getCssValue(navbar.value, 'paddingLeft') +
     getCssValue(navbar.value, 'paddingRight');
@@ -152,9 +152,30 @@ const getCssValue = (el, property) => {
   }
 }
 
+@media (max-width: 1320px) {
+  .navbar {
+    padding: 2.5rem;
+  }
+}
+
 @media (max-width: $MQNarrow) {
   .navbar {
     padding: 2rem;
+    .can-hide,
+    .navbar-links-wrapper {
+      display: none;
+    }
+  }
+  .donate {
+    display: none !important;
+  }
+  .sidebar {
+    top: 0;
+  }
+  .navbar-item > a:hover {
+    border-bottom: 0;
+    margin-bottom: 0;
+    color: var(--c-text-accent);
   }
 }
 

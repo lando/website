@@ -6,6 +6,7 @@
 </template>
 
 <style lang="scss">
+  @import '../styles/main.scss';
   .logos {
     margin-bottom: 5rem;
     h3 {
@@ -27,6 +28,17 @@
       }
     }
   }
+@media (max-width: $MQMobile) {
+  .logos {
+    h3 {
+      font-size: 1em;
+    }
+    .icons {
+      display: flex;
+    }
+  }
+}
+
 </style>
 
 <script>

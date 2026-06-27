@@ -3,11 +3,12 @@
     <ParentLayout>
       <template #sidebar-bottom>
         <FooterCta
-          heading="Start building with Lando"
-          ctaText="Install Lando"
-          ctaLink="https://docs.lando.dev/install"
+          heading="Support the Lando Alliance"
+          ctaText="Donate"
+          ctaLink="https://github.com/sponsors/lando"
           ctaTarget="_blank"
           ctaRel="noopener noreferrer"
+          :showHeart="true"
         />
       </template>
       <template #page>
@@ -88,7 +89,7 @@ if (typeof window !== 'undefined') {
   }
 }
 
-@media (max-width: 719px) {
+@media (max-width: $MQNarrow) {
   .theme-container.sidebar-open {
     overflow: hidden;
 
@@ -102,6 +103,7 @@ if (typeof window !== 'undefined') {
       padding-top: calc(var(--navbar-height) + 2.5rem);
       .navbar-items {
         border: none;
+        display: block;
         .navbar-item {
           border-bottom: 1px solid rgba(255, 255, 255, 0.14);
           padding: 1.3125rem 0 1.5rem 0rem;

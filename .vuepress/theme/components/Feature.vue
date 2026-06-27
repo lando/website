@@ -107,6 +107,16 @@ $default-orbit-margin-top: 225 - $default-orbit-height;
 @media (max-width: $MQMobile) {
   .feature {
     margin-top: 1rem;
+    flex-direction: column-reverse;
+    text-align: center;
+    h3 {
+      margin-top: 0;
+      padding-top: 0;
+    }
+    &.right {
+      flex-direction: column-reverse;
+    }
+    gap: 0;
     .feature-content,
     .feature-image {
       width: 100%;
@@ -128,6 +138,12 @@ $default-orbit-margin-top: 225 - $default-orbit-height;
       top: 900px;
       left: 50rem;
     }
+  }
+  .feature-resource-links {
+    justify-content: center;
+  }
+  .feature-orbit.orbit-2 {
+    margin-top: -450px;
   }
 }
 
