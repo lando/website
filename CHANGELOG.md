@@ -1,5 +1,8 @@
 ## {{ UNRELEASED_VERSION }} - [{{ UNRELEASED_DATE }}]({{ UNRELEASED_LINK }})
 
+* Fixed various long standing bugs
+* Updated site to reflect new non-profit reality
+
 ## v4.0.3 - [September 3, 2025](https://github.com/lando/website/releases/tag/v4.0.3)
 
 * Added 501(c)(3) status and link to IRS Determination Letter
