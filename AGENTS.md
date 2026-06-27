@@ -25,3 +25,9 @@
 - Treat the public site as a seamless experience split across multiple Netlify projects. Shared navbar links in `.vuepress/config.js` should use absolute production URLs such as `https://lando.dev/mission`, not root-relative links.
 - Keep donation and sponsorship links pointed directly at `https://github.com/sponsors/lando`. The `/donate` redirect exists for convenience, but public donation CTAs should use the GitHub Sponsors URL directly.
 - External Docs and GitHub CTA links should use `target="_blank"` with `rel="noopener noreferrer"`.
+
+## AI Metadata
+
+- Keep `.vuepress/public/llms.txt` and `.vuepress/public/llms-full.txt` as static public files for the pinned VuePress build. They are copied directly to the production site root during build.
+- Update both files periodically when landing-page copy, mission/support/contact content, public URLs, donation/support routes, or other major site content changes.
+- Do not add a VuePress `llms.txt` plugin for this pinned stack unless a deliberate VuePress migration validates it with a clean install, dev server, and production build.

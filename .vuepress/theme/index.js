@@ -3,8 +3,11 @@ const {path} = require('@vuepress/utils');
 const parentTheme = require('@lando/vuepress-theme-default-plus');
 const {palettePlugin} = require('@vuepress/plugin-palette');
 const {registerComponentsPlugin} = require('@vuepress/plugin-register-components');
+const {sitemapIndexPlugin} = require('./plugins/sitemap-index');
 
 module.exports = options => {
+  const sitemapIndex = options.sitemapIndex;
+
   return {
     name: '@lando/website-theme',
     extends: parentTheme(options),
@@ -23,6 +26,7 @@ module.exports = options => {
         componentsDir: path.resolve(__dirname, './components'),
         componentsPatterns: ['*.vue', '**/*.vue'],
       }),
+      ...(sitemapIndex ? [sitemapIndexPlugin(sitemapIndex)] : []),
     ],
   };
 };

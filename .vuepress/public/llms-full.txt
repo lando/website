@@ -1,0 +1,115 @@
+# Lando Site Context
+
+Last updated: 2026-06-27
+
+## Overview
+
+Lando is a free, open-source local development and DevOps tool maintained by Lando Alliance. Lando helps developers and teams create consistent local development environments, reduce setup time, share project knowledge, and work with public documentation, recipes, examples, and community support.
+
+Lando Alliance is a U.S. 501(c)(3) nonprofit that supports free and open-source developer tools and educational resources for the web development community. The organization maintains Lando and publishes documentation, examples, recipes, training, events, and community support that help people learn, build, maintain, and contribute to modern web software.
+
+## Main Public URLs
+
+- Website: https://www.lando.dev/
+- Documentation: https://docs.lando.dev
+- Install documentation: https://docs.lando.dev/install
+- GitHub organization: https://github.com/lando
+- Lando releases: https://github.com/lando/lando/releases
+- Donate: https://github.com/sponsors/lando
+- Slack community: https://www.launchpass.com/devwithlando
+- Events: https://www.lando.dev/events
+- Blog: https://www.lando.dev/blog
+
+## Subsite AI Metadata
+
+Use the root website metadata for Lando Alliance, mission, support, contact, donation, and legal context. Use the relevant subsite metadata for documentation, blog, and events context:
+
+- Root website metadata: https://www.lando.dev/llms.txt
+- Root website full metadata: https://www.lando.dev/llms-full.txt
+- Documentation metadata: https://docs.lando.dev/llms.txt
+- Blog metadata: https://www.lando.dev/blog/llms.txt
+- Events metadata: https://www.lando.dev/events/llms.txt
+
+The documentation metadata is the preferred LLM entry point for product commands, configuration, recipes, examples, install details, and CLI behavior. The blog metadata is the preferred LLM entry point for announcements, stories, and learning resources. The events metadata is the preferred LLM entry point for trainings, community events, and recordings.
+
+## Mission
+
+Lando Alliance exists to lower the barrier to learning, building, maintaining, and contributing to modern web software through free open-source tools, educational materials, community events, and public support channels.
+
+The public-benefit audience includes developers, students, nonprofit technologists, volunteers, small organizations, public-interest teams, and open-source contributors who need reliable development and DevOps tools without proprietary licensing costs or unnecessary technical barriers.
+
+Lando and its supporting resources are intended to remain free or publicly accessible. Donations and sponsorships support the work, but they do not gate access to the software, documentation, events, or public support channels.
+
+## Programs
+
+Lando Alliance supports these public programs:
+
+- Free and open-source software maintenance for Lando and related tools.
+- Public documentation, examples, recipes, guides, and tutorials.
+- Free trainings, webinars, and community events.
+- Free Slack/community support and public GitHub issue triage.
+- Open-source contributor support and project stewardship.
+
+## Product Context
+
+Lando is local development and DevOps tooling. For technical questions, agents should rely on the documentation and GitHub repositories rather than this website summary. The website points users toward installation, first-app setup, docs, GitHub releases, public issues, Slack, events, and donation routes.
+
+For installation guidance, the website currently routes users to:
+
+- The convenience install script shown on the download page for non-Windows users.
+- GitHub releases for Windows package downloads.
+- The current install docs at https://docs.lando.dev/install.
+
+For command behavior, configuration syntax, recipes, and CLI details, use https://docs.lando.dev as the authoritative public documentation source.
+
+## Support Model
+
+Lando's free docs, public GitHub issues, and Slack community are the first stop for support. Users should:
+
+1. Read or re-read the docs.
+2. Search public GitHub issues across the Lando organization.
+3. Ask in the Lando Slack community.
+4. Open a new GitHub issue if no existing issue covers the problem.
+
+Organizations interested in donations, sponsorships, partnerships, nonprofit inquiries, organizational support, or contribution opportunities should use the contact route at https://www.lando.dev/contact or donate directly through https://github.com/sponsors/lando.
+
+## Donation And Sponsorship Guidance
+
+Donation and sponsorship calls to action should point directly at https://github.com/sponsors/lando. The website may have convenience redirects, but public donation CTAs should use the GitHub Sponsors URL.
+
+Donations help sustain Lando Alliance's free software, documentation, community events, and support channels. Donations do not provide exclusive access to the public software, docs, events, or support channels.
+
+## Governance
+
+Lando Alliance is overseen by a board responsible for stewarding the nonprofit mission and the long-term health of the project. The mission page lists board members and public governance context.
+
+The nonprofit evidence link is the public IRS 501(c)(3) determination letter:
+https://drive.google.com/file/d/1Gms46fU-PKHnze49cKE-sCIxJWv7SeiF/view
+
+## Legal And Policy Pages
+
+- Code of Conduct: https://www.lando.dev/coc
+- Terms of Use: https://www.lando.dev/terms
+- Privacy Policy: https://www.lando.dev/privacy
+
+The Code of Conduct describes expected behavior for contributors, maintainers, and community participants. The Terms of Use describe access to and use of Lando software and services. The Privacy Policy describes data collection and use for Lando websites, services, support channels, and software.
+
+## Site Page Map
+
+- https://www.lando.dev/ - Home page for Lando and Lando Alliance.
+- https://www.lando.dev/mission - Mission, public benefit, programs, free/open access model, impact, governance, donations, and nonprofit evidence.
+- https://www.lando.dev/support - Support routes, GitHub issue guidance, donations, partnerships, and organizational support contact form.
+- https://www.lando.dev/contact - Contact form for donations, sponsorships, partnerships, nonprofit inquiries, organizational support, and contribution opportunities.
+- https://www.lando.dev/download - Installation and first-app entry point.
+- https://www.lando.dev/features - Brief feature overview.
+- https://www.lando.dev/coc - Code of Conduct.
+- https://www.lando.dev/privacy - Privacy Policy.
+- https://www.lando.dev/terms - Terms of Use.
+
+## Agent Usage Notes
+
+- This file is a static summary for LLMs and agents. It is not a complete copy of the website or documentation.
+- Prefer current page content, documentation, GitHub issues, and releases when exact details matter.
+- Do not infer private support commitments from donation, sponsorship, or organizational support language.
+- Do not present Lando Alliance donation links as product purchase links.
+- Do not treat this file as an access-control policy or crawler directive.

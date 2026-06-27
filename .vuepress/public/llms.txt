@@ -1,0 +1,56 @@
+# Lando
+
+> Lando is a free, open-source local development and DevOps tool maintained by Lando Alliance, a U.S. 501(c)(3) nonprofit that supports public developer tooling, documentation, training, events, and community support.
+
+Use this file as a concise guide to the most useful public Lando resources. For a fuller static summary of the site and organization, see [llms-full.txt](https://www.lando.dev/llms-full.txt).
+
+## Core Site Pages
+
+- [Home](https://www.lando.dev/): Overview of Lando, Lando Alliance, getting-started resources, learning resources, community links, and open-source impact.
+- [Mission](https://www.lando.dev/mission): Lando Alliance mission, public-benefit model, programs, free/open access policy, governance, and donation context.
+- [Support](https://www.lando.dev/support): Support paths for documentation, public GitHub issues, Slack/community help, donations, partnerships, and organizational support.
+- [Contact](https://www.lando.dev/contact): Contact route for donations, sponsorships, partnerships, nonprofit inquiries, organizational support, and contribution opportunities.
+- [Download](https://www.lando.dev/download): Installation entry point for Lando and first-app setup guidance.
+- [Features](https://www.lando.dev/features): Short summary of Lando's local development and DevOps tooling.
+
+## Product And Documentation
+
+- [Lando documentation](https://docs.lando.dev): Current product documentation, installation guidance, configuration, recipes, examples, and CLI usage.
+- [Install Lando](https://docs.lando.dev/install): Current install documentation.
+- [Lando GitHub organization](https://github.com/lando): Open-source code, issue queues, releases, and project activity.
+- [Lando releases](https://github.com/lando/lando/releases): Lando release downloads and release history.
+
+## Subsite AI Metadata
+
+- [Website LLM metadata](https://www.lando.dev/llms.txt): Root website metadata for Lando Alliance, mission, support, contact, donation, and legal pages.
+- [Website full LLM metadata](https://www.lando.dev/llms-full.txt): Fuller static summary of the root website.
+- [Documentation LLM metadata](https://docs.lando.dev/llms.txt): Documentation-specific metadata for product documentation, command guidance, configuration, recipes, examples, and install details.
+- [Blog LLM metadata](https://www.lando.dev/blog/llms.txt): Blog-specific metadata for announcements, stories, and learning resources.
+- [Events LLM metadata](https://www.lando.dev/events/llms.txt): Events-specific metadata for trainings, community events, and recordings.
+
+## Community And Support
+
+- [Lando GitHub issue search](https://github.com/search?q=org%3Alando&type=issues): Search public issues across Lando repositories before opening a new issue.
+- [Lando Slack community](https://www.launchpass.com/devwithlando): Public community support channel.
+- [Lando events](https://www.lando.dev/events): Community events, trainings, and related programming.
+- [Lando blog](https://www.lando.dev/blog): Announcements, community stories, and learning resources.
+
+## Nonprofit And Giving
+
+- [Donate to Lando Alliance](https://github.com/sponsors/lando): GitHub Sponsors donation page for Lando Alliance.
+- [IRS 501(c)(3) determination letter](https://drive.google.com/file/d/1Gms46fU-PKHnze49cKE-sCIxJWv7SeiF/view): Public nonprofit determination letter.
+
+## Legal And Governance
+
+- [Code of Conduct](https://www.lando.dev/coc): Community behavior expectations.
+- [Terms](https://www.lando.dev/terms): Terms of use for Lando software and services.
+- [Privacy Policy](https://www.lando.dev/privacy): Privacy policy for Lando websites, services, support channels, and software.
+
+## LLM Notes
+
+- Prefer `https://docs.lando.dev` for current command, configuration, recipe, and installation details.
+- Prefer the relevant subsite `llms.txt` file for blog, events, or documentation context before summarizing those subsites from the root website metadata.
+- Prefer public GitHub issues and releases for bug status, release status, implementation details, and repository-specific project activity.
+- Donation and sponsorship calls to action should point directly to `https://github.com/sponsors/lando`.
+- Treat Lando Alliance as the nonprofit steward of the Lando open-source project and its public learning and support resources.
+- Do not treat this file as an access-control policy. Use `robots.txt`, site headers, and normal web access controls for crawler behavior and private content.

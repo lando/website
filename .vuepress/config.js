@@ -5,6 +5,7 @@ module.exports = {
   lang: 'en-US',
   title: 'Lando',
   description: 'Free and open-source developer tools and resources from Lando Alliance.',
+  pagePatterns: ['**/*.md', '!AGENTS.md', '!**/AGENTS.md', '!.vuepress', '!node_modules'],
   theme: customTheme({
   // PARENT CONFIG
     contributors: false,
@@ -45,7 +46,16 @@ module.exports = {
     robots: {
       allowAll: true,
     },
-    sitemap: true,
+    sitemap: {
+      outFile: 'sitemap-main.xml',
+    },
+    sitemapIndex: {
+      sitemaps: [
+        'https://www.lando.dev/sitemap-main.xml',
+        'https://www.lando.dev/blog/sitemap.xml',
+        'https://www.lando.dev/events/sitemap.xml',
+      ],
+    },
     sharedNavbar: [
       {text: 'Mission', link: 'https://www.lando.dev/mission'},
       {text: 'Blog', link: 'https://www.lando.dev/blog'},
