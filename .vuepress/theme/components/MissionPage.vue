@@ -24,7 +24,8 @@
       <article class="brief-panel brief-panel-primary mission-thesis-panel">
         <p class="mission-kicker">Mission</p>
         <h2 class="mission-thesis">
-          <template v-for="part in getEmphasizedMissionParts()" :key="`${part.text}-${part.emphasized}`">
+          <template v-for="part in getEmphasizedMissionParts()"
+            :key="`${part.text}-${part.emphasized}`">
             <span v-if="part.emphasized" class="emphasis">{{ part.text }}</span>
             <template v-else>{{ part.text }}</template>
           </template>

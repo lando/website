@@ -190,6 +190,10 @@ const missionContent = {
       title: 'Project',
       links: [
         {
+          text: 'Mission summary PDF',
+          href: '/lando-alliance-mission.pdf',
+        },
+        {
           text: 'GitHub organization',
           href: 'https://github.com/lando',
         },
