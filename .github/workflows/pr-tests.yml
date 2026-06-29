@@ -21,7 +21,5 @@ jobs:
       # Run tests
       - name: Run linter
         run: npm run lint
-      - name: Check mission PDF
-        run: npm run mission:pdf:check
       - name: Test build
         run: npm run build

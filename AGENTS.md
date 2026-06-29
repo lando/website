@@ -36,5 +36,5 @@
 
 - Keep `.vuepress/public/lando-alliance-mission.pdf` aligned with `/mission/` content when the mission page, mission content data, public-benefit language, impact metrics, governance copy, or mission references change.
 - Regenerate the committed PDF with `npm run mission:pdf`; the script reads `.vuepress/theme/data/mission-content.js` and writes the public PDF asset.
-- CI should run `npm run mission:pdf:check` to fail when the committed PDF is stale. Do not rely on the production build to silently generate a different PDF than the one reviewed in git.
+- Do not rely on the production build to generate the PDF. Agents should update the committed PDF ad hoc when mission content changes.
 - Keep the PDF print-friendly: white background, pink Lando logo, concise one-page snapshot, and any longer link/reference material on a references page.

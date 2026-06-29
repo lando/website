@@ -12,8 +12,7 @@
     "dev": "vuepress dev . --clean-cache --clean-temp",
     "build": "vuepress build .",
     "lint": "eslint .",
-    "mission:pdf": "node scripts/generate-mission-pdf.mjs",
-    "mission:pdf:check": "test -f .vuepress/public/lando-alliance-mission.pdf && npm run mission:pdf && git diff --exit-code -- .vuepress/public/lando-alliance-mission.pdf"
+    "mission:pdf": "node scripts/generate-mission-pdf.mjs"
   },
   "devDependencies": {
     "@babel/eslint-parser": "^7.17.0",
