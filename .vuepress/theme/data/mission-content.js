@@ -45,7 +45,7 @@ const missionContent = {
       benefit: 'Maintain web projects with repeatable workflows.',
     },
     {
-      audience: 'Resource-constrained and underrepresented contributors',
+      audience: 'Independent learners and contributors',
       benefit: 'Use professional-grade workflows without proprietary tooling costs.',
     },
   ],
@@ -164,70 +164,90 @@ const missionContent = {
       },
     ],
   },
-  evidence: [
+  references: [
     {
-      text: 'IRS 501(c)(3) determination letter',
-      href: 'https://drive.google.com/file/d/1Gms46fU-PKHnze49cKE-sCIxJWv7SeiF/view',
+      title: 'Legal',
+      links: [
+        {
+          text: 'IRS 501(c)(3) determination letter',
+          href: 'https://drive.google.com/file/d/1Gms46fU-PKHnze49cKE-sCIxJWv7SeiF/view',
+        },
+        {
+          text: 'Terms of Use',
+          href: '/terms/',
+        },
+        {
+          text: 'Privacy Policy',
+          href: '/privacy/',
+        },
+        {
+          text: 'Code of Conduct',
+          href: '/coc/',
+        },
+      ],
     },
     {
-      text: 'GitHub organization',
-      href: 'https://github.com/lando',
+      title: 'Project',
+      links: [
+        {
+          text: 'GitHub organization',
+          href: 'https://github.com/lando',
+        },
+        {
+          text: 'Source repository',
+          href: 'https://github.com/lando/lando',
+        },
+        {
+          text: 'Documentation',
+          href: 'https://docs.lando.dev',
+        },
+        {
+          text: 'Contributing guide',
+          href: 'https://docs.lando.dev/contrib',
+        },
+      ],
     },
     {
-      text: 'Source repository',
-      href: 'https://github.com/lando/lando',
+      title: 'Community',
+      links: [
+        {
+          text: 'Slack community',
+          href: 'https://www.launchpass.com/devwithlando',
+        },
+        {
+          text: 'Events',
+          href: 'https://www.lando.dev/events',
+        },
+        {
+          text: 'Blog',
+          href: 'https://www.lando.dev/blog',
+        },
+        {
+          text: 'YouTube channel',
+          href: 'https://www.youtube.com/channel/UCl_QBNuGJNoo7yH-n18K7Kg',
+        },
+        {
+          text: 'Origin story',
+          href: 'https://www.lando.dev/blog/2017/10/24/journey-lando.html',
+        },
+        {
+          text: 'Support resources',
+          href: '/support/',
+        },
+      ],
     },
     {
-      text: 'Documentation',
-      href: 'https://docs.lando.dev',
-    },
-    {
-      text: 'Slack community',
-      href: 'https://www.launchpass.com/devwithlando',
-    },
-    {
-      text: 'Events',
-      href: 'https://www.lando.dev/events',
-    },
-    {
-      text: 'Blog',
-      href: 'https://www.lando.dev/blog',
-    },
-    {
-      text: 'YouTube channel',
-      href: 'https://www.youtube.com/channel/UCl_QBNuGJNoo7yH-n18K7Kg',
-    },
-    {
-      text: 'Origin story',
-      href: 'https://www.lando.dev/blog/2017/10/24/journey-lando.html',
-    },
-    {
-      text: 'Support resources',
-      href: '/support/',
-    },
-    {
-      text: 'Contributing guide',
-      href: 'https://docs.lando.dev/contrib',
-    },
-    {
-      text: 'Terms of Use',
-      href: '/terms/',
-    },
-    {
-      text: 'Privacy Policy',
-      href: '/privacy/',
-    },
-    {
-      text: 'Code of Conduct',
-      href: '/coc/',
-    },
-    {
-      text: 'Patreon',
-      href: 'https://www.patreon.com/devwithlando',
-    },
-    {
-      text: 'Open Collective',
-      href: 'https://opencollective.com/lando',
+      title: 'Funding',
+      links: [
+        {
+          text: 'Patreon',
+          href: 'https://www.patreon.com/devwithlando',
+        },
+        {
+          text: 'Open Collective',
+          href: 'https://opencollective.com/lando',
+        },
+      ],
     },
   ],
 };

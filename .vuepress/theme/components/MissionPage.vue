@@ -146,19 +146,28 @@
     <section class="brief-section evidence-section">
       <div class="brief-section-heading">
         <p class="mission-kicker">Evidence</p>
-        <h2>Public references</h2>
+        <h2>References</h2>
       </div>
-      <nav class="brief-evidence-list" aria-label="Mission evidence links">
-        <a
-          v-for="item in content.evidence"
-          :key="item.href"
-          :href="item.href"
-          :target="isExternal(item.href) ? '_blank' : undefined"
-          :rel="isExternal(item.href) ? 'noopener noreferrer' : undefined"
+      <div class="brief-reference-groups">
+        <section
+          v-for="group in content.references"
+          :key="group.title"
+          class="brief-reference-group"
         >
-          {{ item.text }}
-        </a>
-      </nav>
+          <h3>{{ group.title }}</h3>
+          <nav class="brief-reference-list" :aria-label="`${group.title} references`">
+            <a
+              v-for="item in group.links"
+              :key="item.href"
+              :href="item.href"
+              :target="isExternal(item.href) ? '_blank' : undefined"
+              :rel="isExternal(item.href) ? 'noopener noreferrer' : undefined"
+            >
+              {{ item.text }}
+            </a>
+          </nav>
+        </section>
+      </div>
     </section>
   </div>
 </template>
@@ -812,13 +821,26 @@ onMounted(async () => {
   color: var(--c-brand-light);
 }
 
-.brief-evidence-list {
+.brief-reference-groups {
   display: grid;
-  gap: .75rem;
-  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 1.5rem;
+  grid-template-columns: repeat(4, minmax(0, 1fr));
 }
 
-.brief-evidence-list a {
+.brief-reference-group h3 {
+  color: var(--c-brand);
+  font-size: .875rem;
+  font-weight: 800;
+  line-height: 1.25;
+  margin: 0 0 .45rem;
+  text-transform: uppercase;
+}
+
+.brief-reference-list {
+  display: grid;
+}
+
+.brief-reference-list a {
   border-bottom: 1px solid rgba(121, 73, 147, .65);
   color: var(--c-text-lightest);
   font-size: 1rem;
@@ -828,8 +850,8 @@ onMounted(async () => {
   text-decoration: none;
 }
 
-.brief-evidence-list a:hover,
-.brief-evidence-list a:focus-visible {
+.brief-reference-list a:hover,
+.brief-reference-list a:focus-visible {
   color: var(--c-brand-light);
   text-decoration: none;
 }
@@ -837,7 +859,7 @@ onMounted(async () => {
 @media (max-width: $MQNarrow) {
   .brief-snapshot,
   .brief-program-list,
-  .brief-evidence-list {
+  .brief-reference-groups {
     grid-template-columns: repeat(2, minmax(0, 1fr));
   }
 
@@ -874,7 +896,7 @@ onMounted(async () => {
   .brief-program-list,
   .brief-callout,
   .brief-board-list,
-  .brief-evidence-list {
+  .brief-reference-groups {
     grid-template-columns: 1fr;
   }
 
