@@ -31,3 +31,10 @@
 - Keep `.vuepress/public/llms.txt` and `.vuepress/public/llms-full.txt` as static public files for the pinned VuePress build. They are copied directly to the production site root during build.
 - Update both files periodically when landing-page copy, mission/support/contact content, public URLs, donation/support routes, or other major site content changes.
 - Do not add a VuePress `llms.txt` plugin for this pinned stack unless a deliberate VuePress migration validates it with a clean install, dev server, and production build.
+
+## Mission PDF
+
+- Keep `.vuepress/public/lando-alliance-mission.pdf` aligned with `/mission/` content when the mission page, mission content data, public-benefit language, impact metrics, governance copy, or mission references change.
+- Regenerate the committed PDF with `npm run mission:pdf`; the script reads `.vuepress/theme/data/mission-content.js` and writes the public PDF asset.
+- Do not rely on the production build to generate the PDF. Agents should update the committed PDF ad hoc when mission content changes.
+- Keep the PDF print-friendly: white background, pink Lando logo, concise one-page snapshot, and any longer link/reference material on a references page.
